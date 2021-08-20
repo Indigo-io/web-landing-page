@@ -1,8 +1,3 @@
-@import "/vendor/aos/aos.css";
-@import "/vendor/bootstrap/css/bootstrap.min.css";
-@import "/vendor/bootstrap-icons/bootstrap-icons.css";
-@import "/vendor/boxicons/css/boxicons.min.css";
-@import "/vendor/swiper/swiper-bundle.min.css";
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -854,7 +849,7 @@ section {
 # Hero Section linear-gradient(to right, rgba(115, 21, 241, 0.9) 0%, rgba(12, 88, 228, 0.9) 50%),
 --------------------------------------------------------------*/
 .hero-section {
-  background-image: url(/img/hero-bg.png);
+  background-image: url(../img/hero-bg.png);
   position: relative;
 }
 
