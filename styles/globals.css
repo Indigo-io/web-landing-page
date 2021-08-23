@@ -3,6 +3,7 @@
 @import "/vendor/bootstrap-icons/bootstrap-icons.css";
 @import "/vendor/boxicons/css/boxicons.min.css";
 @import "/vendor/swiper/swiper-bundle.min.css";
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -135,6 +136,11 @@ section {
   background: linear-gradient(-45deg, #324df6, #7945ef);
   color: #fff;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+.progress .progress-bar {
+  background: #2d71a1;
+  background: linear-gradient(-45deg, #324df6, #7945ef);
 }
 
 /* Feature 1 */
@@ -1039,4 +1045,17 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);# Hero Section
 
 .social a i {
   line-height: 0;
+}
+
+/* Step Wizard ======================== */
+
+/* Step */
+.wizard-step {
+  /* box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1); */
+  /* background: #fff; */
+  padding: 40px;
+  /* min-height: 300px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
