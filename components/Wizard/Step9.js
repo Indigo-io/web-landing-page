@@ -1,134 +1,128 @@
+import { useForm } from "react-hook-form";
+
 export default function Step9({ nextStep, previousStep, setProgress }) {
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    setProgress(100);
+    reset();
+  };
+
   return (
     <div className="wizard-step">
       <div>
-        <h4 className="mb-3 text-center">
-          Por último ¿Tenés alguna enfermedad o condición clínica de base?
-        </h4>
-        <div className="col-md-12 form-group mb-3">
-          <div className="col-md-12">
-            <div className="checkbox">
-              <label htmlFor="diseases-0">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-0"
-                  value="1"
-                />
-                Problemas de presión arterial
-              </label>
+        <h2 className="mb-3 text-center">Cuentanos sobre ti </h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-3">
+            <label htmlFor="diseases">
+              Por último ¿Tenés alguna enfermedad o condición clínica de base?
+            </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-0"
+                value="1"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-0">Problemas de presión arterial</label>
             </div>
-            <div className="checkbox">
-              <label htmlFor="diseases-1">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-1"
-                  value="2"
-                />
-                Hipo/hiper tiroidismo
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-1"
+                value="2"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-1">Hipo/hiper tiroidismo</label>
             </div>
-            <div className="checkbox">
-              <label htmlFor="diseases-2">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-2"
-                  value="3"
-                />
-                Afecciones cardíacas
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-2"
+                value="3"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-2">Afecciones cardíacas</label>
             </div>
-            <div className="checkbox">
-              <label htmlFor="diseases-3">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-3"
-                  value="4"
-                />
-                Afecciones respiratorias
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-3"
+                value="4"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-3">Afecciones respiratorias</label>
             </div>
-            <div className="checkbox">
-              <label htmlFor="diseases-4">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-4"
-                  value="5"
-                />
-                Alergias
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-4"
+                value="5"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-4">Alergias</label>
             </div>
-            <div className="checkbox">
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-5"
+                value="6"
+                {...register("diseases")}
+              />
               <label htmlFor="diseases-5">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-5"
-                  value="6"
-                />
                 Fracturas, luxaciones o lesiones ligamentarias
               </label>
             </div>
-            <div className="checkbox">
-              <label htmlFor="diseases-6">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-6"
-                  value="7"
-                />
-                Problemas gastrointestinales
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-6"
+                value="7"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-6">Problemas gastrointestinales</label>
             </div>
-            <div clas s="checkbox">
-              <label htmlFor="diseases-7">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-7"
-                  value="8"
-                />
-                Anemia
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-7"
+                value="8"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-7">Anemia</label>
             </div>
-            <div className="checkbox">
-              <label htmlFor="diseases-8">
-                <input
-                  type="checkbox"
-                  name="diseases"
-                  id="diseases-8"
-                  value=""
-                />
-                Otra
-              </label>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="diseases-8"
+                value="9"
+                {...register("diseases")}
+              />
+              <label htmlFor="diseases-8">Otra</label>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="d-flex justify-content-between">
-        <button
-          className="btn btn-outline-secondary"
-          onClick={() => {
-            setProgress(75);
-            previousStep();
-          }}
-        >
-          Atras
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={() => {
-            setProgress(100);
-            nextStep();
-          }}
-        >
-          Enviar
-        </button>
+          <div className="d-flex justify-content-between">
+            <button
+              className="btn btn-outline-secondary"
+              onClick={() => {
+                setProgress(75);
+                previousStep();
+              }}
+            >
+              Atras
+            </button>
+            <input type="submit" className="btn btn-primary" value="Enviar" />
+          </div>
+        </form>
       </div>
     </div>
   );

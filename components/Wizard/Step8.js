@@ -1,112 +1,125 @@
+import { useForm } from "react-hook-form";
+
 export default function Step2({ nextStep, previousStep, setProgress }) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    setProgress(87.5);
+    reset();
+    nextStep();
+  };
+
   return (
     <div className="wizard-step">
       <div>
-        <h4 className="mb-3 text-center">
-          ¿Cuál de estas actividades te gusta o te gustaría realizar?{" "}
-        </h4>
-        <div className="col-md-12 form-group mb-3">
-          <div className="checkbox">
-            <label htmlFor="activities-0">
+        <h2 className="mb-3 text-center">Cuentanos sobre ti </h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="mb-3">
+            <label htmlFor="activities">
+              ¿Cuál de estas actividades te gusta o te gustaría realizar?
+            </label>
+            <div className="form-check">
               <input
                 type="checkbox"
-                name="activities"
+                className="form-check-input"
                 id="activities-0"
                 value="1"
+                {...register("activities")}
               />
-              Entrenamiento Funcional
-            </label>
-          </div>
-          <div className="checkbox">
-            <label htmlFor="activities-1">
+              <label htmlFor="activities-0">Entrenamiento Funcional</label>
+            </div>
+            <div className="form-check">
               <input
                 type="checkbox"
-                name="activities"
+                className="form-check-input"
                 id="activities-1"
                 value="2"
+                {...register("activities")}
               />
-              Crossfit
-            </label>
-          </div>
-          <div className="checkbox">
-            <label htmlFor="activities-2">
+              <label htmlFor="activities-1">Crossfit</label>
+            </div>
+            <div className="form-check">
               <input
                 type="checkbox"
-                name="activities"
+                className="form-check-input"
                 id="activities-2"
                 value="3"
+                {...register("activities")}
               />
-              Yoga
-            </label>
-          </div>
-          <div className="checkbox">
-            <label htmlFor="activities-3">
+              <label htmlFor="activities-2">Yoga</label>
+            </div>
+            <div className="form-check">
               <input
                 type="checkbox"
-                name="activities"
+                className="form-check-input"
                 id="activities-3"
                 value="4"
+                {...register("activities")}
               />
-              Pilates
-            </label>
-          </div>
-          <div className="checkbox">
-            <label htmlFor="activities-4">
+              <label htmlFor="activities-3">Pilates</label>
+            </div>
+            <div className="form-check">
               <input
                 type="checkbox"
-                name="activities"
+                className="form-check-input"
                 id="activities-4"
                 value="5"
+                {...register("activities")}
               />
-              Running
-            </label>
+              <label htmlFor="activities-4">Running</label>
+            </div>
           </div>
-        </div>
-        <h4 className="mb-3 text-center">
-          ¿Cuál es tu actividad de relajación favorita?{" "}
-        </h4>
-        <div className="col-md-12 form-group mb-3 mt-3">
-          <textarea
-            className="form-control"
-            name="relaxActivities"
-            required
-          ></textarea>
-        </div>
-        <h4 className="mb-3 text-center">
-          ¿Cuál es tu actividad de relajación favorita?{" "}
-        </h4>
-        <div className="col-md-12 form-group mb-3">
-          <div className="col-md-12">
-            <select id="investment" name="investment" className="form-control">
+          <div className="mb-3">
+            <label htmlFor="relaxActivities">
+              ¿Cuál es tu actividad de relajación favorita?
+            </label>
+            <textarea
+              className={`form-control ${
+                errors.relaxActivities ? "is-invalid" : ""
+              }`}
+              {...register("relaxActivities", { required: true })}
+            ></textarea>
+            <div className="invalid-feedback">Este valor es requerido.</div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="investment">
+              ¿Cuánto tiempo semanal estás dispuesto a invertir? Mente y cuerpo,
+              no te olvides!
+            </label>
+            <select
+              className={`form-select ${errors.investment ? "is-invalid" : ""}`}
+              {...register("investment", { required: true })}
+            >
               <option value="1">Una hora o menos</option>
               <option value="2">Hasta dos horas</option>
               <option value="3">Hasta cinco horas</option>
               <option value="4">Hasta diez horas</option>
               <option value="5">¡Lo que haga falta!!!</option>
             </select>
+            <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
-        </div>
-      </div>
-
-      <div className="d-flex justify-content-between">
-        <button
-          className="btn btn-outline-secondary"
-          onClick={() => {
-            setProgress(62.5);
-            previousStep();
-          }}
-        >
-          Atras
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={() => {
-            setProgress(87.5);
-            nextStep();
-          }}
-        >
-          Continuar
-        </button>
+          <div className="d-flex justify-content-between">
+            <button
+              className="btn btn-outline-secondary"
+              onClick={() => {
+                setProgress(62.5);
+                previousStep();
+              }}
+            >
+              Atras
+            </button>
+            <input
+              type="submit"
+              className="btn btn-primary"
+              value="Continuar"
+            />
+          </div>
+        </form>
       </div>
     </div>
   );
