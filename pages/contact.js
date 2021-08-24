@@ -1,8 +1,38 @@
 import LayoutSimple from "components/LayoutSimple";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    setIsLoading(true);
+    fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setIsLoading(false);
+        toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
+        console.log(data);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        toast.error("Ups algo paso, intenta nuevamente!");
+      });
+  };
+
   return (
     <LayoutSimple title="Hablemos!">
+      <Toaster />
       <main id="main">
         <section className="section">
           <div className="container">
@@ -36,59 +66,76 @@ export default function Contact() {
               </div>
 
               <div className="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
-                <form className="php-email-form" id="contact-form">
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="row">
                     <div className="col-md-6 form-group">
                       <label htmlFor="name">Nombre</label>
                       <input
-                        type="text"
-                        name="name"
-                        className="form-control"
-                        required
+                        className={`form-control ${
+                          errors.name ? "is-invalid" : ""
+                        }`}
+                        {...register("name", { required: true })}
                       />
+                      <div className="invalid-feedback">
+                        Este valor es requerido.
+                      </div>
                     </div>
                     <div className="col-md-6 form-group mt-3 mt-md-0">
                       <label htmlFor="email">Email</label>
                       <input
                         type="email"
-                        className="form-control"
-                        name="email"
-                        required
+                        className={`form-control ${
+                          errors.email ? "is-invalid" : ""
+                        }`}
+                        {...register("email", { required: true })}
                       />
+                      <div className="invalid-feedback">
+                        Este valor es requerido.
+                      </div>
                     </div>
                     <div className="col-md-12 form-group mt-3">
                       <label htmlFor="subject">Asunto</label>
                       <input
-                        type="text"
-                        className="form-control"
-                        name="subject"
-                        required
+                        className={`form-control ${
+                          errors.subject ? "is-invalid" : ""
+                        }`}
+                        {...register("subject", { required: true })}
                       />
+                      <div className="invalid-feedback">
+                        Este valor es requerido.
+                      </div>
                     </div>
-                    <div className="col-md-12 form-group mt-3">
+                    <div className="col-md-12 form-group mt-3 mb-4">
                       <label htmlFor="name">Mensaje</label>
                       <textarea
-                        className="form-control"
-                        name="message"
-                        required
+                        className={`form-control ${
+                          errors.message ? "is-invalid" : ""
+                        }`}
+                        {...register("message", { required: true })}
                       ></textarea>
-                    </div>
-                    <input id="timestamp" type="hidden" name="timestamp" />
-                    <div className="col-md-12 mb-3">
-                      <div className="loading">Cargando</div>
-                      <div className="error-message"></div>
-                      <div className="sent-message">
-                        Tu mensaje ha sido enviado. Muchas gracias!
+                      <div className="invalid-feedback">
+                        Este valor es requerido.
                       </div>
                     </div>
 
-                    <div className="col-md-6 form-group">
-                      <input
+                    <div className="d-grid gap-2">
+                      <button
                         type="submit"
-                        className="btn btn-primary d-block w-100"
-                        value="Enviar"
-                        id="submit-form"
-                      />
+                        className="btn btn-primary "
+                        disabled={isLoading ? true : false}
+                      >
+                        {isLoading && (
+                          <>
+                            <span
+                              className="spinner-border spinner-border-sm mr-1"
+                              role="status"
+                              aria-hidden="true"
+                            ></span>
+                            <span className="visually-hidden">Loading...</span>
+                          </>
+                        )}{" "}
+                        Enviar
+                      </button>
                     </div>
                   </div>
                 </form>
