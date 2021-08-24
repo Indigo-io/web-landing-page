@@ -1,6 +1,14 @@
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useState } from "react";
 
-export default function Step2({ nextStep, previousStep, setProgress }) {
+export default function Step2({
+  nextStep,
+  previousStep,
+  setProgress,
+  dispatch,
+}) {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -8,10 +16,26 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
-    setProgress(12.5);
-    reset();
-    nextStep();
+    setIsLoading(true);
+    const url =
+      "https://script.google.com/macros/s/AKfycbwowDiLeL7tuiwWwcSG0Q3OW_G6qpeU03BfmglrjQ6USAdtuKKmbvS9pNOf92fkSdqw/exec";
+    const formData = new FormData();
+    const arrayData = Object.entries(data);
+
+    arrayData.forEach((item) => {
+      formData.append(item[0], item[1]);
+    });
+    axios
+      .post(url, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((result) => {
+        dispatch({ type: "update", payload: data });
+        setProgress(12.5);
+        reset();
+        nextStep();
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -63,11 +87,23 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
             >
               Atras
             </button>
-            <input
+            <button
               type="submit"
               className="btn btn-primary"
-              value="Continuar"
-            />
+              disabled={isLoading ? true : false}
+            >
+              {isLoading && (
+                <>
+                  <span
+                    className="spinner-border spinner-border-sm mr-1"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Loading...</span>
+                </>
+              )}{" "}
+              Continuar
+            </button>
           </div>
         </form>
       </div>

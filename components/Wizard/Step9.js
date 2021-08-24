@@ -1,11 +1,44 @@
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
-export default function Step9({ nextStep, previousStep, setProgress }) {
+export default function Step9({
+  previousStep,
+  setProgress,
+  dispatch,
+  state,
+  firstStep,
+}) {
+  const [isLoading, setIsLoading] = useState(false);
+
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    setIsLoading(true);
+    dispatch({ type: "update", payload: data });
     setProgress(100);
-    reset();
+    const url =
+      "https://script.google.com/macros/s/AKfycbwowDiLeL7tuiwWwcSG0Q3OW_G6qpeU03BfmglrjQ6USAdtuKKmbvS9pNOf92fkSdqw/exec";
+    const formData = new FormData();
+    const arrayData = Object.entries(state);
+
+    arrayData.forEach((item) => {
+      formData.append(item[0], item[1]);
+    });
+    axios
+      .post(url, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((result) => {
+        toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
+        reset();
+        firstStep();
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        toast.error("Ups algo paso, intenta nuevamente!");
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -22,7 +55,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-0"
-                value="1"
+                value="Problemas de presión arterial"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-0">Problemas de presión arterial</label>
@@ -32,7 +65,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-1"
-                value="2"
+                value="Hipo/hiper tiroidismo"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-1">Hipo/hiper tiroidismo</label>
@@ -42,7 +75,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-2"
-                value="3"
+                value="Afecciones cardíacas"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-2">Afecciones cardíacas</label>
@@ -52,7 +85,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-3"
-                value="4"
+                value="Afecciones respiratorias"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-3">Afecciones respiratorias</label>
@@ -62,7 +95,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-4"
-                value="5"
+                value="Alergias"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-4">Alergias</label>
@@ -72,7 +105,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-5"
-                value="6"
+                value="Fracturas, luxaciones o lesiones ligamentarias"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-5">
@@ -84,7 +117,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-6"
-                value="7"
+                value="Problemas gastrointestinales"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-6">Problemas gastrointestinales</label>
@@ -94,7 +127,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-7"
-                value="8"
+                value="Anemia"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-7">Anemia</label>
@@ -104,7 +137,7 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="diseases-8"
-                value="9"
+                value="Otra"
                 {...register("diseases")}
               />
               <label htmlFor="diseases-8">Otra</label>
@@ -120,7 +153,23 @@ export default function Step9({ nextStep, previousStep, setProgress }) {
             >
               Atras
             </button>
-            <input type="submit" className="btn btn-primary" value="Enviar" />
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={isLoading ? true : false}
+            >
+              {isLoading && (
+                <>
+                  <span
+                    className="spinner-border spinner-border-sm mr-1"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Loading...</span>
+                </>
+              )}{" "}
+              Enviar
+            </button>
           </div>
         </form>
       </div>

@@ -9,10 +9,27 @@ import Step6 from "components/Wizard/Step6";
 import Step7 from "components/Wizard/Step7";
 import Step8 from "components/Wizard/Step8";
 import Step9 from "components/Wizard/Step9";
-import { useState } from "react";
+import { useState, useReducer } from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function StartNow() {
   const [progress, setProgress] = useState(0);
+  const initialState = {};
+
+  function reducer(state, action) {
+    switch (action.type) {
+      case "update":
+        return {
+          ...state,
+          ...action.payload,
+        };
+      default:
+        throw new Error();
+    }
+  }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <LayoutSimple title="Tu cambio empieza ahora!">
       <main id="main">
@@ -31,20 +48,26 @@ export default function StartNow() {
                 </div>
                 <StepWizard>
                   <Step1 />
-                  <Step2 setProgress={setProgress} />
-                  <Step3 setProgress={setProgress} />
-                  <Step4 setProgress={setProgress} />
-                  <Step5 setProgress={setProgress} />
-                  <Step6 setProgress={setProgress} />
-                  <Step7 setProgress={setProgress} />
-                  <Step8 setProgress={setProgress} />
-                  <Step9 setProgress={setProgress} />
+                  <Step2 setProgress={setProgress} dispatch={dispatch} />
+                  <Step3 setProgress={setProgress} dispatch={dispatch} />
+                  <Step4 setProgress={setProgress} dispatch={dispatch} />
+                  <Step5 setProgress={setProgress} dispatch={dispatch} />
+                  <Step6 setProgress={setProgress} dispatch={dispatch} />
+                  <Step7 setProgress={setProgress} dispatch={dispatch} />
+                  <Step8 setProgress={setProgress} dispatch={dispatch} />
+                  <Step9
+                    setProgress={setProgress}
+                    state={state}
+                    dispatch={dispatch}
+                  />
                 </StepWizard>
               </div>
             </div>
           </div>
         </section>
       </main>
+
+      <Toaster />
     </LayoutSimple>
   );
 }

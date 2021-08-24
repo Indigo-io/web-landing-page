@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 
-export default function Step7({ nextStep, previousStep, setProgress }) {
+export default function Step7({
+  nextStep,
+  previousStep,
+  setProgress,
+  dispatch,
+}) {
   const {
     register,
     handleSubmit,
@@ -8,7 +13,7 @@ export default function Step7({ nextStep, previousStep, setProgress }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch({ type: "update", payload: data });
     setProgress(75);
     reset();
     nextStep();
@@ -161,14 +166,13 @@ export default function Step7({ nextStep, previousStep, setProgress }) {
 
           <div className="mb-3">
             <label htmlFor="foodChanges">
-              ¿Qué tan estresado/a te sentís últimamente?
+              ¿Te gustaría cambiar algo de tu alimentación?
             </label>
             <div className="form-check">
               <input
                 type="checkbox"
-                name="foodChanges"
                 id="foodChanges-0"
-                value="1"
+                value="Incluir más alimentos"
                 className="form-check-input"
                 {...register("foodChanges")}
               />
@@ -177,9 +181,8 @@ export default function Step7({ nextStep, previousStep, setProgress }) {
             <div className="form-check">
               <input
                 type="checkbox"
-                name="foodChanges"
                 id="foodChanges-1"
-                value="2"
+                value="Dejar de comer algún alimento (ej carne, procesados, lácteos)"
                 className="form-check-input"
                 {...register("foodChanges")}
               />
@@ -190,9 +193,8 @@ export default function Step7({ nextStep, previousStep, setProgress }) {
             <div className="form-check">
               <input
                 type="checkbox"
-                name="foodChanges"
                 id="foodChanges-2"
-                value="3"
+                value="Organizar mejor las comidas"
                 className="form-check-input"
                 {...register("foodChanges")}
               />
@@ -201,9 +203,8 @@ export default function Step7({ nextStep, previousStep, setProgress }) {
             <div className="form-check">
               <input
                 type="checkbox"
-                name="foodChanges"
                 id="foodChanges-3"
-                value="4"
+                value="Hacer preparaciones diferentes"
                 className="form-check-input"
                 {...register("foodChanges")}
               />
@@ -214,9 +215,8 @@ export default function Step7({ nextStep, previousStep, setProgress }) {
             <div className="form-check">
               <input
                 type="checkbox"
-                name="foodChanges"
                 id="foodChanges-4"
-                value="5"
+                value="Mejorar la hidratación"
                 className="form-check-input"
                 {...register("foodChanges")}
               />

@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 
-export default function Step6({ nextStep, previousStep, setProgress }) {
+export default function Step6({
+  nextStep,
+  previousStep,
+  setProgress,
+  dispatch,
+}) {
   const {
     register,
     handleSubmit,
@@ -8,7 +13,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch({ type: "update", payload: data });
     setProgress(62.5);
     reset();
     nextStep();
@@ -26,7 +31,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-0"
-                value="1"
+                value="Te distraes facilmente"
                 {...register("focus")}
               />
               <label htmlFor="focus-0">Te distraes facilmente</label>
@@ -36,7 +41,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-1"
-                value="2"
+                value="Te cuesta mantener la concentración en una tarea"
                 {...register("focus")}
               />
               <label htmlFor="focus-1">
@@ -48,7 +53,8 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-2"
-                value="3"
+                value="Tenés dificultad para concentrarte cuando hay otros estímulos a
+                tu alrededor"
                 {...register("focus")}
               />
               <label htmlFor="focus-2">
@@ -61,7 +67,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-3"
-                value="4"
+                value="Perdes el hilo de conversación cuando hablas con alguien"
               />
               <label htmlFor="focus-3">
                 Perdes el hilo de conversación cuando hablas con alguien
@@ -72,7 +78,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-4"
-                value="5"
+                value="Te cuesta hacer mas de una tarea a la vez de manera eficiente"
                 {...register("focus")}
               />
               <label htmlFor="focus-4">
@@ -84,7 +90,8 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-5"
-                value="6"
+                value="Si te distraes... no podes volver a concentrarte en lo que
+                estabas haciendo"
                 {...register("focus")}
               />
               <label htmlFor="focus-5">
@@ -97,7 +104,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-6"
-                value="7"
+                value='Sentís que tu cerebro funciona a un "ritmo mas bajo"'
                 {...register("focus")}
               />
               <label htmlFor="focus-6">
@@ -109,7 +116,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="focus-7"
-                value="8"
+                value="Ninguna de las anteriores"
                 {...register("focus")}
               />
               <label htmlFor="focus-7">Ninguna de las anteriores</label>
@@ -123,7 +130,8 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="memory-0"
-                value="1"
+                value="Repetís las preguntas una y otra vez porque no recordás haberlas
+                hecho"
                 {...register("memory")}
               />
               <label htmlFor="memory-0">
@@ -136,7 +144,8 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="memory-1"
-                value="2"
+                value="No recordás con facilidad conversaciones que tuviste hace unos
+                minutos"
                 {...register("memory")}
               />
               <label htmlFor="memory-1">
@@ -149,7 +158,8 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="memory-2"
-                value="3"
+                value="Sentís que en el último tiempo tuviste más dificultades para
+                recordar información"
                 {...register("memory")}
               />
               <label htmlFor="memory-2">
@@ -162,7 +172,8 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="memory-3"
-                value="4"
+                value="Te cuesta recordar la ubicación y la posición de los objetos en
+                tu casa, oficina, etc."
                 {...register("memory")}
               />
               <label htmlFor="memory-3">
@@ -175,7 +186,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="memory-4"
-                value="5"
+                value="Perdés y te olvidas las cosas"
                 {...register("memory")}
               />
               <label htmlFor="memory-4">Perdés y te olvidas las cosas</label>
@@ -185,7 +196,7 @@ export default function Step6({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="memory-5"
-                value="6"
+                value="Ninguna de las anteriores6"
                 {...register("memory")}
               />
               <label htmlFor="memory-5">Ninguna de las anteriores</label>

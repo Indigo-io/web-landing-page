@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 
-export default function Step2({ nextStep, previousStep, setProgress }) {
+export default function Step2({
+  nextStep,
+  previousStep,
+  setProgress,
+  dispatch,
+}) {
   const {
     register,
     handleSubmit,
@@ -8,7 +13,7 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch({ type: "update", payload: data });
     setProgress(87.5);
     reset();
     nextStep();
@@ -28,7 +33,7 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="activities-0"
-                value="1"
+                value="Entrenamiento Funcional"
                 {...register("activities")}
               />
               <label htmlFor="activities-0">Entrenamiento Funcional</label>
@@ -38,7 +43,7 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="activities-1"
-                value="2"
+                value="Crossfit"
                 {...register("activities")}
               />
               <label htmlFor="activities-1">Crossfit</label>
@@ -48,7 +53,7 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="activities-2"
-                value="3"
+                value="Yoga"
                 {...register("activities")}
               />
               <label htmlFor="activities-2">Yoga</label>
@@ -58,7 +63,7 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="activities-3"
-                value="4"
+                value="Pilates"
                 {...register("activities")}
               />
               <label htmlFor="activities-3">Pilates</label>
@@ -68,7 +73,7 @@ export default function Step2({ nextStep, previousStep, setProgress }) {
                 type="checkbox"
                 className="form-check-input"
                 id="activities-4"
-                value="5"
+                value="Running"
                 {...register("activities")}
               />
               <label htmlFor="activities-4">Running</label>

@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 
-export default function Step4({ nextStep, previousStep, setProgress }) {
+export default function Step4({
+  nextStep,
+  previousStep,
+  setProgress,
+  dispatch,
+}) {
   const {
     register,
     handleSubmit,
@@ -8,7 +13,7 @@ export default function Step4({ nextStep, previousStep, setProgress }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch({ type: "update", payload: data });
     setProgress(37.5);
     reset();
     nextStep();

@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 
-export default function Step5({ nextStep, previousStep, setProgress }) {
+export default function Step5({
+  nextStep,
+  previousStep,
+  setProgress,
+  dispatch,
+}) {
   const {
     register,
     handleSubmit,
@@ -8,7 +13,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch({ type: "update", payload: data });
     setProgress(50);
     reset();
     nextStep();
@@ -27,7 +32,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-0"
-                value="1"
+                value="Manejar mejor tus niveles de ansiedad"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -40,7 +45,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-1"
-                value="2"
+                value="Descubrir nuevos entrenamientos"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -52,7 +57,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-2"
-                value="3"
+                value="Tener más energía"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -64,7 +69,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-3"
-                value="4"
+                value="Subir de peso"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -76,7 +81,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-4"
-                value="5"
+                value="Mejorar tu desarrollo profesional"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -88,7 +93,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-5"
-                value="6"
+                value="Fortalecer tus relaciones personales"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -100,7 +105,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-6"
-                value="7"
+                value="Mejorar tu alimentación"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -112,7 +117,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-7"
-                value="8"
+                value="Sentirte mejor con tu cuerpo"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -124,7 +129,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-8"
-                value="9"
+                value="Bajar de peso"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -136,7 +141,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-9"
-                value="10"
+                value="Mejorar tus hábitos de sueño"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -148,7 +153,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-10"
-                value="11"
+                value="Aprender a desconectar tu cerebro"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -160,7 +165,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-11"
-                value="12"
+                value="Organizar mejor tu rutina diaria"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -172,7 +177,7 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               <input
                 type="checkbox"
                 id="motivation-12"
-                value="13"
+                value="Otro"
                 className="form-check-input"
                 {...register("motivation")}
               />
@@ -192,19 +197,37 @@ export default function Step5({ nextStep, previousStep, setProgress }) {
               }`}
               {...register("top_motivation", { required: true })}
             >
-              <option value="1">Manejar mejor tus niveles de ansiedad</option>
-              <option value="2">Descubrir nuevos entrenamientos</option>
-              <option value="3">Tener más energía</option>
-              <option value="4">Subir de peso</option>
-              <option value="5">Mejorar tu desarrollo profesional</option>
-              <option value="6">Fortalecer tus relaciones personales</option>
-              <option value="7">Mejorar tu alimentación</option>
-              <option value="8">Sentirte mejor con tu cuerpo</option>
-              <option value="9">Bajar de peso</option>
-              <option value="10">Mejorar tus hábitos de sueño</option>
-              <option value="11">Aprender a desconectar tu cerebro</option>
-              <option value="12">Organizar mejor tu rutina diaria</option>
-              <option value="13">Otro</option>
+              <option value="Manejar mejor tus niveles de ansiedad">
+                Manejar mejor tus niveles de ansiedad
+              </option>
+              <option value="Descubrir nuevos entrenamientos">
+                Descubrir nuevos entrenamientos
+              </option>
+              <option value="Tener más energía">Tener más energía</option>
+              <option value="Subir de peso">Subir de peso</option>
+              <option value="Mejorar tu desarrollo profesional">
+                Mejorar tu desarrollo profesional
+              </option>
+              <option value="Fortalecer tus relaciones personales">
+                Fortalecer tus relaciones personales
+              </option>
+              <option value="Mejorar tu alimentación">
+                Mejorar tu alimentación
+              </option>
+              <option value="Sentirte mejor con tu cuerpo">
+                Sentirte mejor con tu cuerpo
+              </option>
+              <option value="Bajar de peso">Bajar de peso</option>
+              <option value="Mejorar tus hábitos de sueño">
+                Mejorar tus hábitos de sueño
+              </option>
+              <option value="Aprender a desconectar tu cerebro">
+                Aprender a desconectar tu cerebro
+              </option>
+              <option value="Organizar mejor tu rutina diaria">
+                Organizar mejor tu rutina diaria
+              </option>
+              <option value="Otro">Otro</option>
             </select>
           </div>
           <div className="d-flex justify-content-between">
