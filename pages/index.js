@@ -175,8 +175,8 @@ export default function Home() {
               data-aos="fade"
             >
               <div className="row">
-                <div className="col-md-4">
-                  <div className="step" style={{ height: "300px !important" }}>
+                <div className="col-md-12 col-lg-4">
+                  <div className="step">
                     <span className="number">01</span>
                     <h3>Conocer tus motivaciones</h3>
                     <p>
@@ -186,8 +186,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="step" style={{ height: "300px !important" }}>
+                <div className="col-md-12 col-lg-4">
+                  <div className="step">
                     <span className="number">02</span>
                     <h3>Crear programa</h3>
                     <p>
@@ -199,8 +199,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="step" style={{ height: "300px !important" }}>
+                <div className="col-md-12 col-lg-4">
+                  <div className="step">
                     <span className="number">03</span>
                     <h3>Fundamentos y seguimiento</h3>
                     <p>
