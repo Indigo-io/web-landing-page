@@ -23,7 +23,7 @@ export default function Layout({ children }) {
         />
         <link href="images/webclip.png" rel="apple-touch-icon" />
 
-        <link href="/img/favicon.png" rel="icon" />
+        <link href="/favicon.ico" rel="icon" />
         <link href="/img/apple-touch-icon.png" rel="apple-touch-icon" />
       </Head>
       <Header paths={paths} />

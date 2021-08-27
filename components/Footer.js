@@ -37,7 +37,7 @@ export default function Footer() {
               <div className="col-md-4 mb-4 mb-md-0">
                 <h3>Mail</h3>
                 <ul className="list-unstyled">
-                  <p>ipa@indigobalance.com</p>
+                  <p>info@indigobalance.com</p>
                 </ul>
               </div>
               <div className="col-md-4 mb-4 mb-md-0">
