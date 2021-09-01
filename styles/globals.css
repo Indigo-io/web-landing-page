@@ -1083,12 +1083,13 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);# Hero Section
 .image-hero {
   width: 30rem;
 }
-
-@media (max-width: 767px) {
+@media (max-width: 990px) {
   .image-hero {
-    width: 25rem;
+    width: 20rem;
   }
+}
 
+@media (max-width: 768px) {
   .btn-start {
     margin-top: 25px;
   }
