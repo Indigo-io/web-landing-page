@@ -339,6 +339,7 @@ section {
 .cta-section {
   background: linear-gradient(to right, #324df6 0%, #7945ef 100%);
   color: #fff;
+  padding: 7rem 1rem;
 }
 
 .cta-section h2 {
@@ -1077,4 +1078,32 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);# Hero Section
   height: 48px;
   border-radius: 0;
   border: 1px solid #dae0e5;
+}
+
+.image-hero {
+  width: 30rem;
+}
+
+@media (max-width: 767px) {
+  .image-hero {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .image-hero {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .title-hero {
+    font-size: 35px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .title-hero {
+    font-size: 30px !important;
+  }
 }
