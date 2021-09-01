@@ -82,7 +82,9 @@ export default function Home() {
           <div className="container">
             <div className="row justify-content-center text-center mb-5">
               <div className="col-md-5" data-aos="fade-up">
-                <h2 className="section-heading">Entrenamiento integral</h2>
+                <h2 className="section-heading title-secondary">
+                  Entrenamiento integral
+                </h2>
               </div>
             </div>
 
@@ -158,7 +160,10 @@ export default function Home() {
           <div className="container">
             <div className="row justify-content-center text-center">
               <div className="col-md-7 mb-5">
-                <h2 id="como_hacemos" className="section-heading">
+                <h2
+                  id="como_hacemos"
+                  className="section-heading title-secondary"
+                >
                   Cómo lo hacemos?
                 </h2>
                 <p>
@@ -227,7 +232,7 @@ export default function Home() {
                   <strong>GRATIS!</strong>
                 </span>
               </div>
-              <div className="col-md-4 mt-sm-4 text-center text-md-end">
+              <div className="col-md-4 btn-start text-center text-md-end">
                 <p>
                   <Link href="/start-now">
                     <a className="btn btn-outline-white">Empezar ahora!</a>

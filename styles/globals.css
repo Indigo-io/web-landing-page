@@ -1088,11 +1088,21 @@ box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);# Hero Section
   .image-hero {
     width: 25rem;
   }
+
+  .btn-start {
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 440px) {
   .image-hero {
     width: 15rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title-secondary {
+    font-size: 35px;
   }
 }
 
