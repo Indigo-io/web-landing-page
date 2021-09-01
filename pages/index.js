@@ -39,7 +39,7 @@ export default function Home() {
             <div className="col-12 hero-text-image">
               <div className="row">
                 <div className="col-lg-8 text-center text-lg-start">
-                  <h1 data-aos="fade-right">
+                  <h1 className="title-hero" data-aos="fade-right">
                     Mente y cuerpo conscientemente balanceados
                   </h1>
                   <p
@@ -67,8 +67,8 @@ export default function Home() {
                   <img
                     src="/img/site_ilus.png"
                     alt="Image"
-                    style={{ width: "30em" }}
                     data-aos="fade-right"
+                    className="image-hero"
                   />
                 </div>
               </div>
@@ -175,8 +175,8 @@ export default function Home() {
               data-aos="fade"
             >
               <div className="row">
-                <div className="col-md-4">
-                  <div className="step" style={{ height: "300px !important" }}>
+                <div className="col-md-12 col-lg-4">
+                  <div className="step">
                     <span className="number">01</span>
                     <h3>Conocer tus motivaciones</h3>
                     <p>
@@ -186,8 +186,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="step" style={{ height: "300px !important" }}>
+                <div className="col-md-12 col-lg-4">
+                  <div className="step">
                     <span className="number">02</span>
                     <h3>Crear programa</h3>
                     <p>
@@ -199,8 +199,8 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4">
-                  <div className="step" style={{ height: "300px !important" }}>
+                <div className="col-md-12 col-lg-4">
+                  <div className="step">
                     <span className="number">03</span>
                     <h3>Fundamentos y seguimiento</h3>
                     <p>
@@ -227,7 +227,7 @@ export default function Home() {
                   <strong>GRATIS!</strong>
                 </span>
               </div>
-              <div className="col-md-4 text-left text-md-end">
+              <div className="col-md-4 mt-sm-4 text-center text-md-end">
                 <p>
                   <Link href="/start-now">
                     <a className="btn btn-outline-white">Empezar ahora!</a>
