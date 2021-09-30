@@ -46,9 +46,9 @@ export default function Step2({
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="name">¿Cuál es tu nombre y apellido?</label>
+            <label htmlFor="name">Nombre</label>
             <input
-              placeholder="Ej: Juan Gomez"
+              placeholder="Ej: Juan"
               name="name"
               className={`form-control ${errors.name ? "is-invalid" : ""}`}
               {...register("name", { required: true })}
@@ -56,12 +56,22 @@ export default function Step2({
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="name">Correo electrónico</label>
+            <label htmlFor="lastName">Apellido</label>
+            <input
+              placeholder="Ej: Gomez"
+              name="lastName"
+              className={`form-control ${errors.lastName ? "is-invalid" : ""}`}
+              {...register("lastName", { required: true })}
+            />
+            <div className="invalid-feedback">Este valor es requerido.</div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email">Correo electrónico</label>
             <input
               type="email"
               name="email"
               placeholder="Ej: juangomez@email.com"
-              className={`form-control ${errors.name ? "is-invalid" : ""}`}
+              className={`form-control ${errors.email ? "is-invalid" : ""}`}
               {...register("email", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
@@ -72,7 +82,7 @@ export default function Step2({
               name="tel"
               type="text"
               placeholder="Ej: 1155555555"
-              className={`form-control ${errors.name ? "is-invalid" : ""}`}
+              className={`form-control ${errors.tel ? "is-invalid" : ""}`}
               {...register("tel", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>

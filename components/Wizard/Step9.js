@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
@@ -17,23 +16,22 @@ export default function Step9({
     setIsLoading(true);
     dispatch({ type: "update", payload: data });
     setProgress(100);
-    const url =
-      "https://script.google.com/macros/s/AKfycbwowDiLeL7tuiwWwcSG0Q3OW_G6qpeU03BfmglrjQ6USAdtuKKmbvS9pNOf92fkSdqw/exec";
-    const formData = new FormData();
-    const arrayData = Object.entries(state);
 
-    arrayData.forEach((item) => {
-      formData.append(item[0], item[1]);
-    });
-    axios
-      .post(url, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      })
-      .then((result) => {
-        toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
-        reset();
-        firstStep();
-        setIsLoading(false);
+    fetch("/api/firebase", {
+      method: "POST",
+      body: JSON.stringify(state),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        fetch("/api/calendar", {
+          method: "POST",
+          body: JSON.stringify(state),
+        }).then((response) => {
+          toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
+          reset();
+          firstStep();
+          setIsLoading(false);
+        });
       })
       .catch((err) => {
         toast.error("Ups algo paso, intenta nuevamente!");
