@@ -9,6 +9,7 @@ import Step6 from "components/Wizard/Step6";
 import Step7 from "components/Wizard/Step7";
 import Step8 from "components/Wizard/Step8";
 import Step9 from "components/Wizard/Step9";
+import Step10 from "components/Wizard/Step10";
 import { useState, useReducer } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -60,6 +61,7 @@ export default function StartNow() {
                     state={state}
                     dispatch={dispatch}
                   />
+                  <Step10 />
                 </StepWizard>
               </div>
             </div>

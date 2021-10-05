@@ -22,12 +22,9 @@ export default function Step2({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="activities">
-              ¿Cuál de estas actividades te gusta o te gustaría realizar?
-            </label>
+            <h3>¿Cuál de estas actividades te gusta o te gustaría realizar?</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -80,9 +77,7 @@ export default function Step2({
             </div>
           </div>
           <div className="mb-3">
-            <label htmlFor="relaxActivities">
-              ¿Cuál es tu actividad de relajación favorita?
-            </label>
+            <h3>¿Cuál es tu actividad de relajación favorita?</h3>
             <textarea
               className={`form-control ${
                 errors.relaxActivities ? "is-invalid" : ""
@@ -92,10 +87,10 @@ export default function Step2({
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="investment">
+            <h3>
               ¿Cuánto tiempo semanal estás dispuesto a invertir? Mente y cuerpo,
               no te olvides!
-            </label>
+            </h3>
             <select
               className={`form-select ${errors.investment ? "is-invalid" : ""}`}
               {...register("investment", { required: true })}

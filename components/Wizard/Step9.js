@@ -7,7 +7,7 @@ export default function Step9({
   setProgress,
   dispatch,
   state,
-  firstStep,
+  nextStep,
 }) {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,7 +29,7 @@ export default function Step9({
         }).then((response) => {
           toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
           reset();
-          firstStep();
+          nextStep();
           setIsLoading(false);
         });
       })
@@ -42,12 +42,11 @@ export default function Step9({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="diseases">
+            <h3>
               Por último ¿Tenés alguna enfermedad o condición clínica de base?
-            </label>
+            </h3>
             <div className="form-check">
               <input
                 type="checkbox"

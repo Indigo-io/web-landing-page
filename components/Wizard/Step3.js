@@ -22,12 +22,11 @@ export default function Step3({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="age">¿Cuál es tu edad?</label>
+            <h3>¿Cuál es tu fecha de nacimiento?</h3>
             <input
-              type="number"
+              type="date"
               placeholder="Ej: 30"
               className={`form-control ${errors.age ? "is-invalid" : ""}`}
               {...register("age", { required: true })}
@@ -36,15 +35,15 @@ export default function Step3({
           </div>
 
           <div className="mb-1">
-            <label htmlFor="gender">
-              ¿Con qué género te sentís identificado?
-            </label>
+            <h3>¿Con qué género te sentís identificado?</h3>
             <div className="mb-2 form-check">
               <input
                 type="radio"
                 id="gender-0"
                 value="Mujer"
-                className={`form-check-input ${errors.age ? "is-invalid" : ""}`}
+                className={`form-check-input ${
+                  errors.gender ? "is-invalid" : ""
+                }`}
                 {...register("gender", { required: true })}
               />
               <label className="form-check-label" htmlFor="genero-0">
@@ -56,7 +55,9 @@ export default function Step3({
                 type="radio"
                 id="gender-1"
                 value="Hombre"
-                className={`form-check-input ${errors.age ? "is-invalid" : ""}`}
+                className={`form-check-input ${
+                  errors.gender ? "is-invalid" : ""
+                }`}
                 {...register("gender", { required: true })}
               />
               <label className="form-check-label" htmlFor="genero-1">
@@ -68,7 +69,9 @@ export default function Step3({
                 type="radio"
                 id="gender-4"
                 value="Otro"
-                className={`form-check-input ${errors.age ? "is-invalid" : ""}`}
+                className={`form-check-input ${
+                  errors.gender ? "is-invalid" : ""
+                }`}
                 {...register("gender", { required: true })}
               />
               <label className="form-check-label" htmlFor="genero-4">
@@ -80,7 +83,9 @@ export default function Step3({
                 type="radio"
                 id="gender-2"
                 value="Prefiero no decirlo"
-                className={`form-check-input ${errors.age ? "is-invalid" : ""}`}
+                className={`form-check-input ${
+                  errors.gender ? "is-invalid" : ""
+                }`}
                 {...register("gender", { required: true })}
               />
               <label className="form-check-label" htmlFor="genero-2">
@@ -90,7 +95,7 @@ export default function Step3({
           </div>
 
           <div className="mb-3">
-            <label htmlFor="profession">¿Cuál es tu profesión? </label>
+            <h3>¿Cuál es tu profesión? </h3>
             <input
               placeholder="Ej: Abogado"
               className={`form-control ${
@@ -101,7 +106,7 @@ export default function Step3({
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="household">¿Con quién(es) vivís? </label>
+            <h3>¿Con quién(es) vivís? </h3>
             <input
               placeholder="Ej: Familia"
               className={`form-control ${errors.household ? "is-invalid" : ""}`}

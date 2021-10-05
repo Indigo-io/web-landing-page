@@ -22,12 +22,9 @@ export default function Step4({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="height">
-              ¿Cuánto medís? Si no te acordás, aproximado.
-            </label>
+            <h3>¿Cuánto medís? Si no te acordás, aproximado.</h3>
             <div className="input-group">
               <input
                 type="number"
@@ -41,13 +38,12 @@ export default function Step4({
           </div>
 
           <div className="mb-3">
-            <label htmlFor="weight">
-              ¿Cuánto pesas? Si no te acordás, aproximado.
-            </label>
+            <h3>¿Cuánto pesas? Si no te acordás, aproximado.</h3>
             <div className="input-group">
               <input
                 name="weight"
                 type="number"
+                step="0.1"
                 placeholder="Ej: 85"
                 className={`form-control ${errors.weight ? "is-invalid" : ""}`}
                 {...register("weight", { required: true })}

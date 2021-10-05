@@ -22,12 +22,9 @@ export default function Step5({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="motivation">
-              Cuál de estos tópicos te gustaría que trabajemos juntos.
-            </label>
+            <h3>Cuál de estos tópicos te gustaría que trabajemos juntos.</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -188,9 +185,7 @@ export default function Step5({
           </div>
 
           <div className="mb-3">
-            <label htmlFor="top_motivation">
-              De las opciones que elegiste ¿Cuál es la más importante?
-            </label>
+            <h3>De las opciones que elegiste ¿Cuál es la más importante?</h3>
             <select
               className={`form-select ${
                 errors.top_motivation ? "is-invalid" : ""

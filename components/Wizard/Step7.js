@@ -22,12 +22,9 @@ export default function Step7({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="focus">
-              ¿Cómo describirías tu alimentación actual?
-            </label>
+            <h3>¿Cómo describirías tu alimentación actual?</h3>
             <div className="col-md-12">
               <div className="form-check form-check-inline">
                 <input
@@ -165,9 +162,7 @@ export default function Step7({
           </div>
 
           <div className="mb-3">
-            <label htmlFor="foodChanges">
-              ¿Te gustaría cambiar algo de tu alimentación?
-            </label>
+            <h3>¿Te gustaría cambiar algo de tu alimentación?</h3>
             <div className="form-check">
               <input
                 type="checkbox"

@@ -22,10 +22,9 @@ export default function Step6({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="focus">Si pensamos en la atención...</label>
+            <h3>Si pensamos en la atención...</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -124,7 +123,7 @@ export default function Step6({
           </div>
 
           <div className="mb-3">
-            <label htmlFor="memory">Y si pensamos en la memoria...</label>
+            <h3>Y si pensamos en la memoria...</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -204,9 +203,7 @@ export default function Step6({
           </div>
 
           <div className="mb-3">
-            <label htmlFor="stress">
-              ¿Qué tan estresado/a te sentís últimamente?
-            </label>
+            <h3>¿Qué tan estresado/a te sentís últimamente?</h3>
             <div className="col-md-12">
               <div className="form-check form-check-inline">
                 <input
