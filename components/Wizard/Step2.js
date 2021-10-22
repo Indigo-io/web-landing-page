@@ -15,6 +15,7 @@ export default function Step2({
     formState: { errors },
     reset,
   } = useForm();
+
   const onSubmit = (data) => {
     setIsLoading(true);
     const url =
@@ -86,6 +87,14 @@ export default function Step2({
               {...register("tel", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
+          </div>
+          <div>
+            <input
+              type="hidden"
+              name="createDate"
+              value={new Date()}
+              {...register("createDate")}
+            />
           </div>
           <div className="d-flex justify-content-between">
             <button
