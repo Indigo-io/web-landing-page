@@ -228,8 +228,7 @@ export default function Home() {
               <div className="col-md-8 me-auto text-center text-md-start">
                 <h1 style={{ color: "white" }}>Descubrí tu mejor versión</h1>
                 <span style={{ color: "white" }}>
-                  Se parte de los primeros en probar nuestro producto,{" "}
-                  <strong>GRATIS!</strong>
+                  Se parte de los primeros en probar nuestro servicio
                 </span>
               </div>
               <div className="col-md-4 btn-start text-center text-md-end">
