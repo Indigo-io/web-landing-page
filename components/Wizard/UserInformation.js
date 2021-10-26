@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
 
-export default function Step2({
+export default function UserInformation({
   nextStep,
   previousStep,
   setProgress,
@@ -35,7 +35,7 @@ export default function Step2({
           type: "update",
           payload: { ...data, fullName: `${data.name} ${data.lastName}` },
         });
-        setProgress(12.5);
+        setProgress(11);
         reset();
         nextStep();
         setIsLoading(false);

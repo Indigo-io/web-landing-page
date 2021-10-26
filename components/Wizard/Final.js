@@ -1,6 +1,6 @@
 import { InlineWidget } from "react-calendly";
 
-export default function Step10() {
+export default function Final() {
   return (
     <div className="wizard-step">
       <div>

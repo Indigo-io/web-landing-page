@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Step6({
+export default function Focus({
   nextStep,
   previousStep,
   setProgress,
