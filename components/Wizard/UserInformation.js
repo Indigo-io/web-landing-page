@@ -31,7 +31,10 @@ export default function UserInformation({
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((result) => {
-        dispatch({ type: "update", payload: data });
+        dispatch({
+          type: "update",
+          payload: { ...data, fullName: `${data.name} ${data.lastName}` },
+        });
         setProgress(11);
         reset();
         nextStep();
