@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Step5({
+export default function Motivation({
   nextStep,
   previousStep,
   setProgress,

@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
-export default function Step9({
+export default function Diseases({
   previousStep,
   setProgress,
   dispatch,

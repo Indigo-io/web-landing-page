@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Step3({
+export default function PersonalInformation({
   nextStep,
   previousStep,
   setProgress,
@@ -14,7 +14,7 @@ export default function Step3({
   } = useForm();
   const onSubmit = (data) => {
     dispatch({ type: "update", payload: data });
-    setProgress(25);
+    setProgress(22);
     reset();
     nextStep();
   };
