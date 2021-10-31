@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Step7({
+export default function Nutrition({
   nextStep,
   previousStep,
   setProgress,

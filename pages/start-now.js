@@ -1,15 +1,16 @@
 import LayoutSimple from "components/LayoutSimple";
 import StepWizard from "react-step-wizard";
-import Step1 from "components/Wizard/Step1";
-import Step2 from "components/Wizard/Step2";
-import Step3 from "components/Wizard/Step3";
-import Step4 from "components/Wizard/Step4";
-import Step5 from "components/Wizard/Step5";
-import Step6 from "components/Wizard/Step6";
-import Step7 from "components/Wizard/Step7";
-import Step8 from "components/Wizard/Step8";
-import Step9 from "components/Wizard/Step9";
-import Step10 from "components/Wizard/Step10";
+import Presentation from "components/Wizard/Presentation";
+import UserInformation from "components/Wizard/UserInformation";
+import PersonalInformation from "components/Wizard/PersonalInformation";
+import BodyInformation from "components/Wizard/BodyInformation";
+import Motivation from "components/Wizard/Motivation";
+import Focus from "components/Wizard/Focus";
+import Nutrition from "components/Wizard/Nutrition";
+import Activity from "components/Wizard/Activity";
+import Diseases from "components/Wizard/Diseases";
+import Final from "components/Wizard/Final";
+import Fitness from "components/Wizard/Fitness";
 import { useState, useReducer } from "react";
 import { Toaster } from "react-hot-toast";
 
@@ -48,20 +49,30 @@ export default function StartNow() {
                   ></div>
                 </div>
                 <StepWizard>
-                  <Step1 />
-                  <Step2 setProgress={setProgress} dispatch={dispatch} />
-                  <Step3 setProgress={setProgress} dispatch={dispatch} />
-                  <Step4 setProgress={setProgress} dispatch={dispatch} />
-                  <Step5 setProgress={setProgress} dispatch={dispatch} />
-                  <Step6 setProgress={setProgress} dispatch={dispatch} />
-                  <Step7 setProgress={setProgress} dispatch={dispatch} />
-                  <Step8 setProgress={setProgress} dispatch={dispatch} />
-                  <Step9
+                  <Presentation />
+                  <UserInformation
+                    setProgress={setProgress}
+                    dispatch={dispatch}
+                  />
+                  <PersonalInformation
+                    setProgress={setProgress}
+                    dispatch={dispatch}
+                  />
+                  <BodyInformation
+                    setProgress={setProgress}
+                    dispatch={dispatch}
+                  />
+                  <Motivation setProgress={setProgress} dispatch={dispatch} />
+                  <Focus setProgress={setProgress} dispatch={dispatch} />
+                  <Nutrition setProgress={setProgress} dispatch={dispatch} />
+                  <Fitness setProgress={setProgress} dispatch={dispatch} />
+                  <Activity setProgress={setProgress} dispatch={dispatch} />
+                  <Diseases
                     setProgress={setProgress}
                     state={state}
                     dispatch={dispatch}
                   />
-                  <Step10 />
+                  <Final />
                 </StepWizard>
               </div>
             </div>

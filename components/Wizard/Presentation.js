@@ -1,4 +1,4 @@
-export default function Step1({ nextStep }) {
+export default function Presentation({ nextStep }) {
   return (
     <div className="wizard-step">
       <div>
