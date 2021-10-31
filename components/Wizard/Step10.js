@@ -5,14 +5,14 @@ export default function Step10() {
     <div className="wizard-step">
       <div>
         <h2 className="mb-3 text-center">
-          Gracias por contestar! Ahora ya te conocemos un poquito más.
+          ¡Gracias por contestar! Ahora ya te conocemos un poquito más.
         </h2>
         <p className="text-center fs-5">
-          Agenda tu cita con expertos para continuar este cambio que ya empezó.
+          Agendá tu cita con expertos para continuar este cambio que ya empezó.
         </p>
 
         <p className="text-center" style={{ fontSize: "16px" }}>
-          En caso que ahora no puedas te enviamos un mail
+          En caso de que ahora no puedas te enviamos un mail.
         </p>
 
         <InlineWidget

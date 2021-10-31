@@ -60,7 +60,7 @@ export default function Step4({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"

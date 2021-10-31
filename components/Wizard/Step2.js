@@ -107,7 +107,7 @@ export default function Step2({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <button
               type="submit"

@@ -30,10 +30,10 @@ export default function Step6({
                 type="checkbox"
                 className="form-check-input"
                 id="focus-0"
-                value="Te distraes facilmente"
+                value="Te distraés fácilmente"
                 {...register("focus")}
               />
-              <label htmlFor="focus-0">Te distraes facilmente</label>
+              <label htmlFor="focus-0">Te distraés fácilmente</label>
             </div>
             <div className="form-check">
               <input
@@ -66,10 +66,10 @@ export default function Step6({
                 type="checkbox"
                 className="form-check-input"
                 id="focus-3"
-                value="Perdes el hilo de conversación cuando hablas con alguien"
+                value="Perdés el hilo de conversación cuando hablás con alguien"
               />
               <label htmlFor="focus-3">
-                Perdes el hilo de conversación cuando hablas con alguien
+                Perdés el hilo de conversación cuando hablás con alguien
               </label>
             </div>
             <div className="form-check">
@@ -77,11 +77,11 @@ export default function Step6({
                 type="checkbox"
                 className="form-check-input"
                 id="focus-4"
-                value="Te cuesta hacer mas de una tarea a la vez de manera eficiente"
+                value="Te cuesta hacer más de una tarea a la vez de manera eficiente"
                 {...register("focus")}
               />
               <label htmlFor="focus-4">
-                Te cuesta hacer mas de una tarea a la vez de manera eficiente
+                Te cuesta hacer más de una tarea a la vez de manera eficiente
               </label>
             </div>
             <div className="form-check">
@@ -89,12 +89,12 @@ export default function Step6({
                 type="checkbox"
                 className="form-check-input"
                 id="focus-5"
-                value="Si te distraes... no podes volver a concentrarte en lo que
+                value="Si te distraés... no podés volver a concentrarte en lo que
                 estabas haciendo"
                 {...register("focus")}
               />
               <label htmlFor="focus-5">
-                Si te distraes... no podes volver a concentrarte en lo que
+                Si te distraés... no podés volver a concentrarte en lo que
                 estabas haciendo
               </label>
             </div>
@@ -103,11 +103,11 @@ export default function Step6({
                 type="checkbox"
                 className="form-check-input"
                 id="focus-6"
-                value='Sentís que tu cerebro funciona a un "ritmo mas bajo"'
+                value='Sentís que tu cerebro funciona a un "ritmo más bajo"'
                 {...register("focus")}
               />
               <label htmlFor="focus-6">
-                Sentís que tu cerebro funciona a un &quot;ritmo mas bajo&quot;
+                Sentís que tu cerebro funciona a un &quot;ritmo más bajo&quot;
               </label>
             </div>
             <div className="form-check">
@@ -185,17 +185,17 @@ export default function Step6({
                 type="checkbox"
                 className="form-check-input"
                 id="memory-4"
-                value="Perdés y te olvidas las cosas"
+                value="Perdés y te olvidás las cosas"
                 {...register("memory")}
               />
-              <label htmlFor="memory-4">Perdés y te olvidas las cosas</label>
+              <label htmlFor="memory-4">Perdés y te olvidás las cosas</label>
             </div>
             <div className="form-check">
               <input
                 type="checkbox"
                 className="form-check-input"
                 id="memory-5"
-                value="Ninguna de las anteriores6"
+                value="Ninguna de las anteriores"
                 {...register("memory")}
               />
               <label htmlFor="memory-5">Ninguna de las anteriores</label>
@@ -347,7 +347,7 @@ export default function Step6({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"

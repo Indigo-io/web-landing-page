@@ -24,7 +24,7 @@ export default function Step5({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>Cuál de estos tópicos te gustaría que trabajemos juntos.</h3>
+            <h3>¿Cuáles de estos tópicos te gustaría que trabajemos juntos?</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -233,7 +233,7 @@ export default function Step5({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"
