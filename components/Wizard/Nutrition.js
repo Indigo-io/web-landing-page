@@ -226,7 +226,7 @@ export default function Nutrition({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"

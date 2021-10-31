@@ -107,7 +107,7 @@ export default function UserInformation({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <button
               type="submit"

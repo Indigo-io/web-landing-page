@@ -59,7 +59,7 @@ export default function Home() {
                     data-aos-offset="-500"
                   >
                     <a href="#como_hacemos" className="btn btn-outline-white">
-                      conocer más
+                      Conocer más
                     </a>
                   </p>
                 </div>
@@ -146,7 +146,7 @@ export default function Home() {
                   </div>
                   <h3 className="mb-3">Fitness</h3>
                   <p>
-                    Entrena tu cuerpo, mantente saludable, vive más y mejor.
+                    Entrená tu cuerpo, mantente saludable, vive más y mejor.
                     Buscaremos que ganes fuerza y movilidad. Tu cuerpo es tu
                     templo, queremos ayudarte a cuidarlo.
                   </p>
@@ -164,7 +164,7 @@ export default function Home() {
                   id="como_hacemos"
                   className="section-heading title-secondary"
                 >
-                  Cómo lo hacemos?
+                  ¿Cómo lo hacemos?
                 </h2>
                 <p>
                   Trabajamos día a día combinando tecnología con expertos en
@@ -228,13 +228,13 @@ export default function Home() {
               <div className="col-md-8 me-auto text-center text-md-start">
                 <h1 style={{ color: "white" }}>Descubrí tu mejor versión</h1>
                 <span style={{ color: "white" }}>
-                  Se parte de los primeros en probar nuestro servicio
+                  Sé parte de los primeros en probar nuestro servicio
                 </span>
               </div>
               <div className="col-md-4 btn-start text-center text-md-end">
                 <p>
                   <Link href="/start-now">
-                    <a className="btn btn-outline-white">Empezar ahora!</a>
+                    <a className="btn btn-outline-white">Empezar ahora</a>
                   </Link>
                 </p>
               </div>

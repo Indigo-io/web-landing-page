@@ -122,7 +122,7 @@ export default function PersonalInformation({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"

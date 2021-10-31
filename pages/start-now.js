@@ -33,7 +33,7 @@ export default function StartNow() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <LayoutSimple title="Tu cambio empieza ahora!">
+    <LayoutSimple title="¡Tu cambio empieza ahora!">
       <main id="main">
         <section className="section">
           <div className="container">

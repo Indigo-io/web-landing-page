@@ -60,7 +60,7 @@ export default function BodyInformation({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"

@@ -27,14 +27,14 @@ export default function Diseases({
           method: "POST",
           body: JSON.stringify(state),
         }).then((response) => {
-          toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
+          toast.success("Tu mensaje ha sido enviado. ¡Muchas gracias!");
           reset();
           nextStep();
           setIsLoading(false);
         });
       })
       .catch((err) => {
-        toast.error("Ups algo paso, intenta nuevamente!");
+        toast.error("Ups algo pasó, intenta nuevamente!");
         setIsLoading(false);
       });
   };
@@ -148,7 +148,7 @@ export default function Diseases({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <button
               type="submit"
