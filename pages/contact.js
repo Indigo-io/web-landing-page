@@ -21,17 +21,17 @@ export default function Contact() {
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
-        toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
+        toast.success("Tu mensaje ha sido enviado. ¡Muchas gracias!");
         console.log(data);
       })
       .catch((err) => {
         setIsLoading(false);
-        toast.error("Ups algo paso, intenta nuevamente!");
+        toast.error("Ups algo pasó, intenta nuevamente!");
       });
   };
 
   return (
-    <LayoutSimple title="Hablemos!">
+    <LayoutSimple title="¡Hablemos!">
       <Toaster />
       <main id="main">
         <section className="section">
@@ -40,7 +40,7 @@ export default function Contact() {
               <div className="col-md-6" data-aos="fade-up">
                 <h2>Formulario de contacto</h2>
                 <p className="mb-0">
-                  Escribinos tu consulta y te contestaremos a la brevedad!
+                  ¡Escribinos tu consulta y te contestaremos a la brevedad!
                 </p>
               </div>
             </div>

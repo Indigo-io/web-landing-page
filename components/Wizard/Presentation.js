@@ -1,8 +1,8 @@
-export default function Step1({ nextStep }) {
+export default function Presentation({ nextStep }) {
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">Cuentanos sobre ti</h2>
+        <h2 className="mb-3 text-center">Cuéntanos sobre ti</h2>
         <p className="text-center fs-5">
           Te vamos a hacer algunas preguntas sobre tu estilo de vida, tus
           rutinas, tus motivaciones, para que podamos armar un plan con

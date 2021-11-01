@@ -89,7 +89,7 @@ export default function Step2({
           <div className="mb-3">
             <h3>
               ¿Cuánto tiempo semanal estás dispuesto a invertir? Mente y cuerpo,
-              no te olvides!
+              ¡No te olvides!
             </h3>
             <select
               className={`form-select ${errors.investment ? "is-invalid" : ""}`}
@@ -111,7 +111,7 @@ export default function Step2({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"

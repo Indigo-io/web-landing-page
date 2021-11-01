@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
-export default function Step9({
+export default function Diseases({
   previousStep,
   setProgress,
   dispatch,
@@ -27,14 +27,14 @@ export default function Step9({
           method: "POST",
           body: JSON.stringify(state),
         }).then((response) => {
-          toast.success("Tu mensaje ha sido enviado. Muchas gracias!");
+          toast.success("Tu mensaje ha sido enviado. ¡Muchas gracias!");
           reset();
           nextStep();
           setIsLoading(false);
         });
       })
       .catch((err) => {
-        toast.error("Ups algo paso, intenta nuevamente!");
+        toast.error("Ups algo pasó, intenta nuevamente!");
         setIsLoading(false);
       });
   };
@@ -148,7 +148,7 @@ export default function Step9({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <button
               type="submit"

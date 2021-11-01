@@ -13,7 +13,11 @@ export default function Header({ paths }) {
           <div className="logo">
             <Link href="/">
               <a>
-                <img src="/img/logo.png" alt="" className="img-fluid" />
+                <img
+                  src="/img/logoIndigo_sin_borde-02.png"
+                  alt=""
+                  className="img-fluid"
+                />
               </a>
             </Link>
           </div>

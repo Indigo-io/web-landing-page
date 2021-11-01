@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Step7({
+export default function Nutrition({
   nextStep,
   previousStep,
   setProgress,
@@ -226,7 +226,7 @@ export default function Step7({
                 previousStep();
               }}
             >
-              Atras
+              Atrás
             </button>
             <input
               type="submit"
