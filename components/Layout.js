@@ -10,7 +10,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <meta name="description" content="Indigo Balance" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logoIndigo_favicon-05.png" />
         <meta charSet="utf-8" />
         <title>Indigo Balance</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
         />
         <link href="images/webclip.png" rel="apple-touch-icon" />
 
-        <link href="/favicon.ico" rel="icon" />
+        <link href="/logoIndigo_favicon-05.png" rel="icon" />
         <link href="/img/apple-touch-icon.png" rel="apple-touch-icon" />
       </Head>
       <Header paths={paths} />
