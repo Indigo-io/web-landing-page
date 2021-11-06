@@ -14,7 +14,7 @@ export default function Header({ paths }) {
             <Link href="/">
               <a>
                 <img
-                  src="/img/logoIndigo_sin_borde-02.png"
+                  src="/img/logoIndigo_noviembre_sinborde-04.png"
                   alt=""
                   className="img-fluid"
                 />
