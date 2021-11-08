@@ -28,8 +28,8 @@ export default function PersonalInformation({
             <input
               type="date"
               placeholder="Ej: 30"
-              className={`form-control ${errors.age ? "is-invalid" : ""}`}
-              {...register("age", { required: true })}
+              className={`form-control ${errors.birthDate ? "is-invalid" : ""}`}
+              {...register("birthDate", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
