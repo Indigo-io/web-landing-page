@@ -1,0 +1,29 @@
+.video {
+  padding: 4rem 0;
+}
+
+.video__title {
+  font-family: Montserrat;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #252b42;
+  letter-spacing: 0.2px;
+}
+
+.video__text {
+  font-family: Montserrat;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #374754;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+  margin-bottom: 3rem;
+}
+
+.video__video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

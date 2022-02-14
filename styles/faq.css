@@ -1,0 +1,48 @@
+.faq {
+  background-color: #f3f5f6;
+  padding: 6rem 0;
+}
+
+.faq__title {
+  font-family: Montserrat;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: #252b42;
+  letter-spacing: 0.2px;
+}
+
+.faq__accordion {
+  margin: 0 8rem;
+}
+
+.faq__accordion--title {
+  display: flex;
+}
+
+.faq__accordion--number {
+  font-family: Montserrat;
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: rgba(60, 60, 67, 0.5);
+  letter-spacing: 0.2px;
+  margin-right: 3rem;
+  height: 100%;
+}
+
+.faq__accordion--question {
+  font-family: Montserrat;
+  font-size: 2.125rem;
+  font-weight: 700;
+  color: #252b42;
+  letter-spacing: 0.2px;
+}
+
+.faq__accordion--tex {
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #3c3c43;
+  letter-spacing: 0.2px;
+}

@@ -1,0 +1,66 @@
+.testimonials {
+  background-color: #5437d6;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.testimonials__title {
+  font-family: Montserrat;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+.testimonials__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimonials__card {
+  border: 1px solid #26dcb0;
+  border-radius: 10px;
+  color: #26dcb0;
+  margin: 0 1rem;
+  display: flex;
+  padding: 2.5rem 2rem;
+}
+
+.testimonials__card--photo {
+  width: 66px;
+  height: 85px;
+  margin-right: 2rem;
+}
+
+.testimonials__summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.testimonials__summary--text {
+  text-align: left;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.875rem;
+}
+
+.testimonials__summary--name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  opacity: 0.3;
+}

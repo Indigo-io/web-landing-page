@@ -1,0 +1,25 @@
+.google-play {
+  background-color: #6048f1;
+  padding: 5rem 0;
+}
+
+.google-play__wrapper {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.google-play__text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  flex: 2;
+}
+
+.google-play__button {
+  flex: 1;
+  text-align: end;
+  align-self: center;
+}
