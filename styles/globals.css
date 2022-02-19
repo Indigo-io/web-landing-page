@@ -972,14 +972,3 @@ section {
     #7945ef 83.17%
   );
 }
-
-@import "./hero.css";
-@import "./video.css";
-@import "./google-play.css";
-@import "./footer.css";
-@import "./camino.css";
-@import "./testimonials.css";
-@import "./contact.css";
-@import "./start-now.css";
-@import "./sub-hero.css";
-@import "./prices.css";
