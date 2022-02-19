@@ -33,52 +33,50 @@ export default function StartNow() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <LayoutSimple title="¡Tu cambio empieza ahora!">
-      <main id="main">
-        <section className="section">
-          <div className="container">
-            <div className="row mb-5">
-              <div className="col-md-6 offset-md-3" data-aos="fade-up">
-                <div className="progress">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: `${progress}%` }}
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-                <StepWizard>
-                  <Presentation />
-                  <UserInformation
-                    setProgress={setProgress}
-                    dispatch={dispatch}
-                  />
-                  <PersonalInformation
-                    setProgress={setProgress}
-                    dispatch={dispatch}
-                  />
-                  <BodyInformation
-                    setProgress={setProgress}
-                    dispatch={dispatch}
-                  />
-                  <Motivation setProgress={setProgress} dispatch={dispatch} />
-                  <Focus setProgress={setProgress} dispatch={dispatch} />
-                  <Nutrition setProgress={setProgress} dispatch={dispatch} />
-                  <Fitness setProgress={setProgress} dispatch={dispatch} />
-                  <Activity setProgress={setProgress} dispatch={dispatch} />
-                  <Diseases
-                    setProgress={setProgress}
-                    state={state}
-                    dispatch={dispatch}
-                  />
-                  <Final />
-                </StepWizard>
+    <LayoutSimple>
+      <div className="start-now">
+        <div className="container">
+          <div className="row mb-5">
+            <div className="col-md-6 offset-md-3" data-aos="fade-up">
+              <div className="progress">
+                <div
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: `${progress}%` }}
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
+              <StepWizard>
+                <Presentation />
+                <UserInformation
+                  setProgress={setProgress}
+                  dispatch={dispatch}
+                />
+                <PersonalInformation
+                  setProgress={setProgress}
+                  dispatch={dispatch}
+                />
+                <BodyInformation
+                  setProgress={setProgress}
+                  dispatch={dispatch}
+                />
+                <Motivation setProgress={setProgress} dispatch={dispatch} />
+                <Focus setProgress={setProgress} dispatch={dispatch} />
+                <Nutrition setProgress={setProgress} dispatch={dispatch} />
+                <Fitness setProgress={setProgress} dispatch={dispatch} />
+                <Activity setProgress={setProgress} dispatch={dispatch} />
+                <Diseases
+                  setProgress={setProgress}
+                  state={state}
+                  dispatch={dispatch}
+                />
+                <Final />
+              </StepWizard>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
 
       <Toaster />
     </LayoutSimple>

@@ -24,7 +24,9 @@ export default function Motivation({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>¿Cuáles de estos tópicos te gustaría que trabajemos juntos?</h3>
+            <h3 className="start-now__label">
+              ¿Cuáles de estos tópicos te gustaría que trabajemos juntos?
+            </h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -185,9 +187,11 @@ export default function Motivation({
           </div>
 
           <div className="mb-3">
-            <h3>De las opciones que elegiste ¿Cuál es la más importante?</h3>
+            <h3 className="start-now__label">
+              De las opciones que elegiste ¿Cuál es la más importante?
+            </h3>
             <select
-              className={`form-select ${
+              className={`form-select step__select ${
                 errors.top_motivation ? "is-invalid" : ""
               }`}
               {...register("top_motivation", { required: true })}
@@ -227,7 +231,7 @@ export default function Motivation({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(25);
                 previousStep();
@@ -237,7 +241,7 @@ export default function Motivation({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

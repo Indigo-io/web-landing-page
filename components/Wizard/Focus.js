@@ -24,7 +24,7 @@ export default function Focus({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>Si pensamos en la atención...</h3>
+            <h3 className="start-now__label">Si pensamos en la atención...</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -123,7 +123,7 @@ export default function Focus({
           </div>
 
           <div className="mb-3">
-            <h3>Y si pensamos en la memoria...</h3>
+            <h3 className="start-now__label">Y si pensamos en la memoria...</h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -203,7 +203,9 @@ export default function Focus({
           </div>
 
           <div className="mb-3">
-            <h3>¿Qué tan estresado/a te sentís últimamente?</h3>
+            <h3 className="start-now__label">
+              ¿Qué tan estresado/a te sentís últimamente?
+            </h3>
             <div className="col-md-12">
               <div className="form-check form-check-inline">
                 <input
@@ -341,7 +343,7 @@ export default function Focus({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(37.5);
                 previousStep();
@@ -351,7 +353,7 @@ export default function Focus({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

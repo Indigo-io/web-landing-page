@@ -13,11 +13,7 @@ export default function Header({ paths }) {
           <div className="logo">
             <Link href="/">
               <a>
-                <img
-                  src="/img/logoIndigo_noviembre_sinborde-04.png"
-                  alt=""
-                  className="img-fluid"
-                />
+                <img src="/img/logo.png" alt="" className="img-fluid" />
               </a>
             </Link>
           </div>
@@ -27,15 +23,31 @@ export default function Header({ paths }) {
             className={`navbar ${showNavModal ? "navbar-mobile" : ""}`}
           >
             <ul>
-              {paths.map((path) => (
-                <li key={`${path.path}-${path.label}`}>
-                  <Link href={path.path}>
-                    <a className={route.pathname === path.path ? "active" : ""}>
-                      {path.label}
-                    </a>
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <a className="header__item" href="#porque">
+                  Por qué
+                </a>
+              </li>
+              <li>
+                <a className="header__item" href="#camino">
+                  El camino
+                </a>
+              </li>
+              <li>
+                <a className="header__item" href="#testimonios">
+                  Testimonios
+                </a>
+              </li>
+              <li>
+                <a className="header__item" href="#contacto">
+                  Contacto
+                </a>
+              </li>
+              <li>
+                <Link href="/start-now">
+                  <a className="header__start">Empezar</a>
+                </Link>
+              </li>
             </ul>
             <i
               className={`bi mobile-nav-toggle ${

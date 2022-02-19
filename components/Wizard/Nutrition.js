@@ -24,7 +24,9 @@ export default function Nutrition({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>¿Cómo describirías tu alimentación actual?</h3>
+            <h3 className="start-now__label">
+              ¿Cómo describirías tu alimentación actual?
+            </h3>
             <div className="col-md-12">
               <div className="form-check form-check-inline">
                 <input
@@ -162,7 +164,9 @@ export default function Nutrition({
           </div>
 
           <div className="mb-3">
-            <h3>¿Te gustaría cambiar algo de tu alimentación?</h3>
+            <h3 className="start-now__label">
+              ¿Te gustaría cambiar algo de tu alimentación?
+            </h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -220,7 +224,7 @@ export default function Nutrition({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(50);
                 previousStep();
@@ -230,7 +234,7 @@ export default function Nutrition({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

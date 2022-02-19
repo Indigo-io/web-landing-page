@@ -33,7 +33,7 @@ export default function Fitness({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>Realizas actividad física?</h3>
+            <h3 className="start-now__label">Realizas actividad física?</h3>
             <div className="mb-2 form-check">
               <input
                 type="radio"
@@ -64,18 +64,21 @@ export default function Fitness({
             </div>
           </div>
           <div className="mb-3">
-            <h3>¿Qué actividad realizas?</h3>
+            <h3 className="start-now__label">¿Qué actividad realizas?</h3>
             <input
               placeholder="Ej: Crossfit"
               name="fitnessActivity"
-              className={`form-control`}
+              className={`form-control step__input`}
               {...register("fitnessActivity")}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <h3>¿Con qué frecuencia?</h3>
-            <select className={`form-select`} {...register("fitnessFrequency")}>
+            <h3 className="start-now__label">¿Con qué frecuencia?</h3>
+            <select
+              className={`form-select step__select`}
+              {...register("fitnessFrequency")}
+            >
               <option value="Hasta 1 hora semanal">Hasta 1 hora semanal</option>
               <option value="Hasta 3 horas semanales">
                 Hasta 3 horas semanales
@@ -87,7 +90,7 @@ export default function Fitness({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(75);
                 previousStep();
@@ -97,7 +100,7 @@ export default function Fitness({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

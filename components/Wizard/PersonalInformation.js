@@ -24,18 +24,24 @@ export default function PersonalInformation({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>¿Cuál es tu fecha de nacimiento?</h3>
+            <h3 className="start-now__label">
+              ¿Cuál es tu fecha de nacimiento?
+            </h3>
             <input
               type="date"
-              placeholder="Ej: 30"
-              className={`form-control ${errors.birthDate ? "is-invalid" : ""}`}
+              placeholder="¿Cuál es tu fecha de nacimiento?"
+              className={`form-control step__input ${
+                errors.birthDate ? "is-invalid" : ""
+              }`}
               {...register("birthDate", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
 
           <div className="mb-1">
-            <h3>¿Con qué género te sentís identificado?</h3>
+            <h3 className="start-now__label">
+              ¿Con qué género te sentís identificado?
+            </h3>
             <div className="mb-2 form-check">
               <input
                 type="radio"
@@ -95,10 +101,10 @@ export default function PersonalInformation({
           </div>
 
           <div className="mb-3">
-            <h3>¿Cuál es tu profesión? </h3>
+            <h3 className="start-now__label">¿Cuál es tu profesión? </h3>
             <input
               placeholder="Ej: Abogado"
-              className={`form-control ${
+              className={`form-control step__input ${
                 errors.profession ? "is-invalid" : ""
               }`}
               {...register("profession", { required: true })}
@@ -106,17 +112,19 @@ export default function PersonalInformation({
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <h3>¿Con quién(es) vivís? </h3>
+            <h3 className="start-now__label">¿Con quién(es) vivís? </h3>
             <input
               placeholder="Ej: Familia"
-              className={`form-control ${errors.household ? "is-invalid" : ""}`}
+              className={`form-control step__input ${
+                errors.household ? "is-invalid" : ""
+              }`}
               {...register("household", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(0);
                 previousStep();
@@ -126,7 +134,7 @@ export default function PersonalInformation({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

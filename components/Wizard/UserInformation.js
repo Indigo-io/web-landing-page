@@ -45,48 +45,52 @@ export default function UserInformation({
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">
+        <h2 className="step__subtitle text-center">
           Necesitamos algunos datos para ponernos en contacto
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <label htmlFor="name">Nombre</label>
             <input
-              placeholder="Ej: Juan"
+              placeholder="Tu nombre"
               name="name"
-              className={`form-control ${errors.name ? "is-invalid" : ""}`}
+              className={`form-control step__input ${
+                errors.name ? "is-invalid" : ""
+              }`}
               {...register("name", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="lastName">Apellido</label>
             <input
-              placeholder="Ej: Gomez"
+              placeholder="Tu apellido"
               name="lastName"
-              className={`form-control ${errors.lastName ? "is-invalid" : ""}`}
+              className={`form-control step__input ${
+                errors.lastName ? "is-invalid" : ""
+              }`}
               {...register("lastName", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="email">Correo electrónico</label>
             <input
               type="email"
               name="email"
-              placeholder="Ej: juangomez@email.com"
-              className={`form-control ${errors.email ? "is-invalid" : ""}`}
+              placeholder="Tu email"
+              className={`form-control step__input ${
+                errors.email ? "is-invalid" : ""
+              }`}
               {...register("email", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <label htmlFor="tel">¿Cuál es tu número de teléfono celular?</label>
             <input
               name="tel"
               type="text"
-              placeholder="Ej: 1155555555"
-              className={`form-control ${errors.tel ? "is-invalid" : ""}`}
+              placeholder="Tu teléfono"
+              className={`form-control step__input ${
+                errors.tel ? "is-invalid" : ""
+              }`}
               {...register("tel", { required: true })}
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
@@ -101,7 +105,7 @@ export default function UserInformation({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(0);
                 previousStep();
@@ -111,7 +115,7 @@ export default function UserInformation({
             </button>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               disabled={isLoading ? true : false}
             >
               {isLoading && (
