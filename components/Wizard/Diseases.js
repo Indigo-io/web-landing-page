@@ -44,7 +44,7 @@ export default function Diseases({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>
+            <h3 className="start-now__label">
               Por último ¿Tenés alguna enfermedad o condición clínica de base?
             </h3>
             <div className="form-check">
@@ -142,7 +142,7 @@ export default function Diseases({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(75);
                 previousStep();
@@ -152,7 +152,7 @@ export default function Diseases({
             </button>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               disabled={isLoading ? true : false}
             >
               {isLoading && (

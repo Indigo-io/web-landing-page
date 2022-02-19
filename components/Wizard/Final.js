@@ -4,7 +4,7 @@ export default function Final() {
   return (
     <div className="wizard-step">
       <div>
-        <h2 className="mb-3 text-center">
+        <h2 className="mb-3 text-center final-step">
           ¡Gracias por contestar! Ahora ya te conocemos un poquito más.
         </h2>
         <p className="text-center fs-5">

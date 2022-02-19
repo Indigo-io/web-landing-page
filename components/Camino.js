@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Camino() {
   return (
-    <div className="camino">
+    <div className="camino" id="camino">
       <div className="camino__background"></div>
       <div className="container">
         <h1 className="camino__title">Tu Camino</h1>

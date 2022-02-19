@@ -656,7 +656,7 @@ section {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 45px;
+  max-height: 65px;
 }
 
 /*--------------------------------------------------------------
@@ -686,10 +686,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
   font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.65);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -792,6 +790,13 @@ section {
     display: none;
   }
 }
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 999;
+}
 
 .navbar-mobile {
   position: fixed;
@@ -853,10 +858,6 @@ section {
   min-width: 200px;
 }
 
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
 .navbar-mobile .dropdown ul a i {
   font-size: 12px;
 }
@@ -869,6 +870,35 @@ section {
 
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
+}
+
+.header__start {
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 35px;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.header__item {
+  padding: 0.5rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 35px;
+  font-family: Montserrat;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  text-align: center;
+
+  color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -886,6 +916,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #fff;
 }
 
 .form-select {
@@ -933,12 +964,22 @@ section {
   }
 }
 
+.gradient {
+  background: linear-gradient(
+    217.01deg,
+    #10d1fd -7.89%,
+    #324df6 40.62%,
+    #7945ef 83.17%
+  );
+}
+
 @import "./hero.css";
 @import "./video.css";
 @import "./google-play.css";
 @import "./footer.css";
 @import "./camino.css";
-@import "./services.css";
 @import "./testimonials.css";
-@import "./faq.css";
 @import "./contact.css";
+@import "./start-now.css";
+@import "./sub-hero.css";
+@import "./prices.css";

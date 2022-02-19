@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="hero__wrapper">
           <div className="hero__wrapper--text">
             <h1 className="hero__title" data-aos="fade-right">
-              ¿Estás viviendo la vida que quieres vivir?
+              Toma el control de tu vida y de tu tiempo, un hábito a la vez.
             </h1>
             <p
               className="mb-5 hero__text"
@@ -17,8 +17,8 @@ export default function Hero() {
               data-aos-delay="100"
               width="80%"
             >
-              Crea hábitos saludables trabajando en tu nutrición, tu
-              entrenamiento físico y mental de forma integral.
+              Crea hábitos de vida saludables mejorando tu nutrición, entrenando
+              tu cuerpo y aprendiendo a controlar y descansar tu mente.
             </p>
             <Link
               href="/start-now"

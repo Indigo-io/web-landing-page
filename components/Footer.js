@@ -5,23 +5,37 @@ export default function Footer() {
         <div className="footer__wrapper">
           <div className="footer__links">
             <h3 className="footer__links--title">Páginas</h3>
-            <p className="footer__links--item">Home</p>
-            <p className="footer__links--item">Por qué</p>
-            <p className="footer__links--item">El Camino</p>
-            <p className="footer__links--item">Testimonios</p>
-            <p className="footer__links--item">Contacto</p>
+            <a href="#contacto" className="footer__links--item">
+              Contacto
+            </a>
+            <a href="#" className="footer__links--item">
+              Indigo Empresas
+            </a>
+            <a href="#" className="footer__links--item">
+              Términos y condiciones
+            </a>
+            <a href="#" className="footer__links--item">
+              Políticas de privacidad
+            </a>
           </div>
           <div className="footer__data">
             <div className="footer__data--item">
               <span className="bi bi-geo-alt footer__icon"></span>
               <p className="footer__data--text">
-                Usina Cowroking, Castillo 1366,
-                <br /> Buenos Aires - Argentina
+                Castillo 1366, C1414, CABA , Argentina
+                <br /> Te: + 54 (911) 2854 4896
               </p>
             </div>
             <div className="footer__data--item">
-              <span className="bi bi-phone footer__icon"></span>
-              <p className="footer__data--text">+54 9 11 2854 4896</p>
+              <span className="bi bi-geo-alt footer__icon"></span>
+              <p className="footer__data--text">
+                2625 Weston Rd., Suite D, Weston, FL
+                <br /> 33331, USA - Te: +1 (650) 276 3570
+              </p>
+            </div>
+            <div className="footer__data--item">
+              <span className="bi bi-at footer__icon"></span>
+              <p className="footer__data--text">info@indigobalance.com</p>
             </div>
             <div className="footer__data--item">
               <a
@@ -41,6 +55,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <span className="footer__copyright">
+          Copyright © 2022 Indigo Mind, Inc. Todos los derechos reservados.
+        </span>
       </div>
     </footer>
   );

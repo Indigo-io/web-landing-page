@@ -4,22 +4,22 @@ import Hero from "components/Hero";
 import Video from "components/Video";
 import GooglePlay from "components/GooglePlay";
 import Camino from "components/Camino";
-import Services from "components/Services";
 import Testimonials from "components/Testimonials";
-import Faq from "components/Faq";
 import Contact from "components/Contact";
+import SubHero from "components/SubHero";
+import Prices from "components/Prices";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <Video />
+      <SubHero />
       <GooglePlay />
       <Camino />
-      <Services />
       <GooglePlay />
       <Testimonials />
-      <Faq />
+      <Prices />
+      <Video />
       <Contact />
     </Layout>
   );

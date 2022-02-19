@@ -24,37 +24,49 @@ export default function BodyInformation({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>¿Cuánto medís? Si no te acordás, aproximado.</h3>
+            <h3 className="start-now__label">
+              ¿Cuánto medís? Si no te acordás, aproximado.
+            </h3>
             <div className="input-group">
               <input
                 type="number"
                 placeholder="Ej: 170"
-                className={`form-control ${errors.height ? "is-invalid" : ""}`}
+                className={`form-control step__input--unit ${
+                  errors.height ? "is-invalid" : ""
+                }`}
                 {...register("height", { required: true })}
               />
-              <span className="input-group-text">cm</span>
+              <span className="input-group-text step__input--unit-right">
+                cm
+              </span>
               <div className="invalid-feedback">Este valor es requerido.</div>
             </div>
           </div>
 
           <div className="mb-3">
-            <h3>¿Cuánto pesas? Si no te acordás, aproximado.</h3>
+            <h3 className="start-now__label">
+              ¿Cuánto pesas? Si no te acordás, aproximado.
+            </h3>
             <div className="input-group">
               <input
                 name="weight"
                 type="number"
                 step="0.1"
                 placeholder="Ej: 85"
-                className={`form-control ${errors.weight ? "is-invalid" : ""}`}
+                className={`form-control step__input--unit ${
+                  errors.weight ? "is-invalid" : ""
+                }`}
                 {...register("weight", { required: true })}
               />
-              <span className="input-group-text">kg</span>
+              <span className="input-group-text step__input--unit-right">
+                kg
+              </span>
               <div className="invalid-feedback">Este valor es requerido.</div>
             </div>
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(11);
                 previousStep();
@@ -64,7 +76,7 @@ export default function BodyInformation({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

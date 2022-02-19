@@ -43,10 +43,16 @@
 
 .footer__data--text {
   margin: 0;
+  font-size: 0.8rem;
 }
 
 .footer__icon {
   font-size: 2rem;
   padding-right: 2rem;
   color: #fff;
+}
+
+.footer__copyright {
+  font-family: Montserrat;
+  font-size: 0.75rem;
 }

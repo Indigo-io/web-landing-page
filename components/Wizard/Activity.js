@@ -24,7 +24,9 @@ export default function Step2({
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
-            <h3>¿Cuál de estas actividades te gusta o te gustaría realizar?</h3>
+            <h3 className="start-now__label">
+              ¿Cuál de estas actividades te gusta o te gustaría realizar?
+            </h3>
             <div className="form-check">
               <input
                 type="checkbox"
@@ -77,9 +79,11 @@ export default function Step2({
             </div>
           </div>
           <div className="mb-3">
-            <h3>¿Cuál es tu actividad de relajación favorita?</h3>
+            <h3 className="start-now__label">
+              ¿Cuál es tu actividad de relajación favorita?
+            </h3>
             <textarea
-              className={`form-control ${
+              className={`form-control step__textarea ${
                 errors.relaxActivities ? "is-invalid" : ""
               }`}
               {...register("relaxActivities", { required: true })}
@@ -87,12 +91,14 @@ export default function Step2({
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
           <div className="mb-3">
-            <h3>
+            <h3 className="start-now__label">
               ¿Cuánto tiempo semanal estás dispuesto a invertir? Mente y cuerpo,
               ¡No te olvides!
             </h3>
             <select
-              className={`form-select ${errors.investment ? "is-invalid" : ""}`}
+              className={`form-select step__select ${
+                errors.investment ? "is-invalid" : ""
+              }`}
               {...register("investment", { required: true })}
             >
               <option value="1">Una hora o menos</option>
@@ -105,7 +111,7 @@ export default function Step2({
           </div>
           <div className="d-flex justify-content-between">
             <button
-              className="btn btn-outline-secondary"
+              className="step__btn--back"
               onClick={() => {
                 setProgress(62.5);
                 previousStep();
@@ -115,7 +121,7 @@ export default function Step2({
             </button>
             <input
               type="submit"
-              className="btn btn-primary"
+              className="step__btn--continue"
               value="Continuar"
             />
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Video() {
   return (
-    <div className="video" id="video">
+    <div className="video" id="porque">
       <div className="container">
         <h1 className="video__title">¿Por qué Indigo?</h1>
         <p className="video__text">

@@ -70,3 +70,33 @@
   border-radius: 100px;
   padding: 1.625rem 4.375rem;
 }
+
+@media (max-width: 768px) {
+  .hero__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    font-size: 1.5rem;
+  }
+
+  .hero__background {
+    height: 950px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
+  }
+
+  .hero__wrapper--text {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero__wrapper--ilustrator {
+    width: 80%;
+  }
+}
