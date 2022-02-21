@@ -11,10 +11,20 @@ export default function Footer() {
             <a href="#" className="footer__links--item">
               Indigo Empresas
             </a>
-            <a href="#" className="footer__links--item">
+            <a
+              href="https://docs.google.com/document/d/1-zmT80i5EORwgQVTSZJMJZj47jgFI7WZ/edit"
+              target="_blank"
+              rel="noreferrer"
+              className="footer__links--item"
+            >
               Términos y condiciones
             </a>
-            <a href="#" className="footer__links--item">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://docs.google.com/document/d/102rTDTM0YlHigjGhvUL4o68GpiHk-pCm/edit"
+              className="footer__links--item"
+            >
               Políticas de privacidad
             </a>
           </div>
