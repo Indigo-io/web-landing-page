@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="footer" role="contentinfo">
@@ -11,22 +13,12 @@ export default function Footer() {
             <a href="#" className="footer__links--item">
               Indigo Empresas
             </a>
-            <a
-              href="https://docs.google.com/document/d/1-zmT80i5EORwgQVTSZJMJZj47jgFI7WZ/edit"
-              target="_blank"
-              rel="noreferrer"
-              className="footer__links--item"
-            >
-              Términos y condiciones
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://docs.google.com/document/d/102rTDTM0YlHigjGhvUL4o68GpiHk-pCm/edit"
-              className="footer__links--item"
-            >
-              Políticas de privacidad
-            </a>
+            <Link href="/tos">
+              <a className="footer__links--item">Términos y condiciones</a>
+            </Link>
+            <Link href="/privacy">
+              <a className="footer__links--item">Políticas de privacidad</a>
+            </Link>
           </div>
           <div className="footer__data">
             <div className="footer__data--item">

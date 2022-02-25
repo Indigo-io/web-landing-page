@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Motivation({ nextStep, previousStep, dispatch }) {
+export default function Intolerance({ nextStep, previousStep, dispatch }) {
   const {
     register,
     handleSubmit,
@@ -19,14 +19,15 @@ export default function Motivation({ nextStep, previousStep, dispatch }) {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
             <h3 className="start-now__label">
-              ¿Qué esperás lograr con Indigo?
+              ¿Tenés intolerancia a algún alimento? ¿O hay algún alimento que no
+              comas?
             </h3>
             <textarea
-              placeholder="Motivación propia"
+              placeholder="Intolerancia a..."
               className={`form-control step__textarea ${
-                errors.motivation ? "is-invalid" : ""
+                errors.intolerance ? "is-invalid" : ""
               }`}
-              {...register("motivation", { required: true })}
+              {...register("intolerance", { required: true })}
             ></textarea>
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>

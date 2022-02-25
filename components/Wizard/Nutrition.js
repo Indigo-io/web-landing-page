@@ -1,11 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function Nutrition({
-  nextStep,
-  previousStep,
-  setProgress,
-  dispatch,
-}) {
+export default function Nutrition({ nextStep, previousStep, dispatch }) {
   const {
     register,
     handleSubmit,
@@ -14,7 +9,6 @@ export default function Nutrition({
   } = useForm();
   const onSubmit = (data) => {
     dispatch({ type: "update", payload: data });
-    setProgress(75);
     reset();
     nextStep();
   };
@@ -25,208 +19,69 @@ export default function Nutrition({
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
             <h3 className="start-now__label">
-              ¿Cómo describirías tu alimentación actual?
-            </h3>
-            <div className="col-md-12">
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-0"
-                  value="1"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                1<label className="form-check-label" htmlFor="food-0"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-1"
-                  value="2"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                2<label className="form-check-label" htmlFor="food-1"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-2"
-                  value="3"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                3<label className="form-check-label" htmlFor="food-2"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-3"
-                  value="4"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                4<label className="form-check-label" htmlFor="food-3"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-4"
-                  value="5"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                5<label className="form-check-label" htmlFor="food-4"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-5"
-                  value="6"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                6<label className="form-check-label" htmlFor="food-5"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-6"
-                  value="7"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                7<label className="form-check-label" htmlFor="food-6"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-7"
-                  value="8"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                8<label className="form-check-label" htmlFor="food-7"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-8"
-                  value="9"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                9<label className="form-check-label" htmlFor="food-8"></label>
-              </div>
-              <div className="form-check form-check-inline">
-                <input
-                  type="radio"
-                  name="food"
-                  id="food-9"
-                  value="10"
-                  className={`form-check-input ${
-                    errors.food ? "is-invalid" : ""
-                  }`}
-                  {...register("food", { required: true })}
-                />
-                <label className="form-check-label" htmlFor="food-9">
-                  10
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-3">
-            <h3 className="start-now__label">
               ¿Te gustaría cambiar algo de tu alimentación?
             </h3>
             <div className="form-check">
               <input
                 type="checkbox"
-                id="foodChanges-0"
-                value="Incluir más alimentos"
+                id="nutritionActivities-0"
+                value="Tomar más agua"
                 className="form-check-input"
-                {...register("foodChanges")}
+                {...register("nutritionActivities")}
               />
-              <label htmlFor="foodChanges-0">Incluir más alimentos</label>
+              <label htmlFor="nutritionActivities-0">Tomar más agua</label>
             </div>
             <div className="form-check">
               <input
                 type="checkbox"
-                id="foodChanges-1"
-                value="Dejar de comer algún alimento (ej carne, procesados, lácteos)"
+                id="nutritionActivities-1"
+                value="Comer más variado"
                 className="form-check-input"
-                {...register("foodChanges")}
+                {...register("nutritionActivities")}
               />
-              <label htmlFor="foodChanges-1">
-                Dejar de comer algún alimento (ej carne, procesados, lácteos)
+              <label htmlFor="nutritionActivities-1">Comer más variado</label>
+            </div>
+            <div className="form-check">
+              <input
+                type="checkbox"
+                id="nutritionActivities-2"
+                value="Organizar mejor mis comidas"
+                className="form-check-input"
+                {...register("nutritionActivities")}
+              />
+              <label htmlFor="nutritionActivities-2">
+                Organizar mejor mis comidas
               </label>
             </div>
             <div className="form-check">
               <input
                 type="checkbox"
-                id="foodChanges-2"
-                value="Organizar mejor las comidas"
+                id="nutritionActivities-3"
+                value="Hacer distintas recetas"
                 className="form-check-input"
-                {...register("foodChanges")}
+                {...register("nutritionActivities")}
               />
-              <label htmlFor="foodChanges-2">Organizar mejor las comidas</label>
-            </div>
-            <div className="form-check">
-              <input
-                type="checkbox"
-                id="foodChanges-3"
-                value="Hacer preparaciones diferentes"
-                className="form-check-input"
-                {...register("foodChanges")}
-              />
-              <label htmlFor="foodChanges-3">
-                Hacer preparaciones diferentes
+              <label htmlFor="nutritionActivities-3">
+                Hacer distintas recetas
               </label>
             </div>
             <div className="form-check">
               <input
                 type="checkbox"
-                id="foodChanges-4"
-                value="Mejorar la hidratación"
+                id="nutritionActivities-4"
+                value="Cambiar mi manera de comer"
                 className="form-check-input"
-                {...register("foodChanges")}
+                {...register("nutritionActivities")}
               />
-              <label htmlFor="foodChanges-4">Mejorar la hidratación</label>
+              <label htmlFor="nutritionActivities-4">
+                Cambiar mi manera de comer
+              </label>
             </div>
           </div>
           <div className="d-flex justify-content-between">
             <button
               className="step__btn--back"
               onClick={() => {
-                setProgress(50);
                 previousStep();
               }}
             >

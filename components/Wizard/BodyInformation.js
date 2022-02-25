@@ -1,11 +1,6 @@
 import { useForm } from "react-hook-form";
 
-export default function BodyInformation({
-  nextStep,
-  previousStep,
-  setProgress,
-  dispatch,
-}) {
+export default function BodyInformation({ nextStep, previousStep, dispatch }) {
   const {
     register,
     handleSubmit,
@@ -14,7 +9,6 @@ export default function BodyInformation({
   } = useForm();
   const onSubmit = (data) => {
     dispatch({ type: "update", payload: data });
-    setProgress(33);
     reset();
     nextStep();
   };
@@ -68,7 +62,6 @@ export default function BodyInformation({
             <button
               className="step__btn--back"
               onClick={() => {
-                setProgress(11);
                 previousStep();
               }}
             >

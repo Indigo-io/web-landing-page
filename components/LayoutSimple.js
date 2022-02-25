@@ -4,7 +4,7 @@ import BackToTop from "components/BackToTop";
 import Head from "next/head";
 import Script from "next/script";
 
-export default function LayoutSimple({ title, children }) {
+export default function LayoutSimple({ bgColor, children }) {
   return (
     <>
       <Head>
@@ -25,7 +25,7 @@ export default function LayoutSimple({ title, children }) {
         <link href="/logoIndigo_favicon-05.png" rel="icon" />
         <link href="/img/apple-touch-icon.png" rel="apple-touch-icon" />
       </Head>
-      <HeaderSingle />
+      <HeaderSingle bgColor={bgColor} />
 
       <div className="gradient">{children}</div>
       <Footer />

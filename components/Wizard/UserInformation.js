@@ -2,12 +2,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
 
-export default function UserInformation({
-  nextStep,
-  previousStep,
-  setProgress,
-  dispatch,
-}) {
+export default function UserInformation({ nextStep, previousStep, dispatch }) {
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -26,6 +21,7 @@ export default function UserInformation({
     arrayData.forEach((item) => {
       formData.append(item[0], item[1]);
     });
+
     axios
       .post(url, formData, {
         headers: { "Content-Type": "multipart/form-data" },
@@ -35,7 +31,6 @@ export default function UserInformation({
           type: "update",
           payload: { ...data, fullName: `${data.name} ${data.lastName}` },
         });
-        setProgress(11);
         reset();
         nextStep();
         setIsLoading(false);
@@ -83,18 +78,6 @@ export default function UserInformation({
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
-          <div className="mb-3">
-            <input
-              name="tel"
-              type="text"
-              placeholder="Tu teléfono"
-              className={`form-control step__input ${
-                errors.tel ? "is-invalid" : ""
-              }`}
-              {...register("tel", { required: true })}
-            />
-            <div className="invalid-feedback">Este valor es requerido.</div>
-          </div>
           <div>
             <input
               type="hidden"
@@ -107,7 +90,6 @@ export default function UserInformation({
             <button
               className="step__btn--back"
               onClick={() => {
-                setProgress(0);
                 previousStep();
               }}
             >

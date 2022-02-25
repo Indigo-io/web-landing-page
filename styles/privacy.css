@@ -1,0 +1,11 @@
+.privacy {
+  color: #000000;
+  background-color: #ffffff;
+  padding-top: 120px;
+}
+
+h1,
+h3,
+p {
+  font-family: Montserrat, serif;
+}

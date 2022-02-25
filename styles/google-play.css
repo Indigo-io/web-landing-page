@@ -5,7 +5,7 @@
 
 .google-play__wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: #fff;
   justify-content: space-between;
 }
@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .google-play__wrapper {
     flex-direction: column;
   }

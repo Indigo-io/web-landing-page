@@ -8,14 +8,15 @@ import Motivation from "components/Wizard/Motivation";
 import Focus from "components/Wizard/Focus";
 import Nutrition from "components/Wizard/Nutrition";
 import Activity from "components/Wizard/Activity";
-import Diseases from "components/Wizard/Diseases";
+import Investment from "components/Wizard/Investment";
 import Final from "components/Wizard/Final";
-import Fitness from "components/Wizard/Fitness";
-import { useState, useReducer } from "react";
+import Intolerance from "components/Wizard/Intolerance";
+import { useReducer } from "react";
 import { Toaster } from "react-hot-toast";
+import Diseases from "components/Wizard/Diseases";
+import Referred from "../components/Wizard/Referred";
 
 export default function StartNow() {
-  const [progress, setProgress] = useState(0);
   const initialState = {};
 
   function reducer(state, action) {
@@ -38,39 +39,19 @@ export default function StartNow() {
         <div className="container">
           <div className="row mb-5">
             <div className="col-md-6 offset-md-3" data-aos="fade-up">
-              <div className="progress">
-                <div
-                  className="progress-bar"
-                  role="progressbar"
-                  style={{ width: `${progress}%` }}
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
               <StepWizard>
                 <Presentation />
-                <UserInformation
-                  setProgress={setProgress}
-                  dispatch={dispatch}
-                />
-                <PersonalInformation
-                  setProgress={setProgress}
-                  dispatch={dispatch}
-                />
-                <BodyInformation
-                  setProgress={setProgress}
-                  dispatch={dispatch}
-                />
-                <Motivation setProgress={setProgress} dispatch={dispatch} />
-                <Focus setProgress={setProgress} dispatch={dispatch} />
-                <Nutrition setProgress={setProgress} dispatch={dispatch} />
-                <Fitness setProgress={setProgress} dispatch={dispatch} />
-                <Activity setProgress={setProgress} dispatch={dispatch} />
-                <Diseases
-                  setProgress={setProgress}
-                  state={state}
-                  dispatch={dispatch}
-                />
+                <UserInformation dispatch={dispatch} />
+                <PersonalInformation dispatch={dispatch} />
+                <BodyInformation dispatch={dispatch} />
+                <Motivation dispatch={dispatch} />
+                <Nutrition dispatch={dispatch} />
+                <Intolerance dispatch={dispatch} />
+                <Focus dispatch={dispatch} />
+                <Activity dispatch={dispatch} />
+                <Diseases dispatch={dispatch} />
+                <Investment dispatch={dispatch} />
+                <Referred state={state} dispatch={dispatch} />
                 <Final />
               </StepWizard>
             </div>
