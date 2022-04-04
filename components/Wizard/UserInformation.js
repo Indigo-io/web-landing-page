@@ -78,6 +78,18 @@ export default function UserInformation({ nextStep, previousStep, dispatch }) {
             />
             <div className="invalid-feedback">Este valor es requerido.</div>
           </div>
+          <div className="mb-3">
+            <input
+              type="tel"
+              name="tel"
+              placeholder="Tu teléfono"
+              className={`form-control step__input ${
+                errors.email ? "is-invalid" : ""
+              }`}
+              {...register("tel", { required: true })}
+            />
+            <div className="invalid-feedback">Este valor es requerido.</div>
+          </div>
           <div>
             <input
               type="hidden"
