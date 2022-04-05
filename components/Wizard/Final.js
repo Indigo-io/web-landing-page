@@ -16,7 +16,7 @@ export default function Final() {
         </p>
 
         <InlineWidget
-          url="https://calendly.com/indigoexperts/30min"
+          url="https://calendly.com/stefy-2/inicio-de-tu-programa-indigo"
           styles={{
             height: "1070px",
           }}

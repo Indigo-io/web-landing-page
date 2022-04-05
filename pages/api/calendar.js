@@ -274,7 +274,7 @@ export default function handler(req, res) {
                           
                           <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
                             <tr>
-                              <td style="border-radius: 3px; text-align: center; background:#26DCB0 !important;" class="button-td"><a href="https://calendly.com/indigoexperts/30min" style=" background:#26DCB0 !important;  padding: 20px;color: #ffffff;font-size: 18px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: regular;" class="button-a"> 
+                              <td style="border-radius: 3px; text-align: center; background:#26DCB0 !important;" class="button-td"><a href="https://calendly.com/stefy-2/inicio-de-tu-programa-indigo" style=" background:#26DCB0 !important;  padding: 20px;color: #ffffff;font-size: 18px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: regular;" class="button-a"> 
                                 <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Programar Entrevista<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--> 
                                 </a></td>
                             </tr>
