@@ -7,7 +7,6 @@ import Camino from "components/Camino";
 import Testimonials from "components/Testimonials";
 import Contact from "components/Contact";
 import SubHero from "components/SubHero";
-import Prices from "components/Prices";
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
       <Camino />
       <GooglePlay />
       <Testimonials />
-      <Prices />
       <Video />
       <Contact />
     </Layout>
