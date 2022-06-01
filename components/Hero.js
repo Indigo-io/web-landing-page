@@ -20,14 +20,6 @@ export default function Hero() {
               Crea hábitos de vida saludables mejorando tu nutrición, entrenando
               tu cuerpo y aprendiendo a controlar y descansar tu mente.
             </p>
-            <Link
-              href="/start-now"
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-offset="-500"
-            >
-              <a className="hero__button">Empezar ahora</a>
-            </Link>
           </div>
           <div className="hero__wrapper--ilustrator">
             <img

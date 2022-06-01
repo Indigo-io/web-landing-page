@@ -17,9 +17,6 @@ export default function GooglePlay() {
             </p>
           </div>
           <div className="google-play__wrapper-buttons">
-            <Link href="/start-now">
-              <a className="google-play__button-register">Regístrate</a>
-            </Link>
             <div className="google-play__wrapper-download">
               <a
                 target="_blank"
