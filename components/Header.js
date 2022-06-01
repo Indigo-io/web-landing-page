@@ -43,11 +43,6 @@ export default function Header({ paths }) {
                   Contacto
                 </a>
               </li>
-              <li>
-                <Link href="/start-now">
-                  <a className="header__start">Empezar</a>
-                </Link>
-              </li>
             </ul>
             <i
               className={`bi mobile-nav-toggle ${
