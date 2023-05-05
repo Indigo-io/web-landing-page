@@ -8,7 +8,9 @@ export default function KnowMore() {
         <div className="google-play__wrapper">
           <div className="google-play__wrapper--text">
             <Link href="/coachs">
-              <h1 className="google-play__title">¡Enterate mas!</h1>
+              <a>
+                <h1 className="google-play__title">¡Enterate mas!</h1>
+              </a>
             </Link>
           </div>
           <div className="google-play__wrapper-buttons">

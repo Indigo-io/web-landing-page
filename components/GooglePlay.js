@@ -1,21 +1,15 @@
 import React from "react";
 
-
-
-
 export default function GooglePlay() {
   return (
     <div className="google-play">
       <div className="container">
         <div className="google-play__wrapper">
-
-        <div class="left-half">
-            <h1 className="google-play__title">
-                Empeza ya mismo
-            </h1>
-         </div>
-         <div class="right-half">
-          <div className="google-play__wrapper-buttons right-half">
+          <div className="left-half">
+            <h1 className="google-play__title">Empeza ya mismo</h1>
+          </div>
+          <div className="right-half">
+            <div className="google-play__wrapper-buttons right-half">
               <div className="google-play__wrapper-download">
                 <a
                   target="_blank"
@@ -26,7 +20,7 @@ export default function GooglePlay() {
                   <img
                     className="google-play__button-ios"
                     src="/img/download-ios.svg"
-                    style={{ width: "200px", height: "200px" }} 
+                    style={{ width: "200px", height: "200px" }}
                   />
                 </a>
                 <a
@@ -35,12 +29,13 @@ export default function GooglePlay() {
                   className="google-play__button"
                   rel="noreferrer"
                 >
-                  <img src="/img/download-google.svg" 
-                  style={{ width: "200px", height: "200px" }} />
+                  <img
+                    src="/img/download-google.svg"
+                    style={{ width: "200px", height: "200px" }}
+                  />
                 </a>
               </div>
             </div>
-          
           </div>
         </div>
       </div>
