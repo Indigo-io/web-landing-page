@@ -24,6 +24,7 @@ export default function Header({ paths }) {
           >
             <ul>
               <li>
+<<<<<<< HEAD
                 <a className="header__item" href="#camino">
                   Como funciona?
                 </a>
@@ -34,6 +35,21 @@ export default function Header({ paths }) {
                   Sos coach?
                 </a>
               </Link>
+=======
+                <a className="header__item" href="#porque">
+                  Por qué
+                </a>
+              </li>
+              <li>
+                <a className="header__item" href="#camino">
+                  El camino
+                </a>
+              </li>
+              <li>
+                <a className="header__item" href="#testimonios">
+                  Testimonios
+                </a>
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
               </li>
               <li>
                 <a className="header__item" href="#contacto">

@@ -901,6 +901,7 @@ section {
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 .list-item {
   margin: 10px 0; /* Agrega espacio vertical de 10px y espacio horizontal de 0 a los elementos li */
 }
@@ -938,6 +939,8 @@ section {
   display: flex;
 }
 
+=======
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
 /*--------------------------------------------------------------
 # Hero Section linear-gradient(to right, rgba(115, 21, 241, 0.9) 0%, rgba(12, 88, 228, 0.9) 50%),
 --------------------------------------------------------------*/

@@ -1,6 +1,9 @@
 import Link from "next/link";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
 export default function Footer() {
   return (
     <footer className="footer" role="contentinfo">
@@ -11,9 +14,15 @@ export default function Footer() {
             <a href="#contacto" className="footer__links--item">
               Contacto
             </a>
+<<<<<<< HEAD
             <Link href="/coachs">
               <a className="footer__links--item">Indigo Coachs</a>
             </Link>
+=======
+            <a href="#" className="footer__links--item">
+              Indigo Empresas
+            </a>
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
             <Link href="/tos">
               <a className="footer__links--item">Términos y condiciones</a>
             </Link>
@@ -59,7 +68,11 @@ export default function Footer() {
           </div>
         </div>
         <span className="footer__copyright">
+<<<<<<< HEAD
           Copyright © 2023 Indigo Mind, Inc. Todos los derechos reservados.
+=======
+          Copyright © 2022 Indigo Mind, Inc. Todos los derechos reservados.
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
         </span>
       </div>
     </footer>

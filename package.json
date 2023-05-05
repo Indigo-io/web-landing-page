@@ -1,6 +1,10 @@
 {
   "name": "web-landing-next",
+<<<<<<< HEAD
   "version": "0.2.0",
+=======
+  "version": "0.1.0",
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@sendgrid/mail": "^7.7.0",
     "axios": "^1.4.0",
     "firebase": "^9.21.0",
@@ -30,6 +35,28 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
+=======
+    "@sendgrid/mail": "^7.4.6",
+    "axios": "^0.21.4",
+    "firebase": "^9.0.2",
+    "framer-motion": "^6.2.6",
+    "next": "^11.1.2",
+    "react": "17.0.2",
+    "react-calendly": "^2.2.3",
+    "react-dom": "17.0.2",
+    "react-firebase-hooks": "^3.0.4",
+    "react-hook-form": "^7.13.0",
+    "react-hot-toast": "^2.1.0",
+    "react-step-wizard": "^5.3.9"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2"
+>>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
