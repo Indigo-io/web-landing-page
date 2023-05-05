@@ -8,11 +8,7 @@ export default function Privacy() {
         <div className="container">
           <h1>Política de privacidad de Indigo Balance</h1>
 
-<<<<<<< HEAD
           <h3>Vigencia: 21 de diciembre de 2023</h3>
-=======
-          <h3>Vigencia: 21 de diciembre de 2021</h3>
->>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
 
           <p>AVISO IMPORTANTE</p>
           <p>
