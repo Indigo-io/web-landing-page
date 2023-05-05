@@ -9,6 +9,7 @@ import "../styles/contact.css";
 import "../styles/start-now.css";
 import "../styles/sub-hero.css";
 import "../styles/privacy.css";
+
 import "../styles/wizard.css";
 
 function MyApp({ Component, pageProps }) {
