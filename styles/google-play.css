@@ -3,7 +3,6 @@
   padding: 5rem 0;
 }
 
-<<<<<<< HEAD
 .google-play-sub {
   background-color: #3555f6;
   padding: 5rem 0;
@@ -11,11 +10,6 @@
 
 .google-play__wrapper {
   display: flex;
-=======
-.google-play__wrapper {
-  display: flex;
-  flex-direction: column;
->>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
   color: #fff;
   justify-content: space-between;
 }
@@ -51,13 +45,8 @@
 .google-play__title {
   font-family: Montserrat;
   font-weight: 600;
-<<<<<<< HEAD
   font-size: 2.5rem;
   line-height: 11.5rem;
-=======
-  font-size: 1.5rem;
-  line-height: 2.5rem;
->>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
   color: #fff;
 }
 
