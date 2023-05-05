@@ -1,0 +1,117 @@
+.start-now {
+  padding: 150px 0;
+  min-height: 110vh;
+}
+
+.step__title {
+  font-family: Montserrat;
+  font-weight: 700;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.step__subtitle {
+  font-family: Montserrat;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.step__text {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.step__btn--start {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  background: #26dcb0;
+  border: none;
+  border-radius: 100px;
+  padding: 1.625rem 4.375rem;
+}
+
+.step__btn--continue {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  background: #26dcb0;
+  border: none;
+  border-radius: 100px;
+  padding: 1rem 2rem;
+}
+
+.step__btn--back {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  background: #a8a8a8;
+  border: none;
+  border-radius: 100px;
+  padding: 1rem 2rem;
+}
+
+.step__input {
+  padding: 19px 20px !important;
+  background: #f5f5f5 !important;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  border-radius: 39px !important;
+}
+
+.step__textarea {
+  padding: 19px 20px !important;
+  background: #f5f5f5 !important;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  border-radius: 39px !important;
+  height: 100px !important;
+}
+
+.step__select {
+  background: #f5f5f5 !important;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  border-radius: 39px !important;
+}
+
+.step__input--unit {
+  padding: 19px 20px !important;
+  background: #f5f5f5 !important;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  border-bottom-left-radius: 39px !important;
+  border-top-left-radius: 39px !important;
+}
+
+.step__input--unit-right {
+  background: #f5f5f5 !important;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  border-bottom-right-radius: 39px !important;
+  border-top-right-radius: 39px !important;
+}
+
+.start-now__label {
+  color: #fff;
+  font-family: Montserrat;
+}
+
+.final-step {
+  font-family: Montserrat;
+  color: #fff;
+}

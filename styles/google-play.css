@@ -1,0 +1,85 @@
+.google-play {
+  background-color: #6048f1;
+  padding: 5rem 0;
+}
+
+.google-play-sub {
+  background-color: #3555f6;
+  padding: 5rem 0;
+}
+
+.google-play__wrapper {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.google-play__button-register {
+  font-family: Montserrat;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  background: #26dcb0;
+  border: none;
+  border-radius: 100px;
+  padding: 1.25rem 4.5rem;
+}
+
+.google-play__wrapper-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.google-play__wrapper-download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.google-play__button-ios {
+  margin-right: 1rem;
+}
+
+.google-play__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 11.5rem;
+  color: #fff;
+}
+
+.google-play__text {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.google-play__button {
+  flex: 1;
+  text-align: end;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .google-play__wrapper-buttons {
+    flex-direction: column;
+  }
+
+  .google-play__button-register {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .google-play__wrapper {
+    flex-direction: column;
+  }
+
+  .google-play__text {
+    margin-bottom: 2rem;
+  }
+}
