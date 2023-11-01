@@ -7,9 +7,9 @@ export default function BeginNow() {
       <div className="container">
         <div className="google-play__wrapper">
           <div className="google-play__wrapper--text">
-            <h3 className="google-play__title">
+            <h1 className="google-play__title">
                 Empeza ya mismo
-            </h3>
+            </h1>
           </div>
           <div className="google-play__wrapper-buttons">
             <div className="google-play__wrapper-download">
