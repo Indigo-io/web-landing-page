@@ -1,0 +1,17 @@
+.ourServicesContainer {
+  padding: 40px 0;
+}
+
+.ourServicesBoxes {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ourServicesTitle {
+  font-size: 32px;
+  text-align: center;
+  color: black;
+}

@@ -11,9 +11,7 @@ export default function HeaderSingle({ bgColor }) {
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo">
             <Link href="/">
-              <a>
-                <img src="/img/logo.png" alt="" className="img-fluid" />
-              </a>
+              <img src="/img/logo.png" alt="" className="img-fluid" />
             </Link>
           </div>
         </div>

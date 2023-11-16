@@ -631,7 +631,8 @@ section {
   height: 80px;
   transition: all 0.5s;
   z-index: 997;
-  transition: all 0.5s;
+  background: rgba(43, 63, 193, 0.8);
+  height: 60px;
 }
 
 #header.header-scrolled {
@@ -810,6 +811,11 @@ section {
   z-index: 999;
 }
 
+.navbar-mobile .navbar-mobile__container {
+  background-color: #c5cae9;
+  padding-top: 40px;
+}
+
 .navbar-mobile .mobile-nav-toggle {
   position: absolute;
   top: 15px;
@@ -819,12 +825,10 @@ section {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
+  height: 100vh;
+  top: 0;
+  right: 0;
   padding: 10px 0;
-  border-radius: 10px;
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
@@ -834,6 +838,18 @@ section {
   padding: 10px 20px;
   font-size: 15px;
   color: #101c36;
+}
+
+.navbar-mobile ul li a span {
+  color: black;
+}
+
+.navbar-mobile ul li a span:hover {
+  color: indigo;
+}
+
+.navbar-mobile i {
+  color: black;
 }
 
 .navbar-mobile a:hover,
@@ -888,12 +904,17 @@ section {
 }
 
 .header__item {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   box-sizing: border-box;
   border-radius: 35px;
   font-family: Montserrat;
-  font-size: 18px;
-  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: 0.3s;
   /* identical to box height, or 156% */
 
   text-align: center;
@@ -901,46 +922,6 @@ section {
   color: #ffffff;
 }
 
-<<<<<<< HEAD
-.list-item {
-  margin: 10px 0; /* Agrega espacio vertical de 10px y espacio horizontal de 0 a los elementos li */
-}
-
-.list-item-c {
-  margin: 10px 0;
-  color: #ffffff;
-}
-
-.left-half, .right-half {
-  color: white;
-/* Agrega aquí los estilos para los colores de fondo, márgenes, etc. de cada mitad */
-}
-
-.section-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  /* Estilos para el título de cada mitad de la sección */
-}
-
-   /* Clase para fondo blanco */
-.bg-white {
-    background-color: #fff; /* Cambiar a tu color de fondo blanco deseado */
-    color: #3F51B5;
-}
-
-/* Clase para fondo indigo */
-.bg-indigo {
-    background-color: #007bff;/* Cambiar a tu color de fondo indigo deseado */
-    color: #fff; /* Cambiar el color de texto si es necesario para que sea legible en el fondo indigo */
-}
-
-.divided-section {
-  display: flex;
-}
-
-=======
->>>>>>> aee4788c2ecff0effaa5b499c346670d148f8fe9
 /*--------------------------------------------------------------
 # Hero Section linear-gradient(to right, rgba(115, 21, 241, 0.9) 0%, rgba(12, 88, 228, 0.9) 50%),
 --------------------------------------------------------------*/

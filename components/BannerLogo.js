@@ -1,26 +1,27 @@
 import React from "react";
-
+import { RoundedButton } from "./uiComponents/RoundedButton";
 
 export default function BannerLogo() {
-    return (
-    <div className="google-play">
+  const calendlyLink = "https://calendly.com/indigobrunon/reunionconbruno"; // Reemplaza con tu enlace de Calendly
+
+  return (
+    <div className="bannerLogo">
       <div className="container">
-        <div className="google-play__wrapper">
-          <div className="google-play__wrapper--text">
-          </div>
-          <div className="google-play__wrapper-buttons">
-            <div className="google-play__wrapper-download">
-              <a
-                target="_blank"
-                    href="https://especialistas.indigobalance.com"
-                className="google-play__button-ios"
-                    rel="noreferrer">
-                <img 
-                src="/img/logoIndigo_coach_blanco.png"
-                style={{ width: "450px", height: "200px" }} />
-              </a>
-                  
-            </div>
+        <div className="bannerLogo__container">
+          <figure className="bannerLogo__imageContainer">
+            <img
+              className="bannerLogo__image"
+              src="img/logoIndigo_sin_borde-02.png"
+            />
+          </figure>
+          <div className="bannerLogo-calendly">
+            <p className="bannerLogo-calendlyTitle">Quieres saber mas?</p>
+            <RoundedButton
+              text={"Agenda tu Calendly"}
+              width={"250px"}
+              backgroundColor={"#49a8df"}
+              onClick={() => window.open(calendlyLink, "_blank")}
+            />
           </div>
         </div>
       </div>
