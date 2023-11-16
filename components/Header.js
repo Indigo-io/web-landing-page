@@ -37,14 +37,9 @@ export default function Header({ paths }) {
                 </Link>
               </li>
               <li>
-                <a href="#camino">
-                  <span className="header__item">Como funciona?</span>
-                </a>
-              </li>
-              <li>
-                <a href="#contacto">
-                  <span className="header__item">Contacto</span>
-                </a>
+                <Link href="/coachs#camino">
+                  <span className="header__item">¿Como funciona?</span>
+                </Link>
               </li>
             </ul>
             <i
