@@ -12,9 +12,7 @@ export default function Header({ paths }) {
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo">
             <Link href="/">
-              <a>
-                <img src="/img/logo.png" alt="" className="img-fluid" />
-              </a>
+              <img src="/img/logo.png" alt="" className="img-fluid" />
             </Link>
           </div>
 
@@ -22,22 +20,30 @@ export default function Header({ paths }) {
             id="navbar"
             className={`navbar ${showNavModal ? "navbar-mobile" : ""}`}
           >
-            <ul>
+            <ul className="navbar-mobile__container">
               <li>
-                <a className="header__item" href="#camino">
-                  Como funciona?
+                <Link href="/about-us">
+                  <span className="header__item">Nosotros</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <span className="header__item">Soy empresa</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/coachs">
+                  <span className="header__item">Soy coach</span>
+                </Link>
+              </li>
+              <li>
+                <a href="#camino">
+                  <span className="header__item">Como funciona?</span>
                 </a>
               </li>
               <li>
-              <Link href="/coachs">
-                <a className="header__item">
-                  Sos coach?
-                </a>
-              </Link>
-              </li>
-              <li>
-                <a className="header__item" href="#contacto">
-                  Contacto
+                <a href="#contacto">
+                  <span className="header__item">Contacto</span>
                 </a>
               </li>
             </ul>

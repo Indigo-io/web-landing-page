@@ -1,5 +1,5 @@
 import HeaderSingle from "components/HeaderSingle";
-import Footer from "components/Footer";
+import FooterSimple from "components/FooterSimple";
 import BackToTop from "components/BackToTop";
 import Head from "next/head";
 import Script from "next/script";
@@ -28,7 +28,7 @@ export default function LayoutSimple({ bgColor, children }) {
       <HeaderSingle bgColor={bgColor} />
 
       <div className="gradient">{children}</div>
-      <Footer />
+      <FooterSimple />
       <BackToTop />
       <Script src="/vendor/aos/aos.js" strategy="beforeInteractive"></Script>
       <Script
