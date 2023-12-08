@@ -2,7 +2,7 @@ import React from "react";
 import { RoundedButton } from "./uiComponents/RoundedButton";
 
 export default function BannerLogo() {
-  const calendlyLink = "https://calendly.com/indigobrunon/reunionconbruno"; // Reemplaza con tu enlace de Calendly
+  const calendlyLink = "https://calendly.com/reuconbruno/30min";
 
   return (
     <div className="bannerLogo">
