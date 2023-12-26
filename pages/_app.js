@@ -1,3 +1,5 @@
+import { initGA, logPageView } from "../services/analytics";
+
 import "../styles/globals.css";
 import "../styles/hero.css";
 import "../styles/ourBenefits.css";
@@ -23,6 +25,10 @@ import "../styles/ourTeam.css";
 import "../styles/wizard.css";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    initGA();
+    logPageView();
+  }, []);
   return <Component {...pageProps} />;
 }
 
