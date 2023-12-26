@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { initGA, logPageView } from "../services/analytics";
 
 import "../styles/globals.css";
