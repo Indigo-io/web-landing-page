@@ -3,6 +3,7 @@ import Header from "components/Header";
 import BackToTop from "components/BackToTop";
 import Head from "next/head";
 import Script from "next/script";
+import GoogleAnalytics from "components/GoogleAnalytics";
 
 export default function Layout({ children }) {
   return (
@@ -45,6 +46,7 @@ export default function Layout({ children }) {
       ></Script>
 
       <Script src="/js/main.js" strategy="beforeInteractive"></Script>
+      <GoogleAnalytics ga_id="G-0646DFBEQF" />
     </>
   );
 }
