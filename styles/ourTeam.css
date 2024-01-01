@@ -2,6 +2,7 @@
   min-height: 200px;
   background-color: #7945efff;
   width: 100%;
+  padding: 48px;
 }
 
 .ourTeam__title {
@@ -41,6 +42,9 @@
 .ourTeam__indigoImageContainer {
   width: 100%;
   margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ourTeam__indigoImage {

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { RoundedAvatar } from "./uiComponents/RoundedAvatar";
 import { aboutUsConstants } from "./constants/aboutUsConstants";
 
@@ -20,7 +21,13 @@ export default function OurTeam() {
       </p>
       <p className="ourTeam__muralTitle">Nuestro mural de cultura</p>
       <figure className="ourTeam__indigoImageContainer" id="indigo">
-        <img src="img/indigoDrawImage.jpeg" className="ourTeam__indigoImage" />
+        <Image
+          alt="indigo"
+          width={1600}
+          height={1131}
+          src="/img/indigoDrawImage.jpeg"
+          className="ourTeam__indigoImage"
+        />
       </figure>
     </section>
   );

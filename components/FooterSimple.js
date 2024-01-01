@@ -58,7 +58,8 @@ export default function Footer() {
         </div>
       </div>
       <p className="footer__copyright">
-        Copyright © 2023 Indigo Mind, Inc. Todos los derechos reservados.
+        Copyright © {new Date().getFullYear()} Indigo Mind, Inc. Todos los
+        derechos reservados.
       </p>
     </footer>
   );
