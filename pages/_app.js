@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/hero.css";
+import "../styles/heroAboutUs.css";
 import "../styles/ourBenefits.css";
 import "../styles/ourServices.css";
 import "../styles/testimonials2.css";
@@ -17,6 +18,7 @@ import "../styles/sub-hero.css";
 import "../styles/privacy.css";
 import "../styles/ourValues.css";
 import "../styles/ourPrinciples.css";
+import "../styles/ourBehaviors.css";
 import "../styles/guidingBehaviors.css";
 import "../styles/ourTeam.css";
 

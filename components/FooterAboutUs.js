@@ -30,12 +30,6 @@ export default function Footer() {
           <a href="#ourValues" className="footer__links--item">
             Nuestros valores
           </a>
-          <a href="#ourPrinciples" className="footer__links--item">
-            Nuestros principios
-          </a>
-          <a href="#ourTeam" className="footer__links--item">
-            Nuestro equipo
-          </a>
           <a href="#indigo" className="footer__links--item">
             Indigo
           </a>

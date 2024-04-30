@@ -1,0 +1,22 @@
+.ourBehaviors__background {
+  background-color: #eaeaea;
+}
+
+.ourBehaviors__mainContainer {
+  min-height: 800px;
+  padding: 50px 0;
+}
+
+.ourBehaviors__slider {
+  padding: 20px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px !important;
+  line-height: 10px !important;
+}
+
+.slick-dots {
+  top: 0 !important;
+  left: 1px !important;
+}

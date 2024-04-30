@@ -1,20 +1,20 @@
 .ourTeam {
   min-height: 200px;
-  background-color: #7945efff;
+  background-color: #eaeaea;
   width: 100%;
   padding: 48px;
 }
 
 .ourTeam__title {
   font-size: 40px;
-  color: white;
+  color: #7945ef;
   padding: 20px 0;
   text-align: center;
 }
 
 .ourTeam__subtitle {
   font-size: 24px;
-  color: white;
+  color: #7945ef;
   padding: 20px 0;
   text-align: center;
   padding: 20px;
@@ -48,13 +48,14 @@
 }
 
 .ourTeam__indigoImage {
-  max-width: 100%;
+  width: 100%;
 }
 
 .ourTeam__muralTitle {
   font-size: 40px;
-  color: white;
-  padding: 100px 0 20px;
+  color: #7945ef;
+  font-weight: bold;
+  padding: 25px;
   text-align: center;
 }
 

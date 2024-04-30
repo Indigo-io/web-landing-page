@@ -3,8 +3,8 @@ import React from "react";
 export default function OurValues() {
   return (
     <section className="ourValues" id="ourValues">
+      <p className="ourValues__title">Nuestros Valores</p>
       <div className="ourValues__container">
-        <p className="ourValues__title">Nuestros Valores</p>
         <div className="ourValues__item">
           <h2>Honestidad</h2>
           <p>Siempre actuamos con transparencia y sinceridad.</p>

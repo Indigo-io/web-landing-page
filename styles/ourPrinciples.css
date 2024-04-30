@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 20px;
 }
 
@@ -17,8 +18,10 @@
 }
 
 .ourPrinciples__title {
+  font-size: 40px;
   color: black;
-  padding-bottom: 20px;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .ourPrinciples__subtitle {

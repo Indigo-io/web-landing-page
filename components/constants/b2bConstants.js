@@ -25,6 +25,10 @@ const B2bConstants = {
   ourBenefitsText:
     "Impulsamos el bienestar integral de forma personalizada, flexible y desde donde estes",
 
+  values: "Valores",
+  principles: "Principios",
+  behaviors: "Comportamientos",
+
   fisic: "Fisico",
   mental: "Mental",
   teams: "Equipos",

@@ -3,8 +3,8 @@ import React from "react";
 export default function ourPrinciples() {
   return (
     <section className="ourPrinciples" id="ourPrinciples">
+      <h2 className="ourPrinciples__title">Principios de Comunicación</h2>
       <div className="ourPrinciples__container">
-        <h2 className="ourPrinciples__title">Principios de Comunicación</h2>
         <div className="ourPrinciples__item">
           <h3 className="ourPrinciples__subtitle">
             Comunicación abierta y transparente

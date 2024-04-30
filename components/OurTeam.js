@@ -6,7 +6,7 @@ import { aboutUsConstants } from "./constants/aboutUsConstants";
 export default function OurTeam() {
   return (
     <section className="ourTeam" id="ourTeam">
-      <p className="ourTeam__title">Nuestro Equipo</p>
+      {/*       <p className="ourTeam__title">Nuestro Equipo</p>
       <figure></figure>
       <div className="ourTeam__teamContainer">
         {aboutUsConstants.teamInfo.map((item) => (
@@ -18,7 +18,7 @@ export default function OurTeam() {
       </div>
       <p className="ourTeam__subtitle">
         Y muchos mas colaboradores que confian en la mision tanto como nosotros.
-      </p>
+      </p> */}
       <p className="ourTeam__muralTitle">Nuestro mural de cultura</p>
       <figure className="ourTeam__indigoImageContainer" id="indigo">
         <Image
