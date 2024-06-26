@@ -276,7 +276,7 @@ export default function Hero() {
                 <Image
                   src="/img/indigo2024/ai.png"
                   layout="fill"
-                  alt="Imagen de Inteligencia Artificial."
+                  alt="Imagen de Inteligencia Artificiall."
                 />
               </figure>
               <figure
