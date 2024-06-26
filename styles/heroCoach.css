@@ -1,0 +1,132 @@
+.heroCoach {
+  width: 100%;
+  background-color: #3d5ef3;
+}
+
+.heroCoach__mainContainer {
+  margin-top: 105px;
+  padding: 100px 0;
+  min-height: 500px;
+  height: 100%;
+  display: flex;
+}
+
+.heroCoach__text-container {
+  flex: 1;
+}
+
+.heroCoach__slider-container {
+  position: relative;
+  flex: 1;
+  max-width: 50%; /* Opcional: Asegura que los hijos no excedan el 50% */
+}
+
+.heroCoach__title {
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.heroCoach__subtitle {
+  font-size: 20px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.heroCoach__slider {
+  border-radius: 20px;
+  background-color: white;
+}
+
+.heroCoach__slider-item {
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.heroCoach__slider-title {
+  font-size: 40px;
+  color: #3d5ef3;
+  font-weight: bold;
+}
+
+.heroCoach__silder-description {
+  padding-top: 20px;
+  font-size: 16x;
+  color: #3d5ef3;
+}
+
+.heroCoach__slider-dots {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+  cursor: pointer;
+  margin: 0 6px;
+  bottom: 20px;
+}
+
+.heroCoach__slider-dots-active {
+  opacity: 1;
+  background: #007aff; /* Color por defecto del bullet activo */
+}
+
+.heroCoach__slider-number {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #3d5ef3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #3d5ef3;
+  margin-bottom: 10px;
+}
+
+.heroCoach__slider .slick-dots {
+  bottom: -0px !important;
+  left: 1px !important;
+}
+
+.slick-dotsa li.slick-active button:before {
+  color: blue !important;
+}
+
+.slick-dotsa li.slick-active button:before:focus {
+  color: red !important;
+}
+
+@media (max-width: 1080px) {
+  .heroCoach__mainContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroCoach__text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
+  .heroCoach__slider-container {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 560px; /* Opcional: Asegura que los hijos no excedan el 50% */
+  }
+}
+
+@media (max-width: 480px) {
+  .heroCoach__mainContainer {
+    padding-top: 50px;
+  }
+}

@@ -4,7 +4,6 @@ export default function handler(req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const { name, email, message } = JSON.parse(req.body);
-  console.log({ name, email, message });
   const msg = {
     to: "info@indigobalance.com", // Change to your recipient
     from: "exe@indigobalance.com", // Change to your verified sender

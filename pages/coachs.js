@@ -1,19 +1,16 @@
 import Layout from "components/Layout";
 import HeroCoach from "components/HeroCoach";
-import Benefist from "components/Benefist";
+import DownloadCoaches from "components/DownloadCoaches";
 import Contact from "components/Contact";
-import BannerLogo from "components/BannerLogo";
+import FooterCoachs from "../components/FooterCoach";
 
 export default function Coachs() {
-    return (
-        <Layout>
-            <HeroCoach />
-
-            <Benefist />
-
-            <BannerLogo />
-
-            <Contact />
-        </Layout>
-    );
+  return (
+    <Layout>
+      <HeroCoach />
+      <DownloadCoaches />
+      <Contact />
+      <FooterCoachs />
+    </Layout>
+  );
 }

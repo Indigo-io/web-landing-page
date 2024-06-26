@@ -1,21 +1,18 @@
-
 import Layout from "components/Layout";
 import Hero from "components/Hero";
-import GooglePlay from "components/GooglePlay";
-import Camino from "components/Camino";
 import Contact from "components/Contact";
-import SubHero from "components/SubHero";
-import KnowMore from "components/KnowMore";
+import BannerHero from "components/BannerHero";
+import OurBenefits from "../components/OurBenefits";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <Camino />
-      <GooglePlay />
-      <SubHero />
-      <KnowMore />
+      <OurBenefits />
+      <BannerHero />
       <Contact />
+      <Footer />
     </Layout>
   );
 }

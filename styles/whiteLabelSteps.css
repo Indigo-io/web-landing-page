@@ -1,0 +1,129 @@
+.whiteLabelSteps__mainContainer {
+  min-height: 500px;
+  background-color: white;
+  padding-top: 40px;
+}
+
+.whiteLabelSteps__slider {
+  padding: 40px 20px 0;
+}
+
+.whiteLabelSteps__slider .swiper-pagination {
+  top: 0 !important;
+}
+
+.whiteLabelSteps__container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 50px;
+  min-height: 450px;
+}
+
+.whiteLabelSteps__imageContainer {
+  position: relative;
+  width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.whiteLabelSteps__image {
+  width: 100%;
+  height: auto;
+}
+
+.whiteLabelSteps__descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 5%;
+  flex: 2;
+}
+
+.whiteLabelSteps__title {
+  font-weight: bold;
+  color: #5473e2;
+  font-size: 34px;
+  padding-bottom: 20px;
+}
+
+.whiteLabelSteps__text {
+  color: black;
+  padding-right: 20%;
+}
+
+.whiteLabelSteps__slider-dots {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+  cursor: pointer;
+  margin: 0 6px;
+  bottom: 20px;
+}
+
+.whiteLabelSteps__slider-dots-active {
+  opacity: 1;
+  background: #007aff; /* Color por defecto del bullet activo */
+}
+
+@media (max-width: 1080px) {
+  .whiteLabelSteps__descriptionContainer {
+    flex-direction: column;
+  }
+
+  .whiteLabelSteps__textContainer {
+    padding-top: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1080px) {
+  .whiteLabelSteps__mainContainer {
+    min-height: 500px;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .whiteLabelSteps__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .whiteLabelSteps__slider {
+    padding: 0;
+  }
+
+  .whiteLabelSteps__descriptionContainer {
+    padding: 0;
+  }
+
+  .whiteLabelSteps__text {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 720px) {
+}
+
+@media (max-width: 480px) {
+  .whiteLabelSteps__container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .whiteLabelSteps__text {
+    text-align: center;
+    padding: 0;
+    text-align: left;
+  }
+}

@@ -1,9 +1,9 @@
 import { paths } from "contants/paths";
 import Header from "components/Header";
-import Footer from "components/Footer";
 import BackToTop from "components/BackToTop";
 import Head from "next/head";
 import Script from "next/script";
+import GoogleAnalytics from "components/GoogleAnalytics";
 
 export default function Layout({ children }) {
   return (
@@ -30,7 +30,6 @@ export default function Layout({ children }) {
 
       {children}
 
-      <Footer />
       <BackToTop />
       <Script src="/vendor/aos/aos.js" strategy="beforeInteractive"></Script>
       <Script
@@ -47,6 +46,7 @@ export default function Layout({ children }) {
       ></Script>
 
       <Script src="/js/main.js" strategy="beforeInteractive"></Script>
+      <GoogleAnalytics ga_id="G-0646DFBEQF" />
     </>
   );
 }

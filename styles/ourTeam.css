@@ -1,0 +1,53 @@
+.ourTeam {
+  min-height: 200px;
+  background-color: #eaeaea;
+  width: 100%;
+  padding: 48px;
+}
+
+.ourTeam::before {
+  content: "";
+  width: 120%;
+  height: 180px;
+  position: absolute;
+  top: -90px;
+  background-color: white;
+  clip-path: ellipse(50% 40% at 50% 50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ourTeam__indigoImageContainer {
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourTeam__indigoImage {
+  width: 100%;
+}
+
+.ourTeam__muralTitle {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  padding: 25px;
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .ourTeam__teamContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .ourTeam__indigoImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ourTeam__indigoImage {
+    width: 500px;
+  }
+}

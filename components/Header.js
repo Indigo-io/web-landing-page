@@ -9,12 +9,10 @@ export default function Header({ paths }) {
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
-        <div className="container d-flex justify-content-between align-items-center">
+        <div className="header-container d-flex justify-content-between align-items-center">
           <div className="logo">
             <Link href="/">
-              <a>
-                <img src="/img/logo.png" alt="" className="img-fluid" />
-              </a>
+              <span className="header__item">Home</span>
             </Link>
           </div>
 
@@ -22,23 +20,31 @@ export default function Header({ paths }) {
             id="navbar"
             className={`navbar ${showNavModal ? "navbar-mobile" : ""}`}
           >
-            <ul>
+            <ul className="navbar-mobile__container">
               <li>
-                <a className="header__item" href="#camino">
-                  Como funciona?
-                </a>
+                <Link href="/b2b">
+                  <span className="header__item">B2B</span>
+                </Link>
               </li>
               <li>
-              <Link href="/coachs">
-                <a className="header__item">
-                  Sos coach?
-                </a>
-              </Link>
+                <Link href="/b2c">
+                  <span className="header__item">B2C</span>
+                </Link>
               </li>
               <li>
-                <a className="header__item" href="#contacto">
-                  Contacto
-                </a>
+                <Link href="/white-label">
+                  <span className="header__item">Marca Blanca</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/coachs">
+                  <span className="header__item">Coach</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about-us">
+                  <span className="header__item">Nosotros</span>
+                </Link>
               </li>
             </ul>
             <i
