@@ -36,7 +36,7 @@ export default function BannerLogo() {
                 <Image
                   src="/img/indigo2024/agenda.png"
                   layout="fill"
-                  alt="Imagen Agenda"
+                  alt="Imagen Agenda."
                 />
               </figure>
             </div>
