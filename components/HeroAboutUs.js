@@ -1,20 +1,19 @@
 import React from "react";
 
 import { aboutUsConstants } from "./constants/aboutUsConstants";
+import Image from "next/image";
 
 export default function HeroAboutUs() {
   return (
-    <section className="heroAboutUs" id="heroAboutUs">
-      <div className="heroAboutUs__background"></div>
+    <section className="heroAboutUs" id="hero">
       <div className="container">
         <div className="heroAboutUs__wrapper">
           <div className="heroAboutUs__wrapper--text">
             <p className="heroAboutUs__textContainer">
               <span
-                className="heroAboutUs__text"
+                className="heroAboutUs__title"
                 data-aos="fade-right"
                 data-aos-delay="100"
-                style={{ fontSize: "41px" }}
               >
                 {aboutUsConstants.heroUpperText}
               </span>
@@ -28,12 +27,14 @@ export default function HeroAboutUs() {
             </p>
           </div>
           <div className="heroAboutUs__wrapper--ilustrator">
-            <img
-              src="/img/team.png"
-              alt="Image"
-              data-aos="fade-right"
-              className="heroAboutUs__ilustrator"
-            />
+            <figure className="heroAboutUs__image-container">
+              <Image
+                className="heroAboutUs__image"
+                src="/img/indigo2024/indigo_illustration.png"
+                width={577}
+                height={577}
+              />
+            </figure>
           </div>
         </div>
       </div>

@@ -12,25 +12,9 @@ function SelectableRoundedButton({ text, onClick, isSelected }) {
   );
 }
 
-function RoundedButton({
-  text,
-  onClick,
-  backgroundColor,
-  textColor,
-  width,
-  isBold,
-}) {
+function RoundedButton({ text, onClick, sx }) {
   return (
-    <button
-      className={`${styles.roundedButton}`}
-      onClick={onClick}
-      style={{
-        backgroundColor: backgroundColor ?? "black",
-        color: textColor ? textColor : "white",
-        width: width ? width : "200px",
-        fontWeight: isBold ? "bold" : "",
-      }}
-    >
+    <button className={`${styles.roundedButton}`} onClick={onClick} style={sx}>
       {text}
     </button>
   );

@@ -2,16 +2,10 @@ import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 
-function RoundedAvatar({ avatar, width }) {
+function RoundedAvatar({ avatar, sx }) {
   return (
-    <figure
-      className={`${styles.roundedAvatar}`}
-      style={{
-        width: width ? width : "150px",
-        height: width ? width : "150px",
-      }}
-    >
-      <Image src={avatar} layout="fill" alt="avatar" objectFit="cover" />
+    <figure className={`${styles.roundedAvatar}`} style={sx}>
+      <Image src={avatar} layout="fill" alt="avatar" objectFit="contain" />
     </figure>
   );
 }

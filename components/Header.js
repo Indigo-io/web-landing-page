@@ -9,10 +9,10 @@ export default function Header({ paths }) {
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
-        <div className="container d-flex justify-content-between align-items-center">
+        <div className="header-container d-flex justify-content-between align-items-center">
           <div className="logo">
             <Link href="/">
-              <img src="/img/logo.png" alt="" className="img-fluid" />
+              <span className="header__item">Home</span>
             </Link>
           </div>
 
@@ -22,23 +22,28 @@ export default function Header({ paths }) {
           >
             <ul className="navbar-mobile__container">
               <li>
-                <Link href="/about-us">
-                  <span className="header__item">Nosotros</span>
+                <Link href="/b2b">
+                  <span className="header__item">B2B</span>
                 </Link>
               </li>
               <li>
-                <Link href="/">
-                  <span className="header__item">Soy empresa</span>
+                <Link href="/b2c">
+                  <span className="header__item">B2C</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/white-label">
+                  <span className="header__item">Marca Blanca</span>
                 </Link>
               </li>
               <li>
                 <Link href="/coachs">
-                  <span className="header__item">Soy coach</span>
+                  <span className="header__item">Coach</span>
                 </Link>
               </li>
               <li>
-                <Link href="/coachs#camino">
-                  <span className="header__item">¿Como funciona?</span>
+                <Link href="/about-us">
+                  <span className="header__item">Nosotros</span>
                 </Link>
               </li>
             </ul>

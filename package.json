@@ -28,9 +28,9 @@
     "react-firebase-hooks": "^5.1.1",
     "react-hook-form": "^7.43.9",
     "react-hot-toast": "^2.4.1",
-    "react-slick": "^0.29.0",
     "react-step-wizard": "^5.3.11",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
     "eslint": "8.39.0",
