@@ -4,7 +4,7 @@ const MainConstants = {
     "Soluciones B2B y B2C, seguimiento de hábitos y prevención de la salud",
 
   meditationText:
-    "Brindamos herramientas para una mejor gestión emocional. Ayudamos a reducir el estrés, aumentar la concentración y mejorar el bienestar, promoviendo un equilibrio entre mente y cuerpo.",
+    "Brindamos herramientas para una mejor gestion emocional. Ayudamos a reducir el estrés, aumentar la concentración y mejorar el bienestar, promoviendo un equilibrio entre mente y cuerpo.",
   fitnessText:
     "Nuestra app ofrece programas de entrenamiento personalizados que te ayudan a alcanzar metas. Conocerás diversos ejercicios y elegirás el plan que se adecue a tus objetivos y estilo de vida.",
   nutritionText:
