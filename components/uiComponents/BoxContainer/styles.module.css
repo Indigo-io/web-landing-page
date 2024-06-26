@@ -1,8 +1,5 @@
 .boxContainer {
   width: 300px;
-  min-height: 300px;
-  background-color: #2b2d2e;
-  color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -14,15 +11,14 @@
 
 .titleContainer {
   display: flex;
+  height: 150px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex: 1;
 }
 
 .title {
   font-size: 20px;
-  flex-grow: 1;
   font-weight: bold;
 }
 

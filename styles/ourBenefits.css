@@ -1,19 +1,18 @@
 .ourBenefits__background {
-  background-color: #c5cae9;
+  background-color: #f9f9f9;
 }
 
 .ourBenefits__mainContainer {
-  min-height: 800px;
-  padding: 100px 0 25px;
+  min-height: 300px;
+  padding-top: 40px;
 }
 
 .ourBenefits__title {
   text-align: center;
-  padding: 20px 0px;
-  max-width: 650px;
-  text-align: center;
   font-weight: bold;
   font-size: 32px;
+  padding-bottom: 60px;
+  color: #3d5ef3;
 }
 
 .ourBenefits__subtitle {
@@ -25,87 +24,60 @@
   transition: content 0.3s ease, opacity 0.3s ease;
 }
 
-.ourBenefits__upperSide {
-  display: flex;
-  flex-direction: column;
+.ourBenefits__slider {
+  height: 200px;
+  width: 70%;
+}
+
+.ourBenefits__company {
+  display: flex !important;
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
 
-.ourBenefits__bottomSide {
-  margin-top: 40px;
-  min-height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-}
-
-.ourBenefits__bottomSideContainer {
-  flex: 1;
-  color: black;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.ourBenefits__bottomSideTitle {
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.ourBenefits__botomSideImageContainer {
-  width: 300px;
-  height: 400px;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.ourBenefits__botomSideImage {
+.ourBenefits__logo--container {
   max-width: 100%;
-  max-height: 100%;
-}
-
-.carousel {
+  margin: 0;
+  height: 50px;
+  position: relative;
   display: flex;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
 }
 
-.carousel-item {
+.ourBenefits__logo {
   width: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  height: 100%;
 }
 
-.carousel-item.active {
-  opacity: 1;
-}
-
-button {
-  margin-top: 10px;
+.ourBenefits__slider-dots {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
   cursor: pointer;
+  margin: 0 6px;
+  bottom: 20px;
 }
 
-/* Agrega estilos adicionales según sea necesario */
+.ourBenefits__slider-dots-active {
+  opacity: 1;
+  background: #007aff; /* Color por defecto del bullet activo */
+}
 
-@media screen and (max-width: 768px) {
-  .ourBenefits__mainContainer {
-    padding-left: 30px;
-    padding-bottom: 40px;
+@media (max-width: 768px) {
+  .ourBenefits__slider {
+    padding: 40px 20px;
+    margin: 0 20%;
   }
+}
 
-  .ourBenefits__botomSideImageContainer {
-    display: none;
-  }
-
-  .ourBenefits__bottomSideContainer {
-    align-items: center;
-    text-align: center;
+@media (max-width: 480px) {
+  .ourBenefits__slider {
+    padding: 40px 20px;
+    margin: 0 0%;
   }
 }

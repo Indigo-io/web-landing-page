@@ -1,15 +1,11 @@
 const aboutUsConstants = {
-  heroUpperText: (
-    <span>
-      Cual es nuestro <b>propósito</b>?
-    </span>
-  ),
+  heroUpperText: <span>¿Quiénes somos?</span>,
 
   heroBottomText: (
     <span>
-      Mejorar la <b>calidad de vida</b> de las personas, promoviendo una mayor
+      Buscamos mejorar la calidad de vida de las personas, promoviendo una mayor
       conciencia individual y fomentando una perspectiva integral que abarque
-      desde la <b>salud</b> hasta el <b>bienestar</b>.
+      desde la salud hasta el bienestar.
     </span>
   ),
 

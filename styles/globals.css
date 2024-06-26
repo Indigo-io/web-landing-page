@@ -628,15 +628,14 @@ section {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
   transition: all 0.5s;
   z-index: 997;
-  background: rgba(43, 63, 193, 0.8);
-  height: 60px;
+  background: white;
+  height: 80px;
 }
 
 #header.header-scrolled {
-  background: rgba(43, 63, 193, 0.8);
+  background: white;
   height: 60px;
 }
 
@@ -660,6 +659,10 @@ section {
   max-height: 65px;
 }
 
+.header-container {
+  width: 100%;
+  padding: 0 30px;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -775,7 +778,7 @@ section {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #3d5ef3;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -796,7 +799,7 @@ section {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 999;
+  z-index: 3999;
 }
 
 .navbar-mobile {
@@ -915,6 +918,7 @@ section {
   font-weight: 400;
   white-space: nowrap;
   transition: 0.3s;
+  color: #3d5ef3 !important;
   /* identical to box height, or 156% */
 
   text-align: center;
@@ -949,6 +953,11 @@ section {
 .image-hero {
   width: 30rem;
 }
+
+.cursor--pointer :hover {
+  cursor: pointer;
+}
+
 @media (max-width: 990px) {
   .image-hero {
     width: 20rem;
@@ -970,18 +979,6 @@ section {
 @media (max-width: 400px) {
   .title-secondary {
     font-size: 35px;
-  }
-}
-
-@media (max-width: 390px) {
-  .hero__title {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 350px) {
-  .hero__title {
-    font-size: 30px;
   }
 }
 

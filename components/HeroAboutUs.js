@@ -1,27 +1,24 @@
 import React from "react";
 
-import { RoundedButton } from "./uiComponents/RoundedButton";
 import { aboutUsConstants } from "./constants/aboutUsConstants";
-import { scrollToSection } from "./helpers/scrollToSection";
+import Image from "next/image";
 
 export default function HeroAboutUs() {
   return (
-    <section className="hero" id="hero">
-      <div className="hero__background"></div>
+    <section className="heroAboutUs" id="hero">
       <div className="container">
-        <div className="hero__wrapper">
-          <div className="hero__wrapper--text">
-            <p className="hero__textContainer">
+        <div className="heroAboutUs__wrapper">
+          <div className="heroAboutUs__wrapper--text">
+            <p className="heroAboutUs__textContainer">
               <span
-                className="hero__text"
+                className="heroAboutUs__title"
                 data-aos="fade-right"
                 data-aos-delay="100"
-                style={{ fontSize: "41px" }}
               >
                 {aboutUsConstants.heroUpperText}
               </span>
               <span
-                className="hero__text"
+                className="heroAboutUs__text"
                 data-aos="fade-right"
                 data-aos-delay="100"
               >
@@ -29,13 +26,15 @@ export default function HeroAboutUs() {
               </span>
             </p>
           </div>
-          <div className="hero__wrapper--ilustrator">
-            <img
-              src="/img/team.png"
-              alt="Image"
-              data-aos="fade-right"
-              className="hero__ilustrator"
-            />
+          <div className="heroAboutUs__wrapper--ilustrator">
+            <figure className="heroAboutUs__image-container">
+              <Image
+                className="heroAboutUs__image"
+                src="/img/indigo2024/indigo_illustration.png"
+                width={577}
+                height={577}
+              />
+            </figure>
           </div>
         </div>
       </div>

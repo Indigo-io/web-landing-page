@@ -1,125 +1,96 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
-import Slider from "react-slick";
+import { MainConstants } from "./constants/mainConstants";
 import Image from "next/image";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import {
-  RoundedButton,
-  SelectableRoundedButton,
-} from "./uiComponents/RoundedButton";
-import { B2bConstants } from "./constants/b2bConstants";
-import { scrollToSection } from "./helpers/scrollToSection";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function OurBenefits() {
-  const [selectedButton, setSelectedButton] = useState("fisic");
-  const [fisicStatus, setFisicStatus] = useState();
-  const [mentalStatus, setMentalStatus] = useState();
-  const [teamsStatus, setTeamsStatus] = useState();
-  const [isChanging, setIsChanging] = useState(false);
-
-  const carrouselText = {
-    FISIC: "fisic",
-    MENTAL: "mental",
-    TEAMS: "teams",
-  };
-
-  const carouselRef = useRef(null);
-
-  useEffect(() => {
-    if (selectedButton === carrouselText.FISIC) {
-      setFisicStatus(true);
-      setMentalStatus(false);
-      setTeamsStatus(false);
-    } else if (selectedButton === carrouselText.MENTAL) {
-      setFisicStatus(false);
-      setMentalStatus(true);
-      setTeamsStatus(false);
-    } else if (selectedButton === carrouselText.TEAMS) {
-      setFisicStatus(false);
-      setMentalStatus(false);
-      setTeamsStatus(true);
-    }
-  }, [selectedButton]);
-
-  const onButtonClick = (newText, slickToChange) => {
-    if (!isChanging) {
-      setSelectedButton(newText), carouselRef.current.slickGoTo(slickToChange);
-    }
-  };
-
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-    beforeChange: () => setIsChanging(true),
-    afterChange: () => setIsChanging(false),
-    easing: "ease-out",
-  };
-
-  function carouselSection(section) {
-    return (
-      <div className="ourBenefits__bottomSide">
-        <div className="ourBenefits__bottomSide">
-          <div className="ourBenefits__bottomSideContainer">
-            <p className="ourBenefits__bottomSideTitle">
-              {B2bConstants.textToShow[section].title}
-            </p>
-            <p>{B2bConstants.textToShow[section].description}</p>
-            <RoundedButton
-              text={"Cotiza un plan"}
-              onClick={() => scrollToSection("contacto")}
-            />
-          </div>
-          <figure className="ourBenefits__botomSideImageContainer">
-            <img
-              className="ourBenefits__botomSideImage"
-              src="/img/hero__ilustrator.png"
-            />
-          </figure>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="ourBenefits__background">
       <div className="container">
-        <section className="ourBenefits__mainContainer" id="beneficios">
-          <div className="ourBenefits__upperSide">
-            <h1 className="ourBenefits__title">
-              {B2bConstants.ourBenefitsText}
-            </h1>
-
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <SelectableRoundedButton
-                text={B2bConstants.fisic}
-                onClick={() => onButtonClick(carrouselText.FISIC, 0)}
-                isSelected={fisicStatus}
-              />
-              <SelectableRoundedButton
-                text={B2bConstants.mental}
-                onClick={() => onButtonClick(carrouselText.MENTAL, 1)}
-                isSelected={mentalStatus}
-              />
-              <SelectableRoundedButton
-                text={B2bConstants.teams}
-                onClick={() => onButtonClick(carrouselText.TEAMS, 2)}
-                isSelected={teamsStatus}
-              />
-            </div>
-          </div>
-          <Slider ref={carouselRef} {...carouselSettings}>
-            {carouselSection("fisic")}
-            {carouselSection("mental")}
-            {carouselSection("teams")}
-          </Slider>
+        <section className="ourBenefits__mainContainer" id="companias">
+          <h1 className="ourBenefits__title">{MainConstants.companiesText}</h1>
+          <Swiper
+            className="ourBenefits__slider"
+            spaceBetween={50}
+            slidesPerView={2}
+            modules={[Autoplay, Pagination, Navigation]}
+            speed={1000}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{
+              clickable: true,
+              bulletClass: "ourBenefits_slider-dots",
+              bulletActiveClass: "ourBenefits_slider-dots-active",
+            }}
+            loop={true}
+            breakpoints={{
+              720: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="ourBenefits__company">
+                <figure className="ourBenefits__logo--container">
+                  <Image
+                    className="ourBenefits__logo"
+                    src="/img/indigo2024/brands_tyrrell.png"
+                    width={254}
+                    height={62}
+                  />
+                </figure>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="ourBenefits__company">
+                <figure className="ourBenefits__logo--container">
+                  <Image
+                    className="ourBenefits__logo"
+                    src="/img/indigo2024/brands_italcred.png"
+                    width={204}
+                    height={42}
+                    style={{
+                      height: "35px",
+                      alignSelf: "flex-end",
+                    }}
+                  />
+                </figure>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="ourBenefits__company">
+                <figure className="ourBenefits__logo--container">
+                  <Image
+                    className="ourBenefits__logo"
+                    src="/img/indigo2024/brands_plus.png"
+                    width={194}
+                    height={89}
+                  />
+                </figure>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="ourBenefits__company">
+                <figure className="ourBenefits__logo--container">
+                  <Image
+                    className="ourBenefits__logo"
+                    src="/img/indigo2024/brands_manteca.png"
+                    width={220}
+                    height={44}
+                  />
+                </figure>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </section>
       </div>
     </div>

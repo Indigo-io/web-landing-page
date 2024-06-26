@@ -1,9 +1,8 @@
 import Layout from "components/Layout";
 import Hero from "components/Hero";
 import Contact from "components/Contact";
-import BannerLogo from "components/BannerLogo";
+import BannerHero from "components/BannerHero";
 import OurBenefits from "../components/OurBenefits";
-import OurServices from "../components/OurServices";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -11,8 +10,7 @@ export default function Home() {
     <Layout>
       <Hero />
       <OurBenefits />
-      <OurServices />
-      <BannerLogo />
+      <BannerHero />
       <Contact />
       <Footer />
     </Layout>
