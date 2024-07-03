@@ -1,0 +1,83 @@
+.ourBenefits__background {
+  background-color: #f9f9f9;
+}
+
+.ourBenefits__mainContainer {
+  min-height: 300px;
+  padding-top: 40px;
+}
+
+.ourBenefits__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 60px;
+  color: #3d5ef3;
+}
+
+.ourBenefits__subtitle {
+  text-align: center;
+  padding: 20px 0;
+  max-width: 650px;
+  font-size: 28px;
+  font-weight: bold;
+  transition: content 0.3s ease, opacity 0.3s ease;
+}
+
+.ourBenefits__slider {
+  height: 200px;
+  width: 70%;
+}
+
+.ourBenefits__company {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.ourBenefits__logo--container {
+  max-width: 100%;
+  margin: 0;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourBenefits__logo {
+  width: 100%;
+  height: 100%;
+}
+
+.ourBenefits__slider-dots {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+  cursor: pointer;
+  margin: 0 6px;
+  bottom: 20px;
+}
+
+.ourBenefits__slider-dots-active {
+  opacity: 1;
+  background: #007aff; /* Color por defecto del bullet activo */
+}
+
+@media (max-width: 768px) {
+  .ourBenefits__slider {
+    padding: 40px 20px;
+    margin: 0 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ourBenefits__slider {
+    padding: 40px 20px;
+    margin: 0 0%;
+  }
+}

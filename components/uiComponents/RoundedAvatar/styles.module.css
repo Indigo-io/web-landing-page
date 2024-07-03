@@ -1,0 +1,8 @@
+.roundedAvatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}

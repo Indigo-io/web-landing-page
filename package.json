@@ -1,0 +1,47 @@
+{
+  "name": "web-landing-next",
+  "version": "0.2.0",
+  "private": true,
+  "engines": {
+    "node": "16.20.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.16",
+    "@mui/material": "^5.14.16",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.4.0",
+    "firebase": "^9.21.0",
+    "framer-motion": "6.5.1",
+    "next": "^13.3.4",
+    "react": "18.2.0",
+    "react-calendly": "^4.1.1",
+    "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hook-form": "^7.43.9",
+    "react-hot-toast": "^2.4.1",
+    "react-step-wizard": "^5.3.11",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.4",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
