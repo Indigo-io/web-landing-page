@@ -26,6 +26,7 @@ import "../styles/ourTeam.css";
 import "../styles/ourValues.css";
 
 import "../styles/wizard.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
