@@ -409,7 +409,7 @@ export default function Hero() {
             </figure>
             <figure className="hero__coaches">
               <Image
-                src="/img/indigo2024/illustration-coaches.png"
+                src="/img/indigo2024/illustration_coaches.png"
                 layout="fill"
                 alt="Imagen de coaches"
               />
