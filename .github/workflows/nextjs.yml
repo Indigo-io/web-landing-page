@@ -53,6 +53,21 @@ jobs:
         with:
           node-version: '16.20.0'
 
+     - name: Clean npm cache
+        run: npm cache clean --force
+
+      - name: Remove package-lock.json
+        run: rm -f package-lock.json
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build with Next.js
+        run: npm run build
+
+      - name: Export Next.js static files
+        run: npm run export
+
       - name: Cache node modules
         uses: actions/cache@v3
         with:
