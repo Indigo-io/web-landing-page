@@ -14,14 +14,24 @@ export default function FooterB2C() {
             />
           </figure>
           <div className="footer__data--item">
-            <span className="bi bi-geo-alt footer__icon"></span>
+            <Image
+              style={{ marginRight: "1rem" }}
+              src="/img/indigo2024/location-icon.png"
+              width={18}
+              height={22}
+            />
             <p className="footer__data--text">
               Castillo 1366, C1414, CABA , Argentina
               <br /> Tel: + 54 (911) 2854 4896
             </p>
           </div>
           <div className="footer__data--item">
-            <span className="bi bi-geo-alt footer__icon"></span>
+            <Image
+              style={{ marginRight: "1rem" }}
+              src="/img/indigo2024/location-icon.png"
+              width={18}
+              height={22}
+            />
             <p className="footer__data--text">
               2625 Weston Rd., Suite D, Weston
               <br /> FL 33331, USA
@@ -29,7 +39,12 @@ export default function FooterB2C() {
             </p>
           </div>
           <div className="footer__data--item">
-            <span className="bi bi-envelope footer__icon"></span>
+            <Image
+              style={{ marginRight: "1rem" }}
+              src="/img/indigo2024/mail-icon.png"
+              width={22}
+              height={16}
+            />
             <p className="footer__data--text">info@indigobalance.com</p>
           </div>
         </div>
@@ -68,14 +83,24 @@ export default function FooterB2C() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bi bi-instagram footer__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/instagram-icon.png"
+                  width={32}
+                  height={32}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/company/indigo-balance/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bi bi-linkedin footer__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/linkedin-icon.png"
+                  width={32}
+                  height={32}
+                />
               </a>
             </div>
           </div>
