@@ -1,8 +1,8 @@
 .ourTeam {
   min-height: 200px;
-  background-color: #eaeaea;
+  background-color: #7945ef;
   width: 100%;
-  padding: 48px;
+  padding: 48px 48px 150px;
 }
 
 .ourTeam::before {

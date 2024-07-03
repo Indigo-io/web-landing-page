@@ -71,14 +71,24 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bi bi-instagram footer__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/instagram-icon.png"
+                  width={32}
+                  height={32}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/company/indigo-balance/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span className="bi bi-linkedin footer__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/linkedin-icon.png"
+                  width={32}
+                  height={32}
+                />
               </a>
             </div>
           </div>
