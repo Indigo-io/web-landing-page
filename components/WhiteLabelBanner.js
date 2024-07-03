@@ -1,7 +1,5 @@
-import Image from "next/image";
 import { WhiteLabelConstants } from "./constants/whiteLabelConstants";
 import { RoundedButton } from "./uiComponents/RoundedButton";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function WhiteLabelBanner() {
   return (
@@ -32,11 +30,6 @@ export default function WhiteLabelBanner() {
             )
           }
         />
-        <a href="https://wa.me/+12056153558" target="_blank">
-          <div className="whiteLabelBanner__whatsapp-buttonContainer">
-            <WhatsAppIcon sx={{ color: "white", fontSize: "32px" }} />
-          </div>
-        </a>
       </div>
     </section>
   );
