@@ -34,7 +34,7 @@ export default function OurBenefits() {
             loop={true}
             breakpoints={{
               720: {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
             }}
           >

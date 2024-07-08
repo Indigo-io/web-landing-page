@@ -16,6 +16,7 @@ body {
   color: #9fa1a4;
   line-height: 1.5;
   font-size: 16px;
+  overflow: hidden;
 }
 
 a {
@@ -777,6 +778,7 @@ section {
 /**
 * Mobile Navigation 
 */
+
 .mobile-nav-toggle {
   color: #3d5ef3;
   font-size: 28px;
@@ -788,7 +790,7 @@ section {
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: inline-block;
   }
   .navbar ul {
     display: none;
@@ -802,9 +804,59 @@ section {
   z-index: 3999;
 }
 
+/* Header.module.css */
+
+.bm-burger-button {
+  width: 36px;
+  height: 30px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background-color: #3d5ef3;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+  color: #d1d1d1;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.header__burguerMenu {
+  display: none;
+}
+
+.burguerIcon {
+  display: none;
+}
+
 .navbar-mobile {
   position: fixed;
-  overflow: hidden;
   top: 0;
   right: 0;
   left: 0;
@@ -926,6 +978,11 @@ section {
   color: #ffffff;
 }
 
+.header__item-mobile {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Hero Section linear-gradient(to right, rgba(115, 21, 241, 0.9) 0%, rgba(12, 88, 228, 0.9) 50%),
 --------------------------------------------------------------*/
@@ -961,6 +1018,13 @@ section {
 @media (max-width: 990px) {
   .image-hero {
     width: 20rem;
+  }
+  .header__burguerMenu {
+    display: block;
+    top: 0;
+  }
+  .burguerIcon {
+    display: block;
   }
 }
 

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { slide as Menu } from "react-burger-menu";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header({ paths }) {
   const route = useRouter();
@@ -47,12 +49,55 @@ export default function Header({ paths }) {
                 </Link>
               </li>
             </ul>
-            <i
+            {/*             <i
               className={`bi mobile-nav-toggle ${
                 showNavModal ? "bi-x" : "bi-list"
               }`}
-              onClick={() => setShowNavModal(!showNavModal)}
-            ></i>
+            ></i> */}
+            <Menu
+              right
+              customBurgerIcon={<MenuIcon color="primary" />}
+              customCrossIcon={<i className="bi bi-x"></i>}
+              className={"header__burguerMenu"}
+            >
+              <ul className={"header_burguerMenu--item"}>
+                <li>
+                  <Link href="/b2b">
+                    <span className="header__item header__item-mobile">
+                      B2B
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/b2c">
+                    <span className="header__item header__item-mobile">
+                      B2C
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/white-label">
+                    <span className="header__item header__item-mobile">
+                      Marca Blanca
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/coachs">
+                    <span className="header__item header__item-mobile">
+                      Coach
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about-us">
+                    <span className="header__item header__item-mobile">
+                      Nosotros
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </Menu>
           </nav>
         </div>
       </header>
