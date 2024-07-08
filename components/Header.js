@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Header({ paths }) {
   const route = useRouter();
@@ -56,8 +57,10 @@ export default function Header({ paths }) {
             ></i> */}
             <Menu
               right
-              customBurgerIcon={<MenuIcon color="primary" />}
-              customCrossIcon={<i className="bi bi-x"></i>}
+              customBurgerIcon={
+                <MenuIcon color="primary" className="header_hamburguerIcon" />
+              }
+              customCrossIcon={<CloseIcon color="secondary" className="" />}
               className={"header__burguerMenu"}
             >
               <ul className={"header_burguerMenu--item"}>

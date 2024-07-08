@@ -662,7 +662,7 @@ section {
 
 .header-container {
   width: 100%;
-  padding: 0 30px;
+  padding-left: 30px;
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -806,6 +806,9 @@ section {
 
 /* Header.module.css */
 
+.header_hamburguerIcon {
+  display: none;
+}
 .bm-burger-button {
   width: 36px;
   height: 30px;
@@ -1023,6 +1026,11 @@ section {
     display: block;
     top: 0;
   }
+
+  .header_hamburguerIcon {
+    display: block;
+  }
+
   .burguerIcon {
     display: block;
   }
