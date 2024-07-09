@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Image from "next/image";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -212,18 +213,33 @@ export default function Contact() {
             ></iframe>
             <div className="contact__info">
               <div className="contact__info--item">
-                <span className="bi bi-geo-alt contact__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/location2-icon.png"
+                  width={52}
+                  height={52}
+                />
                 <p className="contact__info--text">
                   Usina Coworking, Castillo 1366,
                   <br /> Buenos Aires - Argentina
                 </p>
               </div>
               <div className="contact__info--item">
-                <span className="bi bi-phone contact__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/phone-icon.png"
+                  width={52}
+                  height={52}
+                />
                 <p className="contact__info--text">+54 9 11 2854 4896</p>
               </div>
               <div className="contact__info--item">
-                <span className="bi bi-envelope contact__icon"></span>
+                <Image
+                  style={{ marginRight: "1rem" }}
+                  src="/img/indigo2024/mail2-icon.png"
+                  width={52}
+                  height={52}
+                />
                 <p className="contact__info--text">info@indigobalance.com</p>
               </div>
             </div>

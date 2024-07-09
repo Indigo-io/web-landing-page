@@ -2,7 +2,8 @@
   min-height: 200px;
   background-color: #7945ef;
   width: 100%;
-  padding: 48px 48px 150px;
+  padding: 72px 48px 150px;
+  position: relative;
 }
 
 .ourTeam::before {

@@ -672,6 +672,7 @@ section {
 */
 .navbar {
   padding: 0;
+  margin-right: 30px;
 }
 
 .navbar ul {
@@ -766,6 +767,9 @@ section {
   visibility: visible;
 }
 
+.header_hamburguerIcon {
+  position: relative;
+}
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -848,10 +852,6 @@ section {
 
 .bm-item:hover {
   color: white;
-}
-
-.header__burguerMenu {
-  display: none;
 }
 
 .burguerIcon {

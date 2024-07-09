@@ -4,10 +4,13 @@ import { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useMediaQuery } from "@mui/material";
 
 export default function Header({ paths }) {
   const route = useRouter();
   const [showNavModal, setShowNavModal] = useState(false);
+
+  const isMobile = useMediaQuery("(max-width:991px)");
 
   return (
     <>
@@ -55,52 +58,54 @@ export default function Header({ paths }) {
                 showNavModal ? "bi-x" : "bi-list"
               }`}
             ></i> */}
-            <Menu
-              right
-              customBurgerIcon={
-                <MenuIcon color="primary" className="header_hamburguerIcon" />
-              }
-              customCrossIcon={<CloseIcon color="secondary" className="" />}
-              className={"header__burguerMenu"}
-            >
-              <ul className={"header_burguerMenu--item"}>
-                <li>
-                  <Link href="/b2b">
-                    <span className="header__item header__item-mobile">
-                      B2B
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/b2c">
-                    <span className="header__item header__item-mobile">
-                      B2C
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/white-label">
-                    <span className="header__item header__item-mobile">
-                      Marca Blanca
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/coachs">
-                    <span className="header__item header__item-mobile">
-                      Coach
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about-us">
-                    <span className="header__item header__item-mobile">
-                      Nosotros
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </Menu>
+            {isMobile && (
+              <Menu
+                right
+                customBurgerIcon={
+                  <MenuIcon color="primary" className="header_hamburguerIcon" />
+                }
+                customCrossIcon={<CloseIcon color="secondary" className="" />}
+                className={"header__burguerMenu"}
+              >
+                <ul className={"header_burguerMenu--item"}>
+                  <li>
+                    <Link href="/b2b">
+                      <span className="header__item header__item-mobile">
+                        B2B
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/b2c">
+                      <span className="header__item header__item-mobile">
+                        B2C
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/white-label">
+                      <span className="header__item header__item-mobile">
+                        Marca Blanca
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/coachs">
+                      <span className="header__item header__item-mobile">
+                        Coach
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about-us">
+                      <span className="header__item header__item-mobile">
+                        Nosotros
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+              </Menu>
+            )}
           </nav>
         </div>
       </header>

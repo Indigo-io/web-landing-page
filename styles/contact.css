@@ -108,6 +108,15 @@
 
 .contact__info--item {
   margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact__info--item img {
+  margin: 0 !important;
 }
 
 .contact__info--text {
