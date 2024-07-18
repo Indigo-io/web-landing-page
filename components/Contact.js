@@ -44,61 +44,45 @@ export default function Contact() {
         <div className="contact__wrapper">
           <form onSubmit={handleSubmit(onSubmit)} className="contact__form">
             <div className="row">
-              <div
-                className="contact__form--input"
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                }}
-              >
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <input
-                    placeholder="Nombre"
-                    className={`form-control contact__input ${
-                      errors.name ? "is-invalid" : ""
-                    }`}
-                    {...register("name", { required: true })}
-                  />
-                  <div className="invalid-feedback">Campo requerido.</div>
-                </div>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <input
-                    placeholder="Apellido"
-                    className={`form-control contact__input ${
-                      errors.lastName ? "is-invalid" : ""
-                    }`}
-                    {...register("lastName", { required: true })}
-                  />
-                  <div className="invalid-feedback">Campo requerido.</div>
-                </div>
+              <div className="contact__form--input">
+                <input
+                  placeholder="Nombre"
+                  className={`form-control contact__input ${
+                    errors.name ? "is-invalid" : ""
+                  }`}
+                  {...register("name", { required: true })}
+                />
+                <div className="invalid-feedback">Campo requerido.</div>
               </div>
-              <div
-                className="contact__form--input"
-                style={{
-                  display: "flex",
-                  gap: "10px",
-                }}
-              >
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <input
-                    placeholder="Ciudad"
-                    className={`form-control contact__input ${
-                      errors.city ? "is-invalid" : ""
-                    }`}
-                    {...register("city", { required: false })}
-                  />
-                  <div className="invalid-feedback">Campo requerido.</div>
-                </div>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <input
-                    placeholder="País"
-                    className={`form-control contact__input ${
-                      errors.country ? "is-invalid" : ""
-                    }`}
-                    {...register("country", { required: false })}
-                  />
-                  <div className="invalid-feedback">Campo requerido.</div>
-                </div>
+              <div className="contact__form--input">
+                <input
+                  placeholder="Apellido"
+                  className={`form-control contact__input ${
+                    errors.lastName ? "is-invalid" : ""
+                  }`}
+                  {...register("lastName", { required: true })}
+                />
+                <div className="invalid-feedback">Campo requerido.</div>
+              </div>
+              <div className="contact__form--input">
+                <input
+                  placeholder="País"
+                  className={`form-control contact__input ${
+                    errors.country ? "is-invalid" : ""
+                  }`}
+                  {...register("country", { required: true })}
+                />
+                <div className="invalid-feedback">Campo requerido.</div>
+              </div>
+              <div className="contact__form--input">
+                <input
+                  placeholder="Ciudad"
+                  className={`form-control contact__input ${
+                    errors.city ? "is-invalid" : ""
+                  }`}
+                  {...register("city", { required: false })}
+                />
+                <div className="invalid-feedback">Campo requerido.</div>
               </div>
               <div className="contact__form--input">
                 <input
@@ -149,7 +133,7 @@ export default function Contact() {
                   className={`form-control contact__textarea ${
                     errors.comments ? "is-invalid" : ""
                   }`}
-                  {...register("comments", { required: true })}
+                  {...register("comments", { required: false })}
                 ></textarea>
                 <div className="invalid-feedback">Campo requerido.</div>
               </div>
@@ -158,7 +142,7 @@ export default function Contact() {
                   className={`form-control contact__input ${
                     errors.howKnow ? "is-invalid" : ""
                   }`}
-                  {...register("howKnow", { required: true })}
+                  {...register("howKnow", { required: false })}
                   defaultValue=""
                 >
                   <option value="" disabled>
