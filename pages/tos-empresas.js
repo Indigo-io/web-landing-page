@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import LayoutSimple from "components/LayoutSimple";
+import Layout from "components/Layout";
+import FooterSimple from "../components/FooterSimple";
 
 export default function Tos() {
   return (
-    <LayoutSimple bgColor="#002775">
+    <Layout bgColor="#002775">
       <div className="privacy">
         <div className="container">
           <h1>
@@ -62,6 +63,7 @@ export default function Tos() {
           </p>
         </div>
       </div>
-    </LayoutSimple>
+      <FooterSimple />
+    </Layout>
   );
 }

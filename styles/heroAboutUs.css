@@ -1,115 +1,80 @@
-.heroAboutUs {
-  position: relative;
-  min-height: 700px;
-  background-color: #c5cdff;
-}
-
-.heroAboutUs__wrapper {
-  margin-top: 105px;
-  display: flex;
-}
-
-.heroAboutUs__wrapper--text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.heroAboutUs__wrapper--ilustrator {
-  flex: 1;
-}
-
-.heroAboutUs__ilustrator {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.heroAboutUs__image-container {
+.hero-about-us {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 200px;
+  margin-top: 80px;
+  background-color: #41257e10;
 }
 
-.heroAboutUs__image {
-  max-width: 400px;
-  max-height: 400px;
-  width: 100%;
-  height: 100%;
+.hero-about-us__container {
+  padding: 120px 48px;
+  max-width: 1552px;
+  margin: 0 auto;
 }
 
-.heroAboutUs__title {
-  font-family: Montserrat;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #3d5ef3;
-  font-size: 42px;
+.hero-about-us__title {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 90px;
+  color: #1f1b28;
+  text-align: center;
+  margin: 0;
 }
 
-.heroAboutUs__textContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-right: 10%;
+.hero-about-us__paragraph {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: #1f1b28;
+  text-align: center;
+  max-width: 763px;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
-.heroAboutUs__text {
-  font-family: Montserrat;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0.2px;
-  color: #3d5ef3;
+.hero-about-us__sign {
+  background-image: url("/img/indigo2025/sign.png");
+  background-size: cover;
+  aspect-ratio: 440 / 44;
+  width: 100%; /* o una medida específica */
+  max-width: 440px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
-.heroAboutUs__button {
-  font-family: Montserrat;
-  width: fit-content;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0.2px;
-  color: #fff;
-  background: #26dcb0;
-  border: none;
-  border-radius: 100px;
-  padding: 1.625rem 4.375rem;
+@media (max-width: 1200px) {
+  .hero-about-us__title {
+    font-size: 76px;
+  }
+
+  .hero-about-us__paragraph {
+    font-weight: 600;
+    font-size: 21px;
+  }
 }
 
 @media (max-width: 768px) {
-  .heroAboutUs__wrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+  .hero-about-us__title {
+    font-size: 64px;
   }
 
-  .heroAboutUs__textContainer {
-    padding-right: 0;
+  .hero-about-us__paragraph {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-about-us__title {
+    font-size: 44px;
+    line-height: 50px;
   }
 
-  .heroAboutUs__title {
-    font-size: 2rem;
+  .hero-about-us__paragraph {
+    font-weight: 600;
+    font-size: 18px;
   }
 
-  .heroAboutUs__text {
-    font-size: 1.5rem;
-  }
-
-  .heroAboutUs__background {
-    height: 950px;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
-  }
-
-  .heroAboutUs__wrapper--text {
-    width: 100%;
-    align-items: center;
-  }
-
-  .heroAboutUs__image-container {
-    width: 350px;
-    height: 350px;
+  .hero-about-us__container {
+    padding: 80px 24px;
   }
 }

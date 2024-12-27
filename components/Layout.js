@@ -7,7 +7,7 @@ import GoogleAnalytics from "components/GoogleAnalytics";
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div>
       <Head>
         <meta name="description" content="Indigo Balance" />
         <link rel="icon" href="/logoIndigo_favicon-05.png" />
@@ -47,6 +47,6 @@ export default function Layout({ children }) {
 
       <Script src="/js/main.js" strategy="beforeInteractive"></Script>
       <GoogleAnalytics ga_id="G-0646DFBEQF" />
-    </>
+    </div>
   );
 }

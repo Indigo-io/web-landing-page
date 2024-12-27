@@ -1,52 +1,12 @@
 const aboutUsConstants = {
-  heroUpperText: <span>¿Quiénes somos?</span>,
-
-  heroBottomText: (
-    <span>
-      Buscamos mejorar la calidad de vida de las personas, promoviendo una mayor
-      conciencia individual y fomentando una perspectiva integral que abarque
-      desde la salud hasta el bienestar.
-    </span>
-  ),
-
-  teamInfo: [
-    {
-      imagePath: "/img/ipa.png",
-      name: "Ives Payen (Ipa)",
-    },
-    {
-      imagePath: "/img/rodree.jpeg",
-      name: "Rodrigo Avila (Rodree)",
-    },
-    {
-      imagePath: "/img/nacho.png",
-      name: "Ignacio David (Nacho)",
-    },
-    {
-      imagePath: "/img/matias.jpg",
-      name: "Matias Balducci",
-    },
-    {
-      imagePath: "/img/maite.png",
-      name: "Maite Ferrigno",
-    },
-    {
-      imagePath: "/img/bruno.jpg",
-      name: "Bruno Scopetta",
-    },
-    {
-      imagePath: "/img/santiago.jpeg",
-      name: "Santiago Avalos",
-    },
-    {
-      imagePath: "/img/manu.jpg",
-      name: "Stefania Payen (Manu)",
-    },
-    {
-      imagePath: "/img/hoja.jpg",
-      name: "Matias Caliva",
-    },
-  ],
+  HERO_TITLE: "¿Quiénes somos?",
+  HERO_TEXT:
+    "Nos enfocamos en mejorar la calidad de vida de las personas, impulsando una mayor conciencia individual y promoviendo una visión integral que englobe tanto la salud como el bienestar.",
+  MURAL_TITLE: "Nuestro Mural de Cultura",
+  MURAL_SUBTITLE:
+    "Una representación visual de quiénes somos y en qué creemos.",
+  OUR_TEAM__INNOVATION: "Innovacion",
+  OUR_TEAM__INNOVATION_TEXT: " ",
 };
 
 export { aboutUsConstants };

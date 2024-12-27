@@ -235,7 +235,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="contact" id="contacto">
+    <div className="contact" id="contact">
       <Toaster />
       <div className="container">
         <h2 className="contact__title">Contacto</h2>

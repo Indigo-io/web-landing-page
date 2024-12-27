@@ -1,144 +1,137 @@
-import Image from "next/image";
+import { PrincipalConstants } from "./constants/principalConstants";
+import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
+import ShopIcon from "@mui/icons-material/Shop";
+import AppleIcon from "@mui/icons-material/Apple";
 
 export default function FooterAboutUs() {
+  const mq1200 = useMediaQuery("(max-width:1200px)");
+
   return (
     <footer className="footer" role="contentinfo">
-      <div className="footer__wrapper">
-        <div className="footer__data">
-          <figure className="footer__links--logo-container">
-            <Image
-              src="/img/indigo2024/logoIndigoBlanco.png"
-              layout="fill"
-              alt="Logo Indigo"
-            />
-          </figure>
-          <div className="footer__data--item">
-            <Image
-              style={{ marginRight: "1rem" }}
-              src="/img/indigo2024/location-icon.png"
-              width={18}
-              height={22}
-            />
-            <p className="footer__data--text">
-              Castillo 1366, C1414, CABA , Argentina
-              <br /> Tel: + 54 (911) 2854 4896
-            </p>
+      <div className="footer__container">
+        <div
+          className={`footer__sections-container ${mq1200 ? "responsive" : ""}`}
+        >
+          <div className="footer__section">
+            <figure className="footer__logo" />
+            <span className="footer__location">
+              {PrincipalConstants.FOOTER__LOCATION_ARG}
+            </span>
+            <span className="footer__location">
+              {PrincipalConstants.FOOTER__LOCATION_USA}
+            </span>
+            <span className="footer__location">
+              {PrincipalConstants.FOOTER__EMAIL}
+            </span>
           </div>
-          <div className="footer__data--item">
-            <Image
-              style={{ marginRight: "1rem" }}
-              src="/img/indigo2024/location-icon.png"
-              width={18}
-              height={22}
-            />
-            <p className="footer__data--text">
-              2625 Weston Rd., Suite D, Weston
-              <br /> FL 33331, USA
-              <br /> Tel: +1 (650) 276 3570
-            </p>
-          </div>
-          <div className="footer__data--item">
-            <Image
-              style={{ marginRight: "1rem" }}
-              src="/img/indigo2024/mail-icon.png"
-              width={22}
-              height={16}
-            />
-            <p className="footer__data--text">info@indigobalance.com</p>
-          </div>
-        </div>
-        <div className="footer__links-sections-container">
-          <div className="footer__links">
-            <h3 className="footer__links--title">Páginas</h3>
-            <Link href="/">
-              <p className="footer__links--item">Home</p>
-            </Link>
-            <Link href="/tos-empresas">
-              <p className="footer__links--item">Términos y condiciones</p>
-            </Link>
-            <Link href="/privacy">
-              <p className="footer__links--item">Políticas de privacidad</p>
-            </Link>
-          </div>
-          <div className="footer__sections">
-            <h3 className="footer__links--title">Secciones</h3>
-            <a href="#hero" className="footer__links--item">
-              ¿Quienes Somos?
-            </a>
-            <a href="#values" className="footer__links--item">
-              Nuestros Valores
-            </a>
-            <a href="#mural" className="footer__links--item">
-              Mural de Cultura
-            </a>
-          </div>
-        </div>
-        <div className="footer__rightIcons-container">
-          <div className="footer__rightIcons">
-            <h3 className="footer__rightIcons--title">¡Seguinos!</h3>
-            <div className="footer__rightIcons-itemContainer">
-              <a
-                href="https://www.instagram.com/indigo.balance/"
-                target="_blank"
-                rel="noreferrer"
+
+          <div className="footer__links-section">
+            <div className="footer__section">
+              <span className="footer__section-title">Páginas</span>
+              <Link href="/" className="footer__section-link">
+                Home
+              </Link>
+              <Link href="/about-us" className="footer__section-link">
+                Nosotros
+              </Link>
+              <Link href="/tos-empresas" className="footer__section-link">
+                Términos y condiciones
+              </Link>
+              <Link href="/privacy" className="footer__section-link">
+                Políticas de privacidad
+              </Link>
+            </div>
+
+            <div className="footer__section">
+              <span className="footer__section-title">Secciones</span>
+              <Link href="/about-us/#whoWeAre" className="footer__section-item">
+                ¿Quienes Somos?
+              </Link>
+              <Link
+                href="/about-us/#ourValues"
+                className="footer__section-item"
               >
-                <Image
-                  style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/instagram-icon.png"
-                  width={32}
-                  height={32}
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/indigo-balance/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/linkedin-icon.png"
-                  width={32}
-                  height={32}
-                />
-              </a>
+                Nuestros Valores
+              </Link>
+              <Link href="/about-us/#culture" className="footer__section-item">
+                Mural de Cultura
+              </Link>
             </div>
           </div>
-          <div className="footer__rightIcons">
-            <h3 className="footer__rightIcons--title">Descarga la app</h3>
-            <div className="footer__rightIcons-itemContainer">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.indigobalance.app"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/google-play.png"
-                  width={32}
-                  height={32}
+
+          <div>
+            <div className="footer__section">
+              <span className="footer__section-title">¡Seguinos!</span>
+              <div className="footer__section_social-container">
+                <a
+                  href="https://www.instagram.com/indigo.balance/?hl=es-la"
+                  className="footer__section-social"
+                  style={{
+                    backgroundImage: `url("/img/indigo2025/instagram.svg")`,
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 />
-              </a>
-              <a
-                href="https://apps.apple.com/us/app/indigo-balance/id1611795903"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/apple-store.png"
-                  width={32}
-                  height={32}
+                <a
+                  href="https://www.linkedin.com/company/indigo-balance/posts/?feedView=all"
+                  className="footer__section-social"
+                  style={{
+                    backgroundImage: `url("/img/indigo2025/linkedin.svg")`,
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 />
-              </a>
+              </div>
+            </div>
+
+            <div className="footer__section" style={{ paddingTop: "20px" }}>
+              <span className="footer__section-title">Descarga la app</span>
+              <div className="footer__section_social-container">
+                <a
+                  href="https://apps.apple.com/ar/app/indigo-balance/id1611795903"
+                  className="footer__section-store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "5px",
+                    }}
+                  >
+                    <AppleIcon className="footer__store-icon" />
+                    App Store
+                  </div>
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.indigobalance.app"
+                  className="footer__section-store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "5px",
+                    }}
+                  >
+                    <ShopIcon className="footer__store-icon" />
+                    Google Play
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <span className="footer__copyright">
+          {PrincipalConstants.FOOTER__COPYRIGHT}
+        </span>
       </div>
-      <p className="footer__copyright">
-        Copyright © {new Date().getFullYear()} Indigo Mind, Inc. Todos los
-        derechos reservados.
-      </p>
     </footer>
   );
 }

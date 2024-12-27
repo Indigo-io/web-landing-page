@@ -1,42 +1,13 @@
 import React from "react";
-
 import { aboutUsConstants } from "./constants/aboutUsConstants";
-import Image from "next/image";
 
 export default function HeroAboutUs() {
   return (
-    <section className="heroAboutUs" id="hero">
-      <div className="container">
-        <div className="heroAboutUs__wrapper">
-          <div className="heroAboutUs__wrapper--text">
-            <p className="heroAboutUs__textContainer">
-              <span
-                className="heroAboutUs__title"
-                data-aos="fade-right"
-                data-aos-delay="100"
-              >
-                {aboutUsConstants.heroUpperText}
-              </span>
-              <span
-                className="heroAboutUs__text"
-                data-aos="fade-right"
-                data-aos-delay="100"
-              >
-                {aboutUsConstants.heroBottomText}
-              </span>
-            </p>
-          </div>
-          <div className="heroAboutUs__wrapper--ilustrator">
-            <figure className="heroAboutUs__image-container">
-              <Image
-                className="heroAboutUs__image"
-                src="/img/indigo2024/indigo_illustration.png"
-                width={577}
-                height={577}
-              />
-            </figure>
-          </div>
-        </div>
+    <section className="hero-about-us" id="whoWeAre">
+      <div className="hero-about-us__container">
+        <h1 className="hero-about-us__title">{aboutUsConstants.HERO_TITLE}</h1>
+        <p className="hero-about-us__paragraph">{aboutUsConstants.HERO_TEXT}</p>
+        <figure className="hero-about-us__sign" />
       </div>
     </section>
   );

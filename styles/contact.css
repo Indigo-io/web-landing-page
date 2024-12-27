@@ -5,17 +5,17 @@
 }
 
 .contact__title {
-  font-family: Montserrat;
+  font-family: Nunito Sans;
   font-size: 3rem;
   text-align: center;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #3d5ef3;
+  color: #011d5f;
   letter-spacing: 0.2px;
 }
 
 .contact__text {
-  font-family: Montserrat;
+  font-family: Nunito Sans;
   font-size: 1.75rem;
   text-align: center;
   color: #374754;
@@ -82,7 +82,7 @@
   padding: 18px 38px;
   background: #2091f9;
   border-radius: 35px;
-  font-family: Montserrat;
+  font-family: Nunito Sans;
   color: #fff;
   font-weight: 700;
   width: 100%;
@@ -120,7 +120,7 @@
 }
 
 .contact__info--text {
-  font-family: Montserrat;
+  font-family: Nunito Sans;
   font-size: 0.75rem;
   color: #374754;
 }
@@ -143,7 +143,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.5rem;
-  font-family: Montserrat;
+  font-family: Nunito Sans;
   font-weight: 700;
   color: #252b42;
 }
@@ -188,5 +188,9 @@
 
   .contact__textarea {
     height: 100px !important;
+  }
+
+  .contact__location {
+    padding: 32px 12px;
   }
 }
