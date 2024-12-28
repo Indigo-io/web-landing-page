@@ -37,7 +37,7 @@ const PrincipalConstants = {
   FOOTER__LOCATION_USA: `2625 Weston Rd., Suite D, Weston\nFL 33331, USA\nTel: +1 (650) 276 3570`,
   FOOTER__EMAIL: "info@indigobalance.com",
   FOOTER__COPYRIGHT:
-    "Copyright © 2024 Indigo Mind, Inc. Todos los derechos reservados.",
+    "Copyright © 2025 Indigo Mind, Inc. Todos los derechos reservados.",
 };
 
 export { PrincipalConstants };
