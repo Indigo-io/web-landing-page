@@ -407,7 +407,7 @@ export default function Contact() {
               <div className="contact__info--item">
                 <Image
                   style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/location2-icon.png"
+                  src="/img/indigo2025/location-icon.png"
                   width={52}
                   height={52}
                 />
@@ -419,7 +419,7 @@ export default function Contact() {
               <div className="contact__info--item">
                 <Image
                   style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/phone-icon.png"
+                  src="/img/indigo2025/phone-icon.png"
                   width={52}
                   height={52}
                 />
@@ -428,7 +428,7 @@ export default function Contact() {
               <div className="contact__info--item">
                 <Image
                   style={{ marginRight: "1rem" }}
-                  src="/img/indigo2024/mail2-icon.png"
+                  src="/img/indigo2025/mail-icon.png"
                   width={52}
                   height={52}
                 />
