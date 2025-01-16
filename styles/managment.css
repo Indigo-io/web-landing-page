@@ -1,0 +1,139 @@
+.managment {
+  width: 100%;
+  min-height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 251, 255, 0.7) 0%,
+    rgba(250, 251, 255, 0.7) 60%,
+    rgba(250, 251, 255, 0.35) 70%,
+    rgba(59, 14, 160, 0.12) 85%,
+    rgba(59, 14, 160, 0.12) 100%
+  );
+}
+
+.managment__container {
+  padding: 80px 0 0 48px;
+  max-width: 1552px;
+  margin: 0 auto;
+}
+
+.managment__wrapper {
+  display: flex;
+  gap: 48px;
+}
+
+.managment__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  flex: 1;
+}
+
+.managment__title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 68px;
+  color: #1f1b28;
+  padding-top: 20px;
+}
+
+.managment__paragraph {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1f1b28;
+}
+
+.managment__image {
+  flex: 1;
+  height: auto;
+  background-image: url("/img/indigo2025/medic.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  aspect-ratio: 726 / 900;
+}
+
+.managment__button {
+  width: fit-content;
+  height: 48px;
+  padding: 12px 24px;
+  background-color: #6529ac;
+  margin-bottom: 25px;
+  color: #fcfaff;
+  border-radius: 27px;
+  border: none;
+  font-size: 18px;
+}
+
+@media (max-width: 1440px) {
+  .managment__information {
+    gap: 24px;
+  }
+
+  .managment__title {
+    font-size: 48px;
+    line-height: 68px;
+  }
+
+  .managment__paragraph {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .managment__title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .managment__paragraph {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .managment__container {
+    padding: 80px 48px 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .managment__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .managment__image {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 726 / 900;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .managment__button {
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .managment__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .managment__container {
+    padding: 80px 24px 0;
+  }
+  .managment__paragraph {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

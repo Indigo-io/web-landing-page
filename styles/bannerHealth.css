@@ -1,0 +1,82 @@
+.banner-health {
+  width: 100%;
+  background: linear-gradient(
+    to bottom left,
+    rgba(250, 251, 255, 0.7) 0%,
+    rgba(250, 251, 255, 0.7) 60%,
+    rgba(250, 251, 255, 0.35) 70%,
+    rgba(59, 14, 160, 0.12) 85%,
+    rgba(59, 14, 160, 0.12) 100%
+  );
+}
+
+.banner-health__container {
+  padding: 80px 48px 40px;
+  max-width: 1552px;
+  margin: 0 auto;
+}
+
+.banner-health__title {
+  font-weight: 600;
+  font-size: 54px;
+  color: #1f1b28;
+  margin: 0;
+}
+
+.banner-health__subtitle {
+  font-weight: 700;
+  font-size: 54px;
+  color: #7f4dba;
+  margin: 0;
+}
+
+.banner-health__paragraph {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1f1b28;
+  padding-top: 15px;
+}
+
+.banner-health__button {
+  height: 48px;
+  padding: 12px 24px;
+  background-color: #6529ac;
+  margin-bottom: 25px;
+  color: #fcfaff;
+  border-radius: 27px;
+  border: none;
+  display: block;
+  margin: 20px auto 0;
+}
+
+@media (max-width: 1200px) {
+  .banner-health__title,
+  .banner-health__subtitle {
+    font-size: 40px;
+  }
+
+  .banner-health__paragraph {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-health__container {
+    padding: 80px 24px 40px;
+  }
+
+  .banner-health__title,
+  .banner-health__subtitle {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .banner-health__paragraph {
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+}

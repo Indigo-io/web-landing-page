@@ -1,0 +1,168 @@
+.hero-health {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.hero-health__background-top {
+  background: linear-gradient(
+    to bottom,
+    rgba(250, 251, 255, 0.7) 0%,
+    rgba(250, 251, 255, 0.7) 60%,
+    rgba(250, 251, 255, 0.35) 70%,
+    rgba(59, 14, 160, 0.12) 85%,
+    rgba(59, 14, 160, 0.4) 100%
+  );
+
+  padding: 80px 48px 0;
+}
+
+.hero-health__background-bottom {
+  background-color: #fafbff;
+  height: 320px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-health__container {
+  max-width: 1552px;
+  margin: 0 auto;
+}
+
+.hero-health__title {
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 120px;
+  color: #7f4dba;
+  text-align: center;
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.hero-health__bottom {
+  display: flex;
+  gap: 80px;
+  padding: 100px 0 500px;
+  position: relative;
+}
+
+.hero-health__bottom-title {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  color: #1f1b28;
+  flex: 1;
+}
+
+.hero-health__bottom-paragraph {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  flex: 1;
+}
+
+.hero-health__image {
+  width: 100%;
+  max-width: 1024px;
+  aspect-ratio: 1024 / 667;
+  background-image: url("/img/indigo2025/health-site.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: -240px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-health__button {
+  height: 48px;
+  padding: 12px 24px;
+  background-color: #6529ac;
+  margin-bottom: 25px;
+  color: #fcfaff;
+  border-radius: 27px;
+  border: none;
+}
+
+@media (max-width: 1440px) {
+  .hero-health__title {
+    font-size: 96px;
+    line-height: 120px;
+    white-space: pre-line;
+  }
+
+  .hero-health__bottom-title {
+    font-size: 48px;
+    line-height: 72px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-health__title {
+    font-size: 72px;
+    line-height: 80px;
+  }
+
+  .hero-health__bottom-title {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .hero-health__bottom-paragraph {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-health__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 80px 0 250px;
+  }
+
+  .hero-health__title {
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 100%;
+  }
+
+  .hero-health__bottom-title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .hero-health__bottom-paragraph {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-health__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 80px 0 100px;
+  }
+
+  .hero-health__title {
+    font-size: 45px;
+  }
+
+  .hero-health__bottom-title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .hero-health__bottom-paragraph {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero-health__background-top {
+    padding: 40px 24px 0;
+  }
+}

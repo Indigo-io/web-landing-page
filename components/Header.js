@@ -36,16 +36,11 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/#contacto">
+                <Link href="/#contact">
                   <span className="header__item">Contacto</span>
                 </Link>
               </li>
             </ul>
-            {/*             <i
-              className={`bi mobile-nav-toggle ${
-                showNavModal ? "bi-x" : "bi-list"
-              }`}
-            ></i> */}
             {isMobile && (
               <Menu
                 right
@@ -67,7 +62,7 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/#contacto">
+                    <Link href="/#contact">
                       <span className="header__item">Contacto</span>
                     </Link>
                   </li>

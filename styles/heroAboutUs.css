@@ -54,17 +54,6 @@
 
 @media (max-width: 768px) {
   .hero-about-us__title {
-    font-size: 64px;
-  }
-
-  .hero-about-us__paragraph {
-    font-weight: 600;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-about-us__title {
     font-size: 44px;
     line-height: 50px;
   }

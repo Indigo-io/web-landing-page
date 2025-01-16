@@ -1,0 +1,123 @@
+.health-AI {
+  width: 100%;
+}
+
+.health-AI__container {
+  padding: 80px 0 0 48px;
+  max-width: 1552px;
+  margin: 0 auto;
+}
+
+.health-AI__wrapper {
+  background: linear-gradient(
+    175.81deg,
+    rgba(65, 37, 126, 0.063) 27.37%,
+    rgba(59, 14, 160, 0.112) 96.85%
+  );
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  padding: 40px 0 40px 40px;
+}
+
+.health-AI__text {
+  flex: 1;
+  min-width: 50%;
+}
+
+.health-AI__title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 72px;
+  color: #1f1b28;
+}
+
+.health-AI__paragraph {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1f1b28;
+  padding-top: 5px;
+}
+
+.health-AI__image {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  aspect-ratio: 1;
+  background-image: url("/img/indigo2025/robotic-hand.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .health-AI__title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .health-AI__paragraph {
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-AI__container {
+    padding: 80px 48px 0;
+  }
+
+  .health-AI__wrapper {
+    flex-direction: column;
+  }
+
+  .health-AI__text {
+    padding-right: 40px;
+  }
+
+  .health-AI__title {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .health-AI__paragraph {
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .health-AI__image {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-AI__wrapper {
+    padding: 40px 0 40px 20px;
+  }
+
+  .health-AI__text {
+    padding-right: 20px;
+  }
+  .health-AI__container {
+    padding: 80px 24px 0;
+  }
+
+  .health-AI__title {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .health-AI__paragraph {
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 5px;
+    text-align: center;
+  }
+}
