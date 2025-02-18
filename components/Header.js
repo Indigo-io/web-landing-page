@@ -36,6 +36,11 @@ export default function Header() {
                 </Link>
               </li>
               <li>
+                <Link href="/health">
+                  <span className="header__item">Salud</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/#contact">
                   <span className="header__item">Contacto</span>
                 </Link>
