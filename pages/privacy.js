@@ -82,7 +82,7 @@ export default function Privacy() {
               </a>
             </p>
             <p style={{ fontWeight: "bold" }}>
-              1.RESPONSABLE DEL TRATAMIENTO DE DATOS PERSONALES
+              1. RESPONSABLE DEL TRATAMIENTO DE DATOS PERSONALES
             </p>
             <p>
               1.1. El responsable del tratamiento de los datos personales de los
@@ -122,7 +122,7 @@ export default function Privacy() {
               info@indigobalance.com.
             </p>
             <p style={{ fontWeight: "bold" }}>
-              2.¿QUE DATOS RECOLECTAMOS Y COMO LO HACEMOS?{" "}
+              2. ¿QUE DATOS RECOLECTAMOS Y COMO LO HACEMOS?{" "}
             </p>
             <p>
               2.1. INDIGO podrá, a través de la Plataforma, solicitar los
