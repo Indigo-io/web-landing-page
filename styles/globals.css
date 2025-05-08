@@ -63,3 +63,9 @@ a:hover {
   visibility: visible;
   opacity: 1;
 }
+
+@media (max-width: 720px) {
+  .table-responsive {
+    font-size: 12px;
+  }
+}

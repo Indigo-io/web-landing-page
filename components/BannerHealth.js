@@ -15,7 +15,7 @@ export default function BannerHealth() {
         </p>
         <button
           className="banner-health__button"
-          onClick={() => window.open("https://especialista.indigo.com")}
+          onClick={() => window.open("https://specialists.indigobalance.com/")}
         >
           Registrate ahora
         </button>

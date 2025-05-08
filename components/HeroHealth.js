@@ -19,7 +19,9 @@ export default function HeroHealth() {
         <div className="hero-health__background-bottom">
           <button
             className="hero-health__button"
-            onClick={() => window.open("https://especialista.indigo.com")}
+            onClick={() =>
+              window.open("https://specialists.indigobalance.com/")
+            }
           >
             Descubre más
           </button>
