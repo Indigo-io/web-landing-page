@@ -38,7 +38,7 @@ export default function FooterHealth() {
               <Link href="/health" className="footer__section-link">
                 Salud
               </Link>
-              <Link href="/tos-empresas" className="footer__section-link">
+              <Link href="/tos-prof" className="footer__section-link">
                 Términos y condiciones
               </Link>
               <Link href="/privacy" className="footer__section-link">
